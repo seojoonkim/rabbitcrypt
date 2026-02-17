@@ -44,7 +44,7 @@ export default function Home() {
         <div className="flex items-center justify-between h-full" style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 1.25rem' }}>
         {/* Logo */}
         <div className="flex items-center" style={{ gap: '0.5rem' }}>
-          <img src="/favicon.svg" width="28" height="28" alt="Rabbit Crypt" style={{ display: 'block' }} />
+          <img src="/logo.png" width="28" height="28" alt="Rabbit Crypt" style={{ display: 'block', borderRadius: '4px' }} />
           <span
             style={{
               fontFamily: "var(--font-display), var(--font-serif), 'Noto Serif KR', Georgia, serif",
