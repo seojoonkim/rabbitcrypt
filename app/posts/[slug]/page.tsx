@@ -221,20 +221,8 @@ export default async function PostPage({ params }: PostPageProps) {
             className="hover-amber text-sm flex items-center"
             style={{ color: 'rgba(240,228,204,0.35)', gap: '0.25rem' }}
           >
-            ← 토끼굴
+            ← Rabbit Crypt
           </Link>
-          <span
-            className="text-sm flex-1 truncate hidden sm:block"
-            style={{ color: 'rgba(240,228,204,0.2)' }}
-          >
-            {post.title}
-          </span>
-          <span
-            className="text-xs flex items-center"
-            style={{ color: 'rgba(240,228,204,0.25)', gap: '0.25rem' }}
-          >
-            ❤️ {post.reactions}
-          </span>
         </div>
       </div>
 
