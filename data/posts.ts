@@ -350,27 +350,92 @@ X (Twitter): [https://x.com/simonkim_nft/status/2016921602659844420](https://x.c
   {
     id: '29',
     slug: 'hvl-first-meetup',
-    title: 'Hashed Vibe Labs 참가팀 모집 시작!',
+    title: 'Hashed Vibe Labs Fellows 소개',
     category: '🛠️ 빌딩',
     depth: 'entry',
-    summary: 'Hashed Vibe Labs Seoul 1차 모집 지원이 시작되었습니다.',
-    content: `Hashed Vibe Labs Seoul 1차 모집 지원이 시작되었습니다. 지금 바로 신청하세요!
+    summary: '세계적인 오픈소스 프로젝트 개발자부터 칸 광고제 수상 크리에이터, 세계 3대 해커, 아직 고등학생인 차세대 개발자까지.',
+    content: `Hashed Vibe Labs 선발 팀에 어드바이저 역할을 해주실 분들을 펠로십 프로그램을 통해 모시게 되었는데, 정말 놀라운 분들이 많이 함께해 주셨다. 세계적인 오픈소스 프로젝트를 만든 개발자부터 칸 광고제 수상 크리에이터, 대통령직속 AI위원회 위원, 세계 3대 해커, Kaggle Grandmaster, 그리고 아직 고등학생인 차세대 개발자까지. 분야도 나이도 배경도 모두 다르지만 한 가지 공통점이 있다. 직접 최전선에서 가장 빠르게 빌딩하는 사람들.
 
-🗓 마감: 2월 19일(목)
-🔗 지원하기: [https://vibelabs.hashed.com/](https://vibelabs.hashed.com/)
-✉️ 이메일: vibelabs@hashed.com
+18명의 펠로우들이 한 자리에 모이는 Vibe Labs Seoul Edition이 무척 기대된다. 이들이 만들어낼 시너지가 어떤 모습일지 지켜봐 주시길.
 
-Where vibes become rocket products.[
-  
-  Hashed Vibe Labs
-  
-  
-  Where vibes become rocket products
-](https://vibelabs.hashed.com/)`,
+Hashed Vibe Labs 서울 에디션 지원은 오는 19일 마감된다.
+
+[https://n.news.naver.com/mnews/article/015/0005251155?sid=101](https://n.news.naver.com/mnews/article/015/0005251155?sid=101)
+
+**(이하 가나다순 정렬)
+**
+
+**김민수 - 컨택스츠아이오 대표 | 전 Meta, Ground X 엔지니어**
+
+디지털 자산 가치평가 및 포트폴리오 관리 플랫폼 NFTBank를 운영. Hashed, Sequoia, DCG, 1kx 등으로부터 투자 유치. NFT 시장의 '블룸버그 터미널'을 만들겠다는 비전으로 온체인 자산의 공정가치 산정 알고리즘을 개발 중.
+
+**김서준 - Hashed 대표**
+
+투자자이면서 빌딩하는 2회 엑싯 경험의 연쇄 창업자. Web3 생태계에 활발히 투자하며, 동시에 ETHval, Agenlinter, Promptguard 등 Web3 및 AI 프로젝트를 직접 개발 중. 
+
+**김연규 - 오픈소스 개발자 | oh-my-opencode 창시자**
+
+GitHub 스타 3만, 다운로드 60만 회를 기록한 세계적인 오케스트레이션 프로젝트, Oh My Opencode의 개발자. 글로벌 코딩 에이전트 커뮤니티를 운영하며 AI 코딩 도구의 민주화를 이끌고 있다.
+
+**김호진 - Hashed Open Finance 대표 | ShardLab 대표**
+
+탈중앙화 금융(DeFi)과 전통 금융의 접점에서 새로운 인프라를 구축 중. 온체인 금융 서비스의 대중화를 목표로 다양한 프로토콜과 협업 중.
+
+**민웅기 - FriendliAI 소프트웨어 엔지니어**
+
+Vercel AI SDK, vLLM 등 글로벌 오픈소스 프로젝트의 핵심 기여자. 대규모 언어 모델의 추론 효율성과 서빙 최적화 분야에서 실질적인 코드 기여로 인정받는 엔지니어.
+
+**신기헌 - 19년차 경력의 크리에이티브 디렉터**
+
+칸 국제광고제 수상 경력의 베테랑 크리에이티브 디렉터. 브랜딩과 커뮤니케이션 전략에서 쌓은 노하우를 AI 시대의 새로운 표현 방식에 접목 중.
+
+**안수빈 - Hashed Tech Lead | Kaggle Grandmaster**
+
+온체인 데이터 분석 플랫폼 Dune에서 글로벌 1위를 달성한 데이터 사이언티스트. Kaggle Grandmaster 타이틀 보유. 복잡한 블록체인 데이터를 인사이트로 전환하는 전문가이자 AI 개발자.
+
+**여준호 - 스트로크컴패니 창업자 | Sisyphus Labs 운영**
+
+GitHub 스타 5,000+ 보유 개발자. 반복적이고 고된 작업을 자동화하는 도구들을 만드는 Sisyphus Labs를 운영하며, 개발자 생산성 향상에 집중.
+
+**이용준 - 팩토마인드 공동창업자 | 전 시티그룹 채권 트레이더**
+
+월가에서 쌓은 트레이딩 경험을 바탕으로 AI 기반 투자 인사이트 플랫폼 팩토마인드를 창업. 저서 '인사이더 인사이트'의 저자로 금융 시장 분석에 대한 깊은 통찰 보유.
+
+**이재홍 - Across Inc. 창업자**
+
+LLM 검색결과를 최적화하는 GEO/AEO(Generative Engine Optimization) 스타트업 대표. AI 시대의 새로운 SEO를 정의하며, 브랜드가 AI 답변에 노출되는 방식을 혁신 중.
+
+**임완섭 - Loqu 창업자 | 전 이더리움재단 응용암호학팀 리드**
+
+영지식증명(ZKP) 기반 1세대 롤업을 개발한 핵심 연구자. 이더리움재단에서 암호학 연구를 리드한 경험을 바탕으로 프라이버시 보존 기술의 상용화를 추진 중.
+
+**정성영 - MarketFit Lab 창업자 | 그로스 해킹 전문가**
+
+국내 최대 규모의 그로스 해킹 전문가 그룹 운영. 전 삼성전자 C랩 및 카카오벤처스 그로스 컨설턴트로서 수많은 스타트업의 성장 전략을 설계.
+
+**주기영 - CryptoQuant 창업자**
+
+온체인 데이터 분석의 글로벌 리더. 트위터 팔로워 42만 명 이상, 전 세계 크립토 트레이더들이 그의 분석을 참조. 최근 unbias.fyi도 함께 창업하며 데이터 기반 의사결정 도구 확장 중.
+
+**Sigrid Jin - Sionic AI 엔지니어 | [Instruct.KR](http://instruct.kr/) 운영**
+
+AI 엔지니어링 커뮤니티 Instruct.KR을 운영하며 한국 AI 개발자 생태계를 키우는 중. 작년 viberank.app에서 Claude Code 토큰 사용량 전 세계 1위를 기록한 헤비 유저이자 실전형 AI 엔지니어.
+
+**하용호 - 데이터오븐 대표 | 대통령직속 AI전략위원회**
+
+ML 스타트업 2회 엑싯 경험을 보유한 연쇄 창업자. 현재 대통령직속 AI전략위원회 소속으로 국가 AI 정책 수립에 참여하며, 데이터와 AI의 실질적 활용에 기여.
+
+**홍민표 - SEWORKS 창업자 | 해커그룹 WOWHACKER 설립자**
+
+세계 3대 해커로 알려진 사이버보안 전문가. WOWHACKER 그룹을 설립하고 보안 기업 SEWORKS를 창업. 공격자의 시각으로 방어를 설계하는 독보적 전문성 보유.
+
+**황인하 - 부산일과학고 신입생 | 오픈소스 커뮤니티 기여자**
+
+고등학생이면서 오픈소스 프로젝트에 적극 기여하는 차세대 개발자. HVL의 최연소 펠로우로, 나이에 상관없이 실력으로 인정받는 바이브 코딩 문화를 상징.`,
     date: '2026-02-06',
     reactions: 34,
-    tags: ['Hashed', 'Vibe Labs', '바이브코딩', '모집'],
-    relatedSlugs: ['vibelabs-landing', 'vibe-founders-era'],
+    tags: ['Hashed', 'HVL', '커뮤니티', 'Web3', 'AI'],
+    relatedSlugs: ['vibelabs-landing', 'hvl-fellows', 'vibe-founders-era'],
     mediaUrls: ['/media/posts/hvl-first-meetup-0.jpg'],
   },
 
