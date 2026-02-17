@@ -233,8 +233,8 @@ export default function Home() {
                         alt=""
                         className="group-hover:scale-[1.05] transition-transform duration-300"
                         style={{
-                          width: '60px',
-                          height: '60px',
+                          width: '100px',
+                          height: '100px',
                           objectFit: 'cover',
                           borderRadius: '0.375rem',
                           flexShrink: 0,
@@ -248,8 +248,8 @@ export default function Home() {
                         alt=""
                         className="group-hover:scale-[1.05] transition-transform duration-300"
                         style={{
-                          width: '60px',
-                          height: '60px',
+                          width: '100px',
+                          height: '100px',
                           objectFit: 'cover',
                           borderRadius: '0.375rem',
                           flexShrink: 0,
