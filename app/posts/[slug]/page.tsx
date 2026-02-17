@@ -323,33 +323,49 @@ export default async function PostPage({ params }: PostPageProps) {
           </div>
         )}
 
-        {/* Media section — videos (Telegram link) */}
+        {/* Media section — videos */}
         {post.videoUrls && post.videoUrls.length > 0 && (
-          <div style={{ marginTop: '1rem', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+          <div style={{ marginTop: '1rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             {post.videoUrls.map((url, i) => (
-              <a
-                key={i}
-                href={url}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '0.5rem',
-                  borderRadius: '0.75rem',
-                  border: '1px solid rgba(212,146,42,0.25)',
-                  background: 'rgba(212,146,42,0.06)',
-                  color: '#E8A830',
-                  fontSize: '0.875rem',
-                  fontWeight: 500,
-                  padding: '0.625rem 1rem',
-                  textDecoration: 'none',
-                  width: 'fit-content',
-                }}
-              >
-                <span style={{ fontSize: '1rem' }}>▶</span>
-                텔레그램에서 영상 보기
-              </a>
+              url.startsWith('/') || url.startsWith('http') && !url.includes('t.me') ? (
+                <video
+                  key={i}
+                  src={url}
+                  controls
+                  playsInline
+                  style={{
+                    width: '100%',
+                    borderRadius: '0.75rem',
+                    border: '1px solid rgba(212,146,42,0.15)',
+                    background: '#000',
+                    display: 'block',
+                  }}
+                />
+              ) : (
+                <a
+                  key={i}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.5rem',
+                    borderRadius: '0.75rem',
+                    border: '1px solid rgba(212,146,42,0.25)',
+                    background: 'rgba(212,146,42,0.06)',
+                    color: '#E8A830',
+                    fontSize: '0.875rem',
+                    fontWeight: 500,
+                    padding: '0.625rem 1rem',
+                    textDecoration: 'none',
+                    width: 'fit-content',
+                  }}
+                >
+                  <span style={{ fontSize: '1rem' }}>▶</span>
+                  텔레그램에서 영상 보기
+                </a>
+              )
             ))}
           </div>
         )}
