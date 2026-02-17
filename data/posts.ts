@@ -1040,7 +1040,7 @@ AI가 창작의 비용을 제로에 수렴시킨 세상에서, 블록체인은 �
     reactions: 25,
     tags: ['IP', '크립토', 'AI', '블록체인', '철학'],
     relatedSlugs: ['dollar-two-faces', 'quantum-pirates'],
-    mediaUrls: ['/media/posts/ip-tvw-0.jpg'],
+    mediaUrls: [],
     videoUrls: ['/media/posts/ip-tvw-1.mp4'],
   },
   {
@@ -1091,7 +1091,7 @@ BIP 360은 해적들을 막기 위한 첫 번째 방파제다. 하지만 방파�
     reactions: 24,
     tags: ['AI', '중국', 'Seedance', '트렌드'],
     relatedSlugs: ['seedance-30', 'messenger-b2a'],
-    mediaUrls: ['/media/posts/china-ai-frontier-0.jpg'],
+    mediaUrls: [],
     videoUrls: ['/media/posts/china-ai-frontier-1.mp4'],
   },
   {
@@ -1133,7 +1133,7 @@ Seedance 3.0이 최종 비공개 스프린트 단계에 진입했으며, 여러 
     reactions: 11,
     tags: ['Seedance', 'AI 영상', '중국', '트렌드'],
     relatedSlugs: ['china-ai-frontier', 'messenger-b2a'],
-    mediaUrls: ['/media/posts/seedance-30-0.jpg'],
+    mediaUrls: [],
   },
   {
     id: '12',
@@ -1540,7 +1540,7 @@ API 개방성이 만들어내는 격차는 시간이 지날수록 복리처럼 �
     reactions: 23,
     tags: ['메신저', 'API', 'B2A', 'AI', '텔레그램', '카카오'],
     relatedSlugs: ['china-ai-frontier', 'agent-siblings'],
-    mediaUrls: ['/media/posts/messenger-b2a-0.jpg'],
+    mediaUrls: [],
     videoUrls: ['/media/posts/messenger-b2a-1.mp4'],
   },
   {
@@ -1575,7 +1575,7 @@ API 개방성이 만들어내는 격차는 시간이 지날수록 복리처럼 �
     reactions: 30,
     tags: ['로봇', '중국', 'AI', '문화', '트렌드'],
     relatedSlugs: ['china-ai-frontier', 'ip-tvw'],
-    mediaUrls: ['/media/posts/robot-goku-5000-0.jpg'],
+    mediaUrls: [],
     videoUrls: ['/media/posts/robot-goku-5000-1.mp4'],
   },
   {
