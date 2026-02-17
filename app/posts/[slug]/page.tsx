@@ -101,7 +101,7 @@ function renderContent(content: string, relatedPosts: Post[]) {
     return (
       <p
         key={i}
-        style={{ marginBottom: '1.75rem', lineHeight: '1.85', fontSize: '1.125rem', color: 'rgba(240,228,204,0.85)' }}
+        style={{ marginBottom: '1.25rem', lineHeight: '1.75', fontSize: '1.125rem', color: 'rgba(240,228,204,0.85)' }}
       >
         {renderInline(line)}
       </p>
@@ -361,7 +361,7 @@ export default async function PostPage({ params }: PostPageProps) {
         {/* Content */}
         <div
           className="post-content"
-          style={{ lineHeight: '1.85', fontSize: '1.125rem', fontFamily: "'Noto Serif KR', Georgia, serif", letterSpacing: '0.01em' }}
+          style={{ lineHeight: '1.75', fontSize: '1.125rem', fontFamily: "'Noto Serif KR', Georgia, serif", letterSpacing: '0.01em' }}
         >
           {renderContent(post.content, related)}
         </div>

@@ -33,8 +33,7 @@ export default function Home() {
       ? sortedPosts
       : sortedPosts.filter((p) => p.category === selectedCategory);
 
-  const hero = filteredPosts[0];
-  const rest = filteredPosts.slice(1);
+  const rest = filteredPosts;
 
   return (
     <div style={{ background: '#080E1A', color: '#F0E4CC', minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -140,111 +139,7 @@ export default function Home() {
 
         <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '7.5rem 1.25rem 5rem', width: '100%' }}>
 
-          {/* ═══ HERO POST ═══ */}
-          {hero && (
-            <Link
-              href={`/posts/${hero.slug}`}
-              className="block group"
-              style={{
-                marginBottom: '3rem',
-                textDecoration: 'none',
-                color: 'inherit',
-              }}
-            >
-              {/* Hero image */}
-              {getThumb(hero) && (
-                <div style={{
-                  width: '100%',
-                  aspectRatio: '21 / 9',
-                  borderRadius: '0.75rem',
-                  overflow: 'hidden',
-                  marginBottom: '1.5rem',
-                }}>
-                  <img
-                    src={getThumb(hero)!}
-                    alt=""
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'cover',
-                      display: 'block',
-                      transition: 'transform 0.4s ease',
-                    }}
-                    className="group-hover:scale-[1.03]"
-                  />
-                </div>
-              )}
-              {/* Hero video placeholder */}
-              {!getThumb(hero) && hero.videoUrls && hero.videoUrls.length > 0 && (
-                <div style={{
-                  width: '100%',
-                  aspectRatio: '21 / 9',
-                  borderRadius: '0.75rem',
-                  overflow: 'hidden',
-                  marginBottom: '1.5rem',
-                  background: 'rgba(212,146,42,0.06)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '3rem',
-                }}>
-                  🎬
-                </div>
-              )}
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.625rem', marginBottom: '0.75rem' }}>
-                <span
-                  style={{
-                    color: '#D4922A',
-                    fontSize: '0.8125rem',
-                    fontFamily: "var(--font-sans), 'Noto Sans KR', sans-serif",
-                    fontWeight: 400,
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.08em',
-                  }}
-                >
-                  {categoryShort[hero.category]}
-                </span>
-                <span style={{ color: 'rgba(212,146,42,0.3)', fontSize: '0.5rem' }}>●</span>
-                <DepthBadge depth={hero.depth} />
-              </div>
-              <h2
-                style={{
-                  fontFamily: "var(--font-display), var(--font-serif), 'Noto Serif KR', Georgia, serif",
-                  fontSize: '1.75rem',
-                  fontWeight: 700,
-                  lineHeight: '1.3',
-                  color: '#F0E4CC',
-                  marginBottom: '0.75rem',
-                  letterSpacing: '-0.01em',
-                }}
-              >
-                {hero.title}
-              </h2>
-              <p
-                style={{
-                  fontFamily: "var(--font-serif), 'Noto Serif KR', Georgia, serif",
-                  fontSize: '1rem',
-                  lineHeight: '1.7',
-                  color: 'rgba(240,228,204,0.5)',
-                  marginBottom: '1rem',
-                  maxWidth: '640px',
-                }}
-              >
-                {hero.summary}
-              </p>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', fontSize: '0.8125rem', color: '#8A7A5E', fontWeight: 300 }}>
-                <span>{hero.date}</span>
-                <span>❤ {hero.reactions}</span>
-              </div>
-            </Link>
-          )}
-
-          {/* ═══ DIVIDER ═══ */}
-          {hero && rest.length > 0 && (
-            <div style={{ borderTop: '1px solid rgba(212,146,42,0.1)', marginBottom: '2.5rem' }} />
-          )}
-
-          {/* ═══ REST GRID ═══ */}
+          {/* ═══ POST GRID ═══ */}
           <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: '1.5rem' }}>
             {rest.map((post, idx) => {
               const thumb = getThumb(post);

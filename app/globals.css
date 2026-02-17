@@ -31,17 +31,7 @@ body {
 
 /* ─── Background: clean solid ─── */
 
-/* ─── Drop cap for first paragraph in post ─── */
-.post-content > p:first-of-type::first-letter {
-  float: left;
-  font-size: 3.5rem;
-  line-height: 0.8;
-  padding-right: 0.5rem;
-  padding-top: 0.25rem;
-  color: #D4922A;
-  font-family: var(--font-display), Georgia, serif;
-  font-weight: 700;
-}
+/* drop cap removed */
 
 /* ─── Amber cursor blink ─── */
 @keyframes cursor-blink {
