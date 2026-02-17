@@ -39,22 +39,21 @@ export default function Home() {
     <div style={{ background: '#080E1A', color: '#F0E4CC', minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       {/* Header */}
       <header
-        className="fixed top-0 left-0 right-0 z-50 h-12"
+        className="fixed top-0 left-0 right-0 z-50 h-14"
         style={{
           background: 'rgba(8,14,26,0.95)',
           backdropFilter: 'blur(12px)',
-          borderBottom: '1px solid rgba(212,146,42,0.15)',
         }}
       >
         <div className="flex items-center justify-between h-full" style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 1.25rem' }}>
           <div className="flex items-center" style={{ gap: '0.5rem' }}>
-            <img src="/logo.png" width="28" height="28" alt="Rabbit Crypt" style={{ display: 'block', borderRadius: '4px' }} />
+            <img src="/logo.png" width="34" height="34" alt="Rabbit Crypt" style={{ display: 'block', borderRadius: '5px' }} />
             <span
               style={{
                 fontFamily: "var(--font-display), var(--font-serif), 'Noto Serif KR', Georgia, serif",
                 fontWeight: 700,
                 color: '#F0E4CC',
-                fontSize: '0.9375rem',
+                fontSize: '1.0625rem',
                 letterSpacing: '0.01em',
               }}
             >
@@ -77,12 +76,12 @@ export default function Home() {
       </header>
 
       {/* Content */}
-      <div className="pt-12 min-h-screen" style={{ width: '100%', maxWidth: '1000px', margin: '0 auto' }}>
+      <div className="pt-14 min-h-screen" style={{ width: '100%', maxWidth: '1000px', margin: '0 auto' }}>
         {/* Category filter */}
         <div
           className="fixed z-40"
           style={{
-            top: '48px',
+            top: '56px',
             left: 0,
             right: 0,
             background: 'rgba(8,14,26,0.95)',
