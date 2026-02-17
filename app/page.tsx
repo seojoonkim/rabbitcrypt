@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { posts, Category } from '@/data/posts';
-import CardSwipe from '@/components/CardSwipe';
 import DepthBadge from '@/components/DepthBadge';
 
 const CATEGORIES: Category[] = [
@@ -20,10 +19,7 @@ const categoryShort: Record<string, string> = {
   '💭 단상': '단상',
 };
 
-type View = 'swipe' | 'list';
-
 export default function Home() {
-  const [view, setView] = useState<View>('swipe');
   const [selectedCategory, setSelectedCategory] = useState<Category | 'all'>('all');
 
   const filteredPosts =
@@ -54,66 +50,12 @@ export default function Home() {
           <span className="font-mono text-[#8B949E] text-xs hidden sm:inline">토끼굴</span>
         </div>
 
-        {/* View toggle */}
-        <div className="flex items-center gap-1">
-          <button
-            onClick={() => setView('swipe')}
-            className="font-mono text-xs px-3 py-1 rounded border transition-all"
-            style={
-              view === 'swipe'
-                ? {
-                    color: '#00B4D8',
-                    borderColor: 'rgba(0,180,216,0.5)',
-                    background: 'rgba(0,180,216,0.1)',
-                  }
-                : {
-                    color: '#8B949E',
-                    borderColor: '#30363D',
-                    background: 'transparent',
-                  }
-            }
-          >
-            [카드]
-          </button>
-          <button
-            onClick={() => setView('list')}
-            className="font-mono text-xs px-3 py-1 rounded border transition-all"
-            style={
-              view === 'list'
-                ? {
-                    color: '#00B4D8',
-                    borderColor: 'rgba(0,180,216,0.5)',
-                    background: 'rgba(0,180,216,0.1)',
-                  }
-                : {
-                    color: '#8B949E',
-                    borderColor: '#30363D',
-                    background: 'transparent',
-                  }
-            }
-          >
-            [목록]
-          </button>
-        </div>
       </header>
-
-      {/* ═══════════════════════════════════════════
-          SWIPE VIEW — fullscreen fixed overlay
-      ═══════════════════════════════════════════ */}
-      {view === 'swipe' && (
-        <div
-          className="fixed left-0 right-0 bottom-0"
-          style={{ top: '48px' }}
-        >
-          <CardSwipe posts={filteredPosts} />
-        </div>
-      )}
 
       {/* ═══════════════════════════════════════════
           LIST VIEW — scrollable
       ═══════════════════════════════════════════ */}
-      {view === 'list' && (
-        <div className="pt-12 min-h-screen">
+      <div className="pt-12 min-h-screen">
           {/* Category filter — sticky below header */}
           <div
             className="sticky z-40 px-4 py-3"
@@ -248,7 +190,6 @@ export default function Home() {
             </p>
           </footer>
         </div>
-      )}
     </div>
   );
 }
