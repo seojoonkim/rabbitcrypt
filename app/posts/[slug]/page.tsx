@@ -331,26 +331,7 @@ export default async function PostPage({ params }: PostPageProps) {
           </div>
         )}
 
-        {/* Summary / Lede */}
-        <div
-          className="rounded-r-xl"
-          style={{
-            borderLeft: '2px solid rgba(212,146,42,0.5)',
-            background: 'rgba(212,146,42,0.04)',
-            padding: '1rem',
-            marginBottom: '2rem',
-          }}
-        >
-          <p
-            className="italic leading-relaxed text-sm"
-            style={{
-              color: 'rgba(240,228,204,0.65)',
-              fontFamily: "var(--font-serif), 'Noto Serif KR', Georgia, serif",
-            }}
-          >
-            {post.summary}
-          </p>
-        </div>
+        {/* Summary removed — content speaks for itself */}
 
         {/* Content */}
         <div
