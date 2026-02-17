@@ -41,7 +41,7 @@ export default function Home() {
       <header
         className="fixed top-0 left-0 right-0 z-50 h-14"
         style={{
-          background: 'rgba(8,14,26,0.95)',
+          background: 'rgba(4,7,14,0.98)',
           backdropFilter: 'blur(12px)',
         }}
       >
@@ -84,9 +84,9 @@ export default function Home() {
             top: '56px',
             left: 0,
             right: 0,
-            background: 'rgba(8,14,26,0.95)',
+            background: 'rgba(4,7,14,0.98)',
             backdropFilter: 'blur(12px)',
-            borderBottom: '1px solid rgba(212,146,42,0.1)',
+            borderBottom: '1px solid rgba(212,146,42,0.06)',
             padding: '0.75rem 0',
           }}
         >
@@ -136,7 +136,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '7.5rem 1.25rem 5rem', width: '100%' }}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '8.5rem 1.25rem 5rem', width: '100%' }}>
 
           {/* ═══ POST GRID ═══ */}
           <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: '1.5rem' }}>
