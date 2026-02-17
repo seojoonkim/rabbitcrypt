@@ -8,14 +8,14 @@ import DepthBadge from '@/components/DepthBadge';
 const CATEGORIES: Category[] = [
   '🐇 탐험',
   '🛠️ 빌딩',
-  '💭 단상',
+  '✍️ 낙서',
   '📖 소설',
 ];
 
 const categoryShort: Record<string, string> = {
   '🐇 탐험': '탐험',
   '🛠️ 빌딩': '빌딩',
-  '💭 단상': '단상',
+  '✍️ 낙서': '낙서',
   '📖 소설': '소설',
 };
 

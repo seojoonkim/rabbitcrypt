@@ -173,8 +173,8 @@ export default async function PostPage({ params }: PostPageProps) {
   const categoryColors: Record<string, string> = {
     '🐇 탐험': '#D4922A',
     '🛠️ 빌딩': '#9BA8C0',
-    '📡 시그널': '#A88CC0',
-    '💭 단상': '#C08888',
+    
+    '✍️ 낙서': '#C08888',
   };
 
   const topTag = post.tags[0] || '';

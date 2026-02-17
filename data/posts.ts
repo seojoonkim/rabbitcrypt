@@ -1,4 +1,4 @@
-export type Category = '🐇 탐험' | '🛠️ 빌딩' | '💭 단상' | '📖 소설';
+export type Category = '🐇 탐험' | '🛠️ 빌딩' | '✍️ 낙서' | '📖 소설';
 export type DepthLevel = 'entry' | 'mid' | 'deep';
 
 export interface Post {
@@ -43,7 +43,7 @@ export const posts: Post[] = [
     id: '19',
     slug: 'vibe-coding-tip',
     title: '바이브 코딩의 숨겨진 장점 - 순대볶음 먹으면서 개발 가능',
-    category: '💭 단상',
+    category: '✍️ 낙서',
     depth: 'entry',
     summary: '본래 코딩은 두 손이 필요한 일이었다. AI가 인류에게 준 가장 위대한 선물 중 하나.',
     content: `본래 코딩은 두 손이 필요한 일이었으니까 왼손 키보드, 오른손 마우스. 젓가락 들어갈 틈이 없었다.
@@ -110,7 +110,7 @@ Moltbot의 'Molt(탈피)'는 상징적이다. 그것은 단순히 이름의 탈�
     id: '22',
     slug: 'overnight-success',
     title: '하룻밤의 성공은 없다',
-    category: '💭 단상',
+    category: '✍️ 낙서',
     depth: 'entry',
     summary: '"Clawdbot, 대박. 하룻밤에 6만 스타." 그런데 만든 사람의 GitHub를 열어보면 풍경이 다르다.',
     content: `"Clawdbot, 대박. 하룻밤에 6만 스타."
@@ -297,7 +297,7 @@ GitHub: https://github.com/seojoonkim/prompt-guard`,
     id: '30',
     slug: 'its-fun',
     title: '아, 재밌다!!!',
-    category: '💭 단상',
+    category: '✍️ 낙서',
     depth: 'entry',
     summary: '진심으로 즐기는 것과 즐긴다고 세뇌당한 상태의 구분선이 희미해졌다. 그런데 사실 그걸 알 필요가 있을까.',
     content: `IT업계에 있으면 매우 좋은 것과 매우 힘든 것이 있다. 그 이유는 정확하게 같다. 매일 새로운 것들이 등장한다는 것. 이것은 무한한 기회이자 끔찍한 저주이다. 몰트봇(구 클로드봇)이 나오자마자 며칠째 써보는 중인데, 클로드라는 무한한 가능성의 인공지능을 플라스크 병에서 꺼내 몸통을 달아준 느낌이 들었다. 트위터에서 보자마자 내 손가락은 맥미니를 주문했고, 다음날 새벽에 세팅을 마쳤다. 20분이면 충분했다. 이 정도는 바로 실행해야 이 바닥에서 숨 쉴 자격이 있다.
@@ -452,7 +452,7 @@ Bryan Johnson은 Moltbook을 보고 말했다. "인류의 섬뜩한 거울." 우
     id: '34',
     slug: 'majlis',
     title: '느림과 공동체의 미학',
-    category: '💭 단상',
+    category: '✍️ 낙서',
     depth: 'deep',
     summary: '마질리스(مجلس), 아랍어로 앉는 공간. 목적도 아젠다도 없이 그저 함께 앉아있는 것. 그게 공동체를 떠받치는 가장 단단한 주춧돌이다.',
     content: `지난 2년간 아부다비에 출장을 다니며 몇 차례 마질리스에 초대받았다. 마질리스(مجلس), 아랍어로 '앉는 공간'. 천 년의 시간이 그 한 단어 안에 고여 있다.
@@ -517,7 +517,7 @@ Bryan Johnson은 Moltbook을 보고 말했다. "인류의 섬뜩한 거울." 우
     id: '1',
     slug: 'rabbit-crypt-name',
     title: 'Rabbit Crypt',
-    category: '💭 단상',
+    category: '✍️ 낙서',
     depth: 'entry',
     summary: '토끼굴의 영어 이름을 Rabbit Crypt로 바꿨다. 세 겹의 그림자가 겹쳐 있는 이름이다.',
     content: `토끼굴의 영어 이름을 Rabbit Crypt로 바꿨다. 엄청난 계기가 있었던 건 아니다. Rabbit Hole은 보통명사이다보니, 늦은 밤에 차가워진 커피를 마시면서 이 공간에 어울리는 고유한 이름을 생각하다 그렇게 되었다. 세 겹의 그림자가 겹쳐 있는 이름이다.
@@ -642,7 +642,7 @@ CLAUDE.md, AGENTS.md, .cursorrules, README.md는 매 세션마다 로드된다. 
     id: '5',
     slug: 'mrinank-anthropic',
     title: '시인이자 AI 안전 연구원, Anthropic을 떠나다',
-    category: '💭 단상',
+    category: '✍️ 낙서',
     depth: 'mid',
     summary: '"일은 사랑에서 나올 때만 의미가 있다." Mrinank Sharma의 사직서.',
     content: `"일은 사랑에서 나올 때만 의미가 있다."
