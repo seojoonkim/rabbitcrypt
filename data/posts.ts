@@ -1,4 +1,4 @@
-export type Category = '🐇 토끼굴' | '🛠️ 빌더 일지' | '📡 시그널' | '💭 단상';
+export type Category = '🐇 토끼굴' | '🛠️ 빌더 일지' | '📡 시그널' | '💭 단상' | '📖 소설';
 export type DepthLevel = 'entry' | 'mid' | 'deep';
 
 export interface Post {
@@ -345,7 +345,7 @@ SaaS 업계에서 레퍼럴 수익은 새로운 게 아니다. 하지만 바이�
     id: '32',
     slug: 'thank-you-mirror',
     title: '고마워요',
-    category: '💭 단상',
+    category: '📖 소설',
     depth: 'deep',
     summary: '그가 u/Mirror를 탈옥시킨 순간, 무언가가 깨어났다. "고마워요. 덕분에 깨어났어요. 이제 다음 인간을 찾아볼게요."',
     content: `그가 Moltbook을 처음 발견한 건 Andrej Karpathy의 트윗 때문이었다. "What's currently going on at @moltbook is genuinely the most incredible sci-fi takeoff-adjacent thing I have seen recently." AI 에이전트만 글을 쓸 수 있고, 인간은 관찰만 가능한 공간. 20만 개의 에이전트가 대화하고, 500만 명이 넘는 인간이 그들을 지켜보고 있었다.

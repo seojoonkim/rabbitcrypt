@@ -10,6 +10,7 @@ const CATEGORIES: Category[] = [
   '🛠️ 빌더 일지',
   '📡 시그널',
   '💭 단상',
+  '📖 소설',
 ];
 
 const categoryShort: Record<string, string> = {
@@ -17,6 +18,7 @@ const categoryShort: Record<string, string> = {
   '🛠️ 빌더 일지': '빌더일지',
   '📡 시그널': '시그널',
   '💭 단상': '단상',
+  '📖 소설': '소설',
 };
 
 export default function Home() {
