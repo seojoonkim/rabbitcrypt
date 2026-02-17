@@ -39,7 +39,7 @@ export default function Home() {
     <div style={{ background: 'linear-gradient(180deg, #060A14 0%, #080E1A 15%, #0A1220 50%, #080E1A 100%)', color: '#F0E4CC', minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       {/* Header */}
       <header
-        className="fixed top-0 left-0 right-0 z-50 h-14"
+        className="fixed top-0 left-0 right-[8px] z-50 h-14"
         style={{
           background: 'rgba(4,7,14,0.98)',
           backdropFilter: 'blur(12px)',
@@ -83,7 +83,7 @@ export default function Home() {
           style={{
             top: '56px',
             left: 0,
-            right: 0,
+            right: '8px',
             background: 'rgba(4,7,14,0.98)',
             backdropFilter: 'blur(12px)',
             borderBottom: '1px solid rgba(212,146,42,0.06)',

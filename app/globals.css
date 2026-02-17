@@ -72,18 +72,18 @@ body {
 
 /* ─── Custom scrollbar ─── */
 ::-webkit-scrollbar {
-  width: 4px;
-  height: 4px;
+  width: 8px;
+  height: 8px;
 }
 ::-webkit-scrollbar-track {
   background: #080E1A;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(212, 146, 42, 0.25);
-  border-radius: 2px;
+  background: rgba(212, 146, 42, 0.3);
+  border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(212, 146, 42, 0.45);
+  background: rgba(212, 146, 42, 0.5);
 }
 
 /* ─── No-scrollbar utility ─── */
