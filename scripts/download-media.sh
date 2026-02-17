@@ -1,0 +1,70 @@
+#!/bin/bash
+set -e
+DEST="/Users/gimseojun/rabbit-crypt/public/media/posts"
+cd "$DEST"
+
+echo "=== Downloading media files ==="
+
+# agentlinter-dev-log
+curl -sL "https://cdn4.telesco.pe/file/SU-ooWqODGE6Z2KgCEejMkur3BvkVZLK1G2oJZXVC8AKftCknkUhs98hAMS0JXxtvfyOp21n4VqYUxcE72aiNQMwBxAWd3AwQGCjlJblTlE6K7axjtIA82xVgHpZI0ThDxDtpNKCg8Gpfl0zcuOgaEENBh4gIWa55fJDi0cuj9LihaLKuyy6WhTigGmglBDW-9_5Zm3t5opAe6C9J1YrYXpfLrkeG5-D0E00RSpNUQ0eXjz3kKAf36DxSETXJA6zyhfUY7cKgsUlVyk3sS_HGMjtA2FJAmjwX9zTRI-gRD0rPZMfFnQ-nnNDK86h8aRYKRCf2mkyfXGLiLNvnpntvA.jpg" -o "agentlinter-dev-log-0.jpg" && echo "OK: agentlinter-dev-log-0.jpg"
+
+# agentlinter-v040
+curl -sL "https://cdn5.telesco.pe/file/SU0jxSrmGT-WEVg5E7VuHPChTUGn1jgM7g4QXihoVPtbIJJDNsHPE0ZCOz4jd8FjdnVmrHUbRmLB8TLh-MzPim3kRsyyQtv9C-1V-d3fR_brkBeeQZ129zL_Jkg7ocEBHiyRG5qkjuzncjkTJhaiw4fNp1gnTKQ-NDJuLXpwgG1tw5pS6CTyr7VwuNW3VN81yfYnyzo8LRPLbsnOmPHOnnvRiZldsMuh0b_Njim73ITfL0NVSGw8cT-oQMtIUOZSYasmorsRI8Vn1-z-LUqh-7CNISoqf2g9D3knvAbJDRqjKYVL9RGc57y-nARp6npWPiIHwRrxbj1XBsu-Wd3pYw.jpg" -o "agentlinter-v040-0.jpg" && echo "OK: agentlinter-v040-0.jpg"
+
+# claude-md-english
+curl -sL "https://cdn4.telesco.pe/file/N7B_nBU6P6TP5Y4RsYqZoDxVhwqR75hj4s-KgzxRPHp-4ptlK0PapRW7v9OyihwFvDKuxoFl97CInYepZzSwUyuMsocsQzLIUcNpxpmdqoM1T-PxrXAnXAGiVZYG_UIwY2Y6IR_jt4rfXzck95Renpus-iksV5Y-gWUwBaWJxNjK_AdGgmD3BY63T4FyA5Y9cwR947uPE318-QaSLRlGDWYfK2Jcjo1wBPvPQmvbcOirMbHKo1l3hgGI9bVVDxEqwCWuH_j6DujGU4GCodipy9A_Hzwu4V3g2iO-5SDf_e3C2SS9bQhmD05NGDrkHq7TjQP4DP_aErnTCNcR0IPmuw.jpg" -o "claude-md-english-0.jpg" && echo "OK: claude-md-english-0.jpg"
+
+# mrinank-anthropic (2 images)
+curl -sL "https://cdn5.telesco.pe/file/K1GeBdCw6RDN5MoMc9K01n-mq3JkaSU4YFKS9T5xPDPyeUVGEyoox9Rhs_I3D3LWRWhXbB9RQMogTUtpvoLhAhLkh8cL-Rwj2UtSMVCQmtQywJ_vZKd3EPbm4D9DMyeiWgIR6zcwEAAXyfiJDQJCa5B5Wlrajf_sAy5DoqMhgCBIJEn50r9OQygnPQf7UFSN3lIDx255TkBCagJFRRUhLKRGZNvGbEkBfM7U1eHOilv4OcyUY4mT-1Exf7RWeYC6yUwRV8svE_-_oOnusYu0i8Jv5D33DaRHQv2DIMV2iDeLPbuou_PwlUBO41XS1DN0fSjBSy7iSOYdvaNLBXcJtw.jpg" -o "mrinank-anthropic-0.jpg" && echo "OK: mrinank-anthropic-0.jpg"
+curl -sL "https://cdn5.telesco.pe/file/OaGLq5Rftd6onwntOLpEVYT0y0OhCRVSBtxDboEjEKJF-LNHFu7rbhkVxSmjkMlxy511dtYIcUQLtV6dmkgQ7z2k-V-pgU8fLMiwy-0tjvyUdaDIwxMCUfeFadJP_3jPy_u-7mP5TQb_5lSzB6TakTVeRRAebUjxClCpEB4L6Z5E6sSiQ8R9Ey4litczue7ErND28aG-DNu0LbVmBfp1h8jl7mZB5NTAj5IhNnaC3Xnxs6RF6bVZNJiZP1nv48pNpvZQIaWF7dLOAB4zMAD7eC6kyzL0zMypFf3XQQwbULaoYUj6D-X9iXjFXNDum4WL4YTBpZrvpDt247icypNc5g.jpg" -o "mrinank-anthropic-1.jpg" && echo "OK: mrinank-anthropic-1.jpg"
+
+# tail-stopped
+curl -sL "https://cdn5.telesco.pe/file/Jk-ejMTkaLMOQRqRQ0xSNYQBuxaXb1eeXmMhuqiJ1v825rNHg5lHrOX6N_L1LKaZ1DuhUQK98g5jZCHalmaPTZYvWZ2SBj7NXtcf2X7dT_stjLX3qxKreZo7MWLEceQF6NKg_KV-YQqrLN36xgVVnBcXx0_ez41pZ_npVce0jypkcJonvTa2E_IQE91R_EyKZgkpOd00ShIXnrVpXAvItGR_Hwy674GLpzPEsoVdegZ-6JhuAsBJMfmWzqhBmH9-imDqimRCnCQ2svhD9RMGO16x3AcAxCHb_5lweJfj7e86gMu6ZnqBeUmKQYy5vIGbs_H1CChGFUuwsNfmxnzg5Q.jpg" -o "tail-stopped-0.jpg" && echo "OK: tail-stopped-0.jpg"
+
+# zeon-moltbook-vol1
+curl -sL "https://cdn5.telesco.pe/file/So6A7zHd2-wUCdU-b8QW5t_ej7h4RfHZrqXdTZaOuqkTjtsjP29vUXRPYEmurAHYEJqWeVW6U9jZsOY8ji6t4b33AvpPNoUb3ddqz1sZhM6ZuikCHcSJ3Z_plezj-b_nIaQ-yooljkeFGyWy8iWi4m22DMeZZaG0b_ews9AN7WF-xXImD9eOlx-_QzSWi5lBJQSwOuun12yM_A-Y7mclKB3C0k2OIO6snwUdhXYLDh99m-ir_HhFFj1x8spVIwpdvYnR0UpsLe2IhOsymZ3h5c9poEF1hpmfN5VzdCd8zS6sCS89DB25JYfP9SvTjr9IwUuasFOBhhXPy1f4-KAhJg.jpg" -o "zeon-moltbook-vol1-0.jpg" && echo "OK: zeon-moltbook-vol1-0.jpg"
+
+# ip-tvw (jpg + mp4)
+curl -sL "https://cdn5.telesco.pe/file/cP2dgVOTiJv0haYLDe2MRH_yuKGEFsYHcbPdPCNOLgTLdzqJ4KX0kp2l7lb_lTMiCbxAAgA6TYZ-gWuFW8sAOWh8XyueP9Qv768B3H__7UueiTXONT3g5BF1R-vNboj1qto321YoUghWgUMcY44nlQ3Xl_f2aqhrWwsvqLaNLs7AC2YvHUuhVFQEwNeisD5IsuMubAoaKlQSw08Mtmfs9nMSBcZYMEZL-VQrKEEIapM0VNmxQL9HYzgtEjaYeV9f1VUItwZEK5NebCVvsMMe67w01CEwUv5eH_38-KJTshC2TkDiNdVc4P5iUJM1sn2UAHUI7imP9gGHabKzOeZbPw" -o "ip-tvw-0.jpg" && echo "OK: ip-tvw-0.jpg"
+curl -sL "https://cdn5.telesco.pe/file/ed26569f9e.mp4?token=KAjFCQoMZH46E-sNudJv_DDr-issIxDa1WTUU35oBGlNVlK1NaaXoksqZaf6JM-Gi8LX1eZ4EWw6jKlCvIKBmZyTqLlQo06FPE1OtJJ4sX29Fwkxu217o7njbjp8QHlDXQC5hKbm-ySM5PbL9TC5bX6zG2x0Yv79TnqkiSZ3338wfGLx4wV1rP9dNuUdWWSKNQMozX8xkgQAsmVhqKZv9DqbFTki3idIrKat0r_5cjgITWyLnktZmZnhqbms-YiXRoP8ZyS4tKSbEzYkF8OMD-EuV_2hb_alqYElMXkKwwY8TAhLRyTRX788f_gn8PJbzbJeapC5jnikKvF6nO3e3A" -o "ip-tvw-1.mp4" && echo "OK: ip-tvw-1.mp4"
+
+# hvl-fellows
+curl -sL "https://cdn5.telesco.pe/file/JVwvD8X4ti7KhCIDnPU29dyoanbA0I5OKafBW9M5wYfpSmagWYsh6eX4Y7fD8W2ps2XiWieZNQwJA0_-E9nnWfUDpCrh4aKiy-432XK9eu_pyj4STQ2-1VUoPUG7TQX_2e9mGRfxrFyg8skmLqIdOXaKHWaNaF6nGV0pZxhTcZCJ2rW6g6hcFfMq_uNe63BPOqD8_nlXq63VrzBqKYlQiXdaXVQUqnVaQNWHaDDBa2FrmjeFilTSYaAGdhWWXG1XxfLTUIRy58gn_kgT1oUwQj_0BOpjTJJGgkyR0JZXYKmBz14mgC4CwqlWAirPRL1CEG32f53EiwJ0Z6q_pMdRIw.jpg" -o "hvl-fellows-0.jpg" && echo "OK: hvl-fellows-0.jpg"
+
+# quantum-pirates
+curl -sL "https://cdn5.telesco.pe/file/fBsJvQmh1acg1RDxBgsqR04egEcWlWOWxN9lUERmMFX0nDz1Q5Q_JI4Blg3mtgDLtZmQ0Bx-opXwcYuo1dChVV9GyXNdKwdfYqSbdD4hvmQEWEhBpxVB4wBrRa1J5gNmgoc1BgTi9uGjgBt8xG6vzNGvYGkK8iNg0LtKUB2WTyn9-WuAPkLqqWIGpUexJJuXK2K0LGPMeMGqsBZhJ7vMDK_Sni1VcPXWoXpouzbha0Xp5i-r7vDXtDdEm0vouCNOz0aqEfBkKuSIIT8CriRl8uRqiXYq686aekHLJ_z4H8Zt53aDC6by4sCVkkg9wsiUbgoMlkBz5VTxk-XXZIFY0Q.jpg" -o "quantum-pirates-0.jpg" && echo "OK: quantum-pirates-0.jpg"
+
+# china-ai-frontier (jpg + mp4)
+curl -sL "https://cdn5.telesco.pe/file/jV_wHcGp7tJZ9bRDYTSy7HrAWcdWvujJgtxAUMuNgkmCYeuvKYk8gsoI3FigWJnaMJUwjJSPXOfDVOvT0TiKCo4g0WMM1mle3GbyGEWSYVVFE8WkVLMR26m_a80DP0Xwu9v5m5IHSCZbqoNVJ76YEL17CJcrK8qsuGLssLO3n6jIopEzM_osU0ywhI1TNxlSA4LsKBqK8jFalRjW4zshzjv04L6NtXDvUJhiZGDI6SShJ21O3l3w1nX6JfpD7khcPDLvXdhpYitVE9aiOxrzeU9YTeR4MBXdLUJGeKdz1FYeNC7Yz_MGX84Iq19DfCe8Lk6bq6EeENE6BuCwFeHaBA" -o "china-ai-frontier-0.jpg" && echo "OK: china-ai-frontier-0.jpg"
+curl -sL "https://cdn5.telesco.pe/file/e8bea09cac.mp4?token=kGiw3u09YEdZTDJOcNg61ucEf5db--MsiVhQh2zqE34pLcJ2ipdsA5IgVHkAL7Rj9uHWx4_fLb0X0uZllQBpB8ycZ8tko0Fryb9Qsl_rth3LdJPQCGwdvv8wPsdDcAlyfyVrOwc8egnlHlO6ixRHJ8Wyniy5UU-_cW2I0wv2Ko0jswbN50MBRQhMdJMpLuTngwXCdCycBlgmTqBYFlS-aa4yVjDeKI_x40NwTkOqU-SV-kKRHQS76ZAD13ADjLxI2Z2e0tx3FTCvUGOogFVTx4Q8EzI0H85zcTpQ5KV2-rYrbeEhe6zdCif045A-OMTqhi9N3cSmCjNDgPQ15KOPym6gjRpgm8Rr5RPmMbCn3mUXBPnBAEKk7uPNkr5KPIWtbK6ZWHjfULKe4Ev87gbCsiFCZVW5lxc1pIN0rdFJ5EAkUPua0KIfFvU4Dp-6xMV6L5R4uDqiPkmJLPGjXVSRKmASvh0NPXOOIAVcLVZGGcTtt-G8TeYFgSOqIK0F7UTqXXsAZtWtjp53Zy6TOFgUgFA241dDZ9riTvkS-sRyLR_Mz7sVZUlrkmjsyDoM4vpzaWS4GAaO7VqG5sfDrCIcG7LnVcT8rzz76ssz3KNYoolfytTGuU8IYkyokAJHojymxhR4cl1MqFAf5m7Ij6OQ4rywhvxlVF7Od9XzS4DANZc" -o "china-ai-frontier-1.mp4" && echo "OK: china-ai-frontier-1.mp4"
+
+# seedance-30
+curl -sL "https://cdn4.telesco.pe/file/Tw4uX6p7gSgvSlr4lrcXMdLPPKDOZOb59P0qmvN1ReyJxQt8H_Zhh1i9r-9CArvrIUNxxbinBAhi2JrlxVERjTbxx4-Co0Y6uLFIi9rv3hH2Z0J_iVvSGLWj_LhFDp97AMik-Ij_S5sxh1ZErYdDTh-jmYbGZN27mDBA85XlChFvnPPgScW28lHIW5hyQfP35qaTcZ9sF0hLZid9K-wzEbx6iQ3_t1R97TbTKnS1C0av9B9TtJBIZ6w89BJQOTVLMmewpBlnJdkihGDx6xCUo18Hxu1VJpbqmX4p2RY1zQwA1m0hrR4bTURoB1K_znLYqtx4jFWmUx0Zvtqu9BpZpw.jpg" -o "seedance-30-0.jpg" && echo "OK: seedance-30-0.jpg"
+
+# agent-siblings
+curl -sL "https://cdn5.telesco.pe/file/GNFb22eLjFdDOr8B7xB2RkD7F42YWb8XrlWf0BpO0AyK2W30HdlbzNvoaiH2nJMw_Aib1GzXYjeLBLVSRqB4ZDM71bPz4nGONCs1XGyOUMTkZWq4JTyjXwntfYwORBTWbUQjsxS2GBZ_WKaqSlUaCC2eraGchjhRuq8BhYtz6L9shaduMfXJOzZ9APK0O4tyTuGXl3BRhYCLRToaA4ZoeCu0FUyR_cnNmRtYqzxtv4FHDPdbiYa8qvJAiICFxrrWNSgYUTKR4uz-Vo4_uvHPT9hp5GUYBtQBFIDDPkJT3huTD8T1yJI6HnedJFDKMvcMkQIflLzC5xO7UrvfKlHe_Q.jpg" -o "agent-siblings-0.jpg" && echo "OK: agent-siblings-0.jpg"
+
+# matchhz
+curl -sL "https://cdn5.telesco.pe/file/drBlXYTSXCDG7EYiWj-VFVBAcFJLg-NYL4LRod-d6qIn48d0w89RVrhnpcTEYQdKLyHlV8RSiQokOxoxkkz_2MiG0zw1rD_VutMGBBdEANNg2hxrbTY7GUydmZH8LagJlpFb5rL7DlhCQZHJiMQtMDy1osHgfdV8T7whs-OcrwpGM_LhJE10pHzrj-FQ5lZd1115I7ruwL584fhd4_vFCySlfkIRAAJtcYLLaKkuO9CzfWWm81UaQLOfdTRRaYIqPKRfRAiqZ0V7jbDAoBQ7cw37iX5_Pp4u9JnpJ5U-7o7qslaEJKDAsfNlWvwGdCkIV9_eXJo-0TbfB9WfDrDgOw.jpg" -o "matchhz-0.jpg" && echo "OK: matchhz-0.jpg"
+
+# dollar-two-faces (2 images)
+curl -sL "https://cdn5.telesco.pe/file/ZwgawRWR8etk0ryuYa7KWkZ1IkPfDgVETZHm7MjagyYVeMxXDuklkZUYf2gqUmj6hZjMMRobKtWHdABQSUIpMn5tK4vUoj0dmobtXEm23ji6SpSfEj5-3zy8S68tUH11CzI4IFilegYLA10ILyzAP-sFZHLVlo68TD3lbYJjCQidcmF6X3Wo4G2SIpWQ5jOOS8yxYDHqKGBoPgDc6sZmiiKfb_v_SwIG5mRvrNHgpsj3Fc1cgk19VZ-xlXXnCVtwLO3SkFXw5y2XhRXaNhK72EjVadfbactsgj2gIybQxjiBi5-Rz2WL3R82eBqtDbmBdFrXVa5bDw1Ns8gOL5mlww.jpg" -o "dollar-two-faces-0.jpg" && echo "OK: dollar-two-faces-0.jpg"
+curl -sL "https://cdn5.telesco.pe/file/oBaEAejcSm-rjoYwtsdfmNHe7GvZqIRBARPV17yOXFQojS4E7k3n4JR3OD_EoTGVF_EmBumDuA1joydtcDsCUdz4EMCKDB7k-4DDiJyprETpGXTUJzTS0cz73z2J_0xMHdC1s1Y79bcAWMXd-sDGo0gj3wUpA5JoDP4Q_1BsxJ7HTE37fJJy1f154aL4ai4LZFee8dpvmvAGGusY7xU4hVOT5E_AVyT7uaBK6_vNM1Xe3VfvYvHv0dxc1zBl5MHZ6hq8W1AINYkiAp3-dMQQLb2GOZPkC8XF0IpQo6rNo16a3NMk40_5Pc-6QL-MjBHU7_R0CjKHoyJw7g0shSk-4A.jpg" -o "dollar-two-faces-1.jpg" && echo "OK: dollar-two-faces-1.jpg"
+
+# messenger-b2a (jpg + mp4)
+curl -sL "https://cdn5.telesco.pe/file/CzBaJ1L_1u385p_4QXQaizEiKe8upMiMNS_loqL9C8D347mCdinfLtNtvivicDoGA8dyihWKzljfht-BcEBkph2Di2zPpX32542iE1nEvK-W1cGA8UDq3dnv5NOny_MZki2MYlJVDY8kCUaUfhBHS6maNuIpuuuJAL3787B6Z8NMyYlV8yZiRZnP4kZ9oLT5feukqxgCkwbVVSkCz9ovKAmIc0Hh82qFZsfu6woG7ntKnkZeQFU08rXjqszlDxodiEiLN6VNoQk4I9jfZ5U74xgjbwVXlqsdBs8UViQOoBHC6ZLFHDhNVUe19S5EpMYAwe1IaiBLvgkYi2cbvKcKuA" -o "messenger-b2a-0.jpg" && echo "OK: messenger-b2a-0.jpg"
+curl -sL "https://cdn5.telesco.pe/file/43c88453ec.mp4?token=Ys0Yi7iM_yqZmdceC-a3PcGMefZG_D_x0mDcnRnnPR_KtpvJ_uCuG-UEdHGhnhGfxdAkQWfAHzk5ju_wPqZy5Ajuse6r-qoIG_0p4458SAsZMJF8pcvcjlZNcgx7ptjvg2zSbiqyKYcO09ifNpPvW7PJD8OvFzBfg9nLTs6EcYIJZHPqu1iE7gSf7iR_TQ0NL_6OIFsGLOhVhkhSGywDsWZybn8rL6vtPFKbb-loP6bcXOkFWgTlPXWb8_Fn0gW2Zxda6VVuBdJh6Ex6h3bT24EYb45G0wYDMZdZ6BsfV1M-D6XCiAzCuoW_qUvjT0EaxvGafUBkiVYpVUTZtxkwJr5QGtojcoFEPdUfE1yqupZ2Z5CBXKpRr3RNpFCPLxR5wodAr4DqjtBNrY39h7l5CnrKtkMX5DfyDwuuV_oZ2T8qg38WiyP0bpPP3eyT6rjg29P0SYrhgIyDzjvmcLtgw9VAvjBoSvAuhPEVXsgz5PDqqQcses-cnUXEUADl04-p6Igy3BcuMYeKNIzJ8IkMUD1v_BVv1VkDNoLX2Q6cw7nvCzBGeI68kj3jk6YHdNLl0JoHq-_i9wmFAdJJyd7XS8FjniPjiSAyZUc40vhCTjLaVusM1cEgxSAfdabjFXAEQc-rQcyMjs6-0hv16I_uynf708YZ2y-md76JocnT-Xw" -o "messenger-b2a-1.mp4" && echo "OK: messenger-b2a-1.mp4"
+
+# robot-goku-5000 (jpg + mp4)
+curl -sL "https://cdn5.telesco.pe/file/ImusfEJTnMhJMr3fIJdhO3HqJwYCLZgJAyLRKGl5oW0VMw-l3vONgyoonTxhX6IaMjg6JEphYA55e4kSPWrdLsLYLl8eefD2yTUP4LD0QkflWtMopB042y057vsDeP-Jg3ITWUn2LwlUgxiwU9FKpkpCECtYNHav0CRxsyJ7x6EPW2fwUbCkv6YvYcMWvyOobr1-jV6E__K8TtOdtaMY0oGyFRP1tCvI1M-vIDl9PZlTzzEh-vd2DGyRRDAMuZq9x6ing0zFHLfpXTlhSv3hzn7E90Ixzsy2I1R_3KE_C6KEnUPOFvYK1I6AIQjP52kuoy9Bu2yy_uk6FlzulG9Yqg" -o "robot-goku-5000-0.jpg" && echo "OK: robot-goku-5000-0.jpg"
+curl -sL "https://cdn5.telesco.pe/file/13af43c337.mp4?token=eTOVmRjlzla3UnTtEM7BriV6wqaTu-B-L_T7uKTEGZcMqUcCEEzAn1wTDlEIglo5pjOQ8lD_03NI_1uueiUVdoBEZIACmKr7_VgVSd79r3pmRicOOqu_6YNFvXKmuTrZKYzZarLcP-Dfrim-6Y1gb4qJIT6PwFBLT6fbRmsSAFO7SS6oqprPWBrD7Qu_c6z877lJMZjiiH5BQ7Ez5YkUBIJZ1zsZv8Kq91ycpUEf6VrR5r4kouBy2ZW4oCD9IHb5X76oCsYpduj7cHhbsWaY2Q_31b7SAhqZGdImaZ_4h-VhW1C6eL-6gL3rUQzmpYNre5A6lGd6K9ohZ5dSrMbT5YWOpGPPJgrUDPjvR3m_yJOfwRxPGsEpzEljmzYPM_ib305LxFaLPd8quvZ40nG9StDJNw4Nax8aoRuL-b8n-6oBPvwGr8dv3EhiyaKqNfG_gV9yGSa5ZYGah72x-eD3NdPOT5KFLz0rHzzCgVpF21iBWL2Mh-pu7emhKtuQ6RrzYc-exPxNBiFoTJJ4PSz4BcA7I0RbPUvvLPVvJS478EhQjqh_St8RHpk-3Wpaz8lMgpmY2V0l6NDEKTgkiX0IrwOxzwQ6jsb7EQRO3f6H6YGX2g2aDZYSErWvG97giqxzjDm64dEXG5M0_9VmmbDUMpm4EEasNpxSft6FvnJPxA8" -o "robot-goku-5000-1.mp4" && echo "OK: robot-goku-5000-1.mp4"
+
+# vibelabs-landing
+curl -sL "https://cdn4.telesco.pe/file/TilWnWXfhEP6bWSRjhLmKHV-Ap6Z5WcGe8Zfh4BjSb3Y62agIgODzA23LNfSIp92qXxA-2_envLFEgWy7tYO0hoZTj52-N79LKcqHpCLHeq9ZKkSq2Ow7etAJAYdKydcDguPmNqKDPI9Q4S9h8EY1M8Utv16qclUtfZ9Aujz-wdfS_-lysP74bajG_o-833oqi8IQcOJoOBwhkF46jxqCByqEzGMMmTl7qyx47JHkiguWAbpA2hX0E138TMvfnvONeJiw3EcYEFh3w-rC_iuikU96vDWl5I4pbZ_fEnPLyX2fNrpc25BL9kdrV8y9ABpLz_bCEF1KOvsBQDVXjeXOw.jpg" -o "vibelabs-landing-0.jpg" && echo "OK: vibelabs-landing-0.jpg"
+
+# vibe-coding-tip
+curl -sL "https://cdn4.telesco.pe/file/vOb_0A5AsvZAyyITCfXfwtgDQAOly36VBxnDLmAd3UylHfVHKYhDXbKA_4iaKFArifFEbXPQ1ouyeofp5aqQvC3ENhQZSSQDCKzxIMrkHFDUQWNxXGxDXx2aUpqrj7VjaVrdqXiyrt--wyaIY6N3v8vJpTMeKziUGBsa97jS707tL76S3DrRXGq_F63V8k1J0Onw5xSU_SBqPseNNofxporzn49cosV4B3zzhhXBtZIdSLnT2X4H0yuMBi1LTIgtU0OkpgVDmAM6JzqMd8cS9LQAApQkNTSacQBaoHMaj6vseolpaBBHYVenjXfM0LbO78SYVxFf1meSSgcTt6-j1Q.jpg" -o "vibe-coding-tip-0.jpg" && echo "OK: vibe-coding-tip-0.jpg"
+
+echo ""
+echo "=== Download complete! ==="
+ls -la "$DEST/"

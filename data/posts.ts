@@ -511,6 +511,7 @@ Bryan Johnson은 Moltbook을 보고 말했다. "인류의 섬뜩한 거울." 우
     reactions: 73,
     tags: ['에세이', '아랍', '공동체', '느림', '문화'],
     relatedSlugs: ['its-fun', 'thought-speed', 'overnight-success'],
+    videoUrls: ['/media/posts/majlis-0.mp4'],
   },
   {
     id: '1',
