@@ -164,7 +164,7 @@ export default function Home() {
                   }}
                 >
                   {/* Card with thumbnail */}
-                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                  <div style={{ display: 'flex', gap: '1rem' }}>
                     <div style={{ flex: 1, minWidth: 0 }}>
                       {/* Category */}
                       <div style={{ marginBottom: '0.625rem' }}>
@@ -226,7 +226,7 @@ export default function Home() {
                       </div>
                     </div>
 
-                    {/* Thumbnail */}
+                    {/* Thumbnail — aligned to title top */}
                     {thumb && (
                       <img
                         src={thumb}
@@ -238,6 +238,7 @@ export default function Home() {
                           objectFit: 'cover',
                           borderRadius: '0.375rem',
                           flexShrink: 0,
+                          marginTop: '1.75rem',
                         }}
                       />
                     )}
@@ -252,6 +253,7 @@ export default function Home() {
                           objectFit: 'cover',
                           borderRadius: '0.375rem',
                           flexShrink: 0,
+                          marginTop: '1.75rem',
                         }}
                       />
                     )}
