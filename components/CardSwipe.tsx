@@ -121,17 +121,17 @@ export default function CardSwipe({ posts }: CardSwipeProps) {
         {/* Card content */}
         <div
           key={currentIndex}
-          className={`h-full flex flex-col px-6 md:px-12 py-6 ${
+          className={`h-full flex flex-col ${
             enterDir === 'left'
               ? 'card-enter-left'
               : enterDir === 'right'
               ? 'card-enter-right'
               : ''
           }`}
-          style={{ transform: liveTransform, transition: dragStartX !== null ? 'none' : undefined }}
+          style={{ transform: liveTransform, transition: dragStartX !== null ? 'none' : undefined, padding: '1.5rem 1.5rem 1rem' }}
         >
           {/* ── Top row: category badge + counter ── */}
-          <div className="flex items-center justify-between mb-6">
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.5rem' }}>
             <span
               className="font-mono text-xs px-2.5 py-1 rounded"
               style={{
@@ -159,11 +159,12 @@ export default function CardSwipe({ posts }: CardSwipeProps) {
 
             {/* Main summary — serif for Korean readability */}
             <p
-              className="text-[#E6EDF3] leading-relaxed mb-0 max-w-2xl"
+              className="text-[#E6EDF3] max-w-2xl"
               style={{
-                fontFamily: 'var(--font-serif), "Noto Serif KR", Georgia, serif',
-                fontSize: 'clamp(1.4rem, 3vw, 2.2rem)',
-                lineHeight: '1.75',
+                fontFamily: "'Noto Serif KR', Georgia, serif",
+                fontSize: 'clamp(1.2rem, 4vw, 1.8rem)',
+                lineHeight: '1.7',
+                padding: '0 0.5rem',
               }}
             >
               {post.summary}
@@ -172,18 +173,18 @@ export default function CardSwipe({ posts }: CardSwipeProps) {
 
           {/* ── Bottom: meta row ── */}
           <div
-            className="pt-5 mt-auto"
-            style={{ borderTop: '1px solid #30363D' }}
+            className="mt-auto"
+            style={{ borderTop: '1px solid #30363D', paddingTop: '1.25rem' }}
           >
             {/* Title */}
-            <p className="font-mono text-[#8B949E] text-sm mb-4 line-clamp-1">
+            <p className="font-mono text-[#8B949E] text-sm line-clamp-1" style={{ marginBottom: '1rem' }}>
               <span style={{ color: 'rgba(0,180,216,0.5)' }}>// </span>
               {post.title}
             </p>
 
             {/* Badges + CTA */}
-            <div className="flex items-center justify-between gap-3 flex-wrap">
-              <div className="flex items-center gap-3 flex-wrap">
+            <div className="flex items-center justify-between flex-wrap" style={{ gap: '0.75rem' }}>
+              <div className="flex items-center flex-wrap" style={{ gap: '0.75rem' }}>
                 <DepthBadge depth={post.depth} />
                 <span className="font-mono text-[#8B949E] text-xs">{post.date}</span>
                 <span className="font-mono text-[#8B949E] text-xs">❤ {post.reactions}</span>
@@ -214,8 +215,8 @@ export default function CardSwipe({ posts }: CardSwipeProps) {
 
       {/* ─── Bottom nav ─── */}
       <div
-        className="flex items-center justify-between px-6 py-3"
-        style={{ borderTop: '1px solid #161B22' }}
+        className="flex items-center justify-between"
+        style={{ borderTop: '1px solid #161B22', padding: '0.75rem 1.5rem' }}
       >
         <button
           onClick={goPrev}
@@ -231,7 +232,7 @@ export default function CardSwipe({ posts }: CardSwipeProps) {
         </button>
 
         {/* Progress dots (max 9 shown) */}
-        <div className="flex items-center gap-1">
+        <div className="flex items-center" style={{ gap: '0.25rem' }}>
           {posts.slice(0, Math.min(posts.length, 9)).map((_, i) => (
             <button
               key={i}

@@ -124,7 +124,7 @@ export default function Home() {
               borderBottom: '1px solid #30363D',
             }}
           >
-            <div className="flex gap-2 overflow-x-auto no-scrollbar max-w-4xl mx-auto">
+            <div className="flex overflow-x-auto no-scrollbar max-w-4xl mx-auto" style={{ gap: '0.5rem' }}>
               <button
                 onClick={() => setSelectedCategory('all')}
                 className="flex-shrink-0 font-mono text-xs px-3 py-1 rounded border transition-all"
@@ -162,16 +162,17 @@ export default function Home() {
           </div>
 
           {/* ── Post grid ── */}
-          <div className="max-w-4xl mx-auto px-4 py-6">
+          <div className="max-w-4xl mx-auto" style={{ padding: '1.5rem 1.25rem 4rem' }}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredPosts.map((post) => (
                 <Link
                   key={post.slug}
                   href={`/posts/${post.slug}`}
-                  className="block rounded-lg p-5 transition-all duration-200 group"
+                  className="block rounded-lg transition-all duration-200 group"
                   style={{
                     background: '#161B22',
                     border: '1px solid #30363D',
+                    padding: '1.25rem',
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.borderColor = 'rgba(0,180,216,0.5)';
@@ -183,7 +184,7 @@ export default function Home() {
                   }}
                 >
                   {/* Category + depth row */}
-                  <div className="flex items-center gap-2 mb-3">
+                  <div className="flex items-center" style={{ gap: '0.5rem', marginBottom: '0.75rem' }}>
                     <span
                       className="font-mono text-xs px-2 py-0.5 rounded"
                       style={{
@@ -199,14 +200,14 @@ export default function Home() {
 
                   {/* Title */}
                   <h2
-                    className="text-[#E6EDF3] text-[15px] leading-snug mb-2 line-clamp-2 transition-colors"
-                    style={{ fontFamily: 'var(--font-serif), "Noto Serif KR", Georgia, serif' }}
+                    className="text-[#E6EDF3] text-[15px] leading-snug line-clamp-2 transition-colors"
+                    style={{ marginBottom: '0.5rem', fontFamily: 'var(--font-serif), "Noto Serif KR", Georgia, serif' }}
                   >
                     {post.title}
                   </h2>
 
                   {/* Summary */}
-                  <p className="text-[#8B949E] text-sm leading-relaxed mb-4 line-clamp-2">
+                  <p className="text-[#8B949E] text-sm leading-relaxed line-clamp-2" style={{ marginBottom: '1rem' }}>
                     {post.summary}
                   </p>
 

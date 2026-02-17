@@ -17,18 +17,42 @@ function renderContent(content: string, relatedPosts: Post[]) {
     
     // Headers
     if (line.startsWith('### ')) {
-      return <h3 key={i} className="text-white text-lg font-bold mt-6 mb-3">{line.slice(4)}</h3>;
+      return (
+        <h3
+          key={i}
+          className="text-white text-lg font-bold"
+          style={{ marginTop: '1.5rem', marginBottom: '0.75rem' }}
+        >
+          {line.slice(4)}
+        </h3>
+      );
     }
     if (line.startsWith('## ')) {
-      return <h2 key={i} className="text-white text-xl font-bold mt-8 mb-4">{line.slice(3)}</h2>;
+      return (
+        <h2
+          key={i}
+          className="text-white text-xl font-bold"
+          style={{ marginTop: '2rem', marginBottom: '1rem' }}
+        >
+          {line.slice(3)}
+        </h2>
+      );
     }
     if (line.startsWith('# ')) {
-      return <h1 key={i} className="text-white text-2xl font-bold mt-8 mb-4">{line.slice(2)}</h1>;
+      return (
+        <h1
+          key={i}
+          className="text-white text-2xl font-bold"
+          style={{ marginTop: '2rem', marginBottom: '1rem' }}
+        >
+          {line.slice(2)}
+        </h1>
+      );
     }
     
     // HR
     if (line.trim() === '---') {
-      return <hr key={i} className="border-white/10 my-6" />;
+      return <hr key={i} className="border-white/10" style={{ margin: '1.5rem 0' }} />;
     }
     
     // Code block (single backtick)
@@ -40,7 +64,7 @@ function renderContent(content: string, relatedPosts: Post[]) {
     if (line.startsWith('- ') || line.startsWith('* ')) {
       const text = line.slice(2);
       return (
-        <li key={i} className="ml-4 mb-2">
+        <li key={i} style={{ marginLeft: '1rem', marginBottom: '0.5rem' }}>
           {renderInline(text)}
         </li>
       );
@@ -49,7 +73,7 @@ function renderContent(content: string, relatedPosts: Post[]) {
     // Italic lines (poem/quote style)
     if (line.startsWith('*') && line.endsWith('*') && line.length > 2) {
       return (
-        <p key={i} className="italic text-white/60 my-2">
+        <p key={i} className="italic text-white/60" style={{ margin: '0.5rem 0' }}>
           {line.slice(1, -1)}
         </p>
       );
@@ -57,7 +81,11 @@ function renderContent(content: string, relatedPosts: Post[]) {
     
     // Bold headers inside paragraphs
     return (
-      <p key={i} className="mb-6 leading-8 text-white/80">
+      <p
+        key={i}
+        className="text-white/80"
+        style={{ marginBottom: '1.5rem', lineHeight: '1.9' }}
+      >
         {renderInline(line)}
       </p>
     );
@@ -72,7 +100,7 @@ function renderInline(text: string) {
       return <strong key={i} className="text-amber-400 font-semibold">{part.slice(2, -2)}</strong>;
     }
     if (part.startsWith('`') && part.endsWith('`')) {
-      return <code key={i} className="bg-white/5 border border-white/10 rounded px-1.5 py-0.5 text-amber-400 text-sm font-mono">{part.slice(1, -1)}</code>;
+      return <code key={i} className="bg-white/5 border border-white/10 rounded text-amber-400 text-sm font-mono" style={{ padding: '0.125rem 0.375rem' }}>{part.slice(1, -1)}</code>;
     }
     return <span key={i}>{part}</span>;
   });
@@ -110,38 +138,51 @@ export default async function PostPage({ params }: PostPageProps) {
     <div className="min-h-screen bg-[#0B0E1A]">
       {/* Header bar */}
       <div className="sticky top-0 z-30 bg-[#0B0E1A]/90 backdrop-blur-md border-b border-white/5">
-        <div className="max-w-2xl mx-auto px-4 py-3 flex items-center gap-3">
+        <div
+          className="max-w-2xl mx-auto flex items-center"
+          style={{ padding: '0.75rem 1.5rem', gap: '0.75rem' }}
+        >
           <Link
             href="/"
-            className="text-white/40 hover:text-white/70 transition-colors text-sm flex items-center gap-1"
+            className="text-white/40 hover:text-white/70 transition-colors text-sm flex items-center"
+            style={{ gap: '0.25rem' }}
           >
             ← 토끼굴
           </Link>
           <span className="text-white/20 text-sm flex-1 truncate hidden sm:block">
             {post.title}
           </span>
-          <span className="text-white/30 text-xs flex items-center gap-1">
+          <span className="text-white/30 text-xs flex items-center" style={{ gap: '0.25rem' }}>
             ❤️ {post.reactions}
           </span>
         </div>
       </div>
 
-      <article className="max-w-2xl mx-auto px-5 py-8">
+      <article style={{ maxWidth: '680px', margin: '0 auto', padding: '2rem 1.5rem 4rem' }}>
         {/* Category */}
-        <div className={`text-sm font-medium mb-3 ${categoryColors[post.category] || 'text-amber-400'}`}>
+        <div
+          className={`text-sm font-medium ${categoryColors[post.category] || 'text-amber-400'}`}
+          style={{ marginBottom: '0.75rem' }}
+        >
           {post.category}
         </div>
 
         {/* Title */}
         <h1
-          className="text-2xl sm:text-3xl font-bold text-white leading-tight mb-4"
-          style={{ fontFamily: "var(--font-serif), 'Noto Serif KR', Georgia, serif" }}
+          className="text-2xl sm:text-3xl font-bold text-white leading-tight"
+          style={{
+            fontFamily: "var(--font-serif), 'Noto Serif KR', Georgia, serif",
+            marginBottom: '1rem',
+          }}
         >
           {post.title}
         </h1>
 
         {/* Meta row */}
-        <div className="flex flex-wrap items-center gap-3 mb-6 pb-6 border-b border-white/10">
+        <div
+          className="flex flex-wrap items-center border-b border-white/10"
+          style={{ gap: '0.75rem', marginBottom: '1.5rem', paddingBottom: '1.5rem' }}
+        >
           <DepthBadge depth={post.depth} />
           <span className="text-white/30 text-sm">
             {new Date(post.date).toLocaleDateString('ko-KR', {
@@ -150,13 +191,16 @@ export default async function PostPage({ params }: PostPageProps) {
               day: 'numeric',
             })}
           </span>
-          <span className="text-white/30 text-sm ml-auto flex items-center gap-1">
+          <span className="text-white/30 text-sm ml-auto flex items-center" style={{ gap: '0.25rem' }}>
             ❤️ {post.reactions}
           </span>
         </div>
 
         {/* Summary / Lede */}
-        <div className="bg-amber-400/5 border-l-4 border-amber-400/60 rounded-r-xl p-4 mb-8">
+        <div
+          className="bg-amber-400/5 border-l-4 border-amber-400/60 rounded-r-xl"
+          style={{ padding: '1rem', marginBottom: '2rem' }}
+        >
           <p
             className="text-white/70 italic leading-relaxed text-sm"
             style={{ fontFamily: "var(--font-serif), 'Noto Serif KR', Georgia, serif" }}
@@ -166,16 +210,23 @@ export default async function PostPage({ params }: PostPageProps) {
         </div>
 
         {/* Content */}
-        <div className="post-content">
+        <div
+          className="post-content"
+          style={{ lineHeight: '1.9', fontFamily: "'Noto Serif KR', Georgia, serif" }}
+        >
           {renderContent(post.content, related)}
         </div>
 
         {/* Tags */}
-        <div className="flex flex-wrap gap-2 mt-8 pt-8 border-t border-white/10">
+        <div
+          className="flex flex-wrap border-t border-white/10"
+          style={{ gap: '0.5rem', marginTop: '2rem', paddingTop: '2rem' }}
+        >
           {post.tags.map((tag) => (
             <span
               key={tag}
-              className="px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-white/50"
+              className="bg-white/5 border border-white/10 rounded-full text-xs text-white/50"
+              style={{ padding: '0.25rem 0.625rem' }}
             >
               #{tag}
             </span>
@@ -183,7 +234,10 @@ export default async function PostPage({ params }: PostPageProps) {
         </div>
 
         {/* Telegram reactions */}
-        <div className="mt-6 flex items-center gap-3 text-white/30 text-sm">
+        <div
+          className="flex items-center text-white/30 text-sm"
+          style={{ marginTop: '1.5rem', gap: '0.75rem' }}
+        >
           <span>텔레그램 반응</span>
           <span className="flex items-center gap-1 text-rose-400">
             ❤️ <strong className="text-white/60">{post.reactions}</strong>
@@ -200,7 +254,10 @@ export default async function PostPage({ params }: PostPageProps) {
 
         {/* Timeline */}
         {sameTagPosts.length > 1 && (
-          <div className="mt-10 pt-8 border-t border-white/10">
+          <div
+            className="border-t border-white/10"
+            style={{ marginTop: '2.5rem', paddingTop: '2rem' }}
+          >
             <TimelineView
               posts={[post, ...sameTagPosts]}
               tag={topTag}
@@ -210,25 +267,38 @@ export default async function PostPage({ params }: PostPageProps) {
 
         {/* Related posts */}
         {related.length > 0 && (
-          <div className="mt-10 pt-8 border-t border-white/10">
-            <h2 className="text-white/50 text-sm mb-4 flex items-center gap-2">
+          <div
+            className="border-t border-white/10"
+            style={{ marginTop: '2.5rem', paddingTop: '2rem' }}
+          >
+            <h2
+              className="text-white/50 text-sm flex items-center"
+              style={{ marginBottom: '1rem', gap: '0.5rem' }}
+            >
               <span className="text-amber-400/60 font-mono">{'// '}</span>
               연관 글
             </h2>
-            <div className="space-y-3">
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               {related.map((r) => (
                 <Link
                   key={r.slug}
                   href={`/posts/${r.slug}`}
-                  className="block bg-[#131726] border border-white/8 rounded-xl p-4 hover:border-amber-400/30 transition-all group"
+                  className="block bg-[#131726] border border-white/8 rounded-xl hover:border-amber-400/30 transition-all group"
+                  style={{ padding: '1rem' }}
                 >
-                  <div className="text-white/80 text-sm font-medium mb-1 group-hover:text-white transition-colors">
+                  <div
+                    className="text-white/80 text-sm font-medium group-hover:text-white transition-colors"
+                    style={{ marginBottom: '0.25rem' }}
+                  >
                     {r.title}
                   </div>
-                  <div className="text-white/40 text-xs line-clamp-2 mb-2">
+                  <div
+                    className="text-white/40 text-xs line-clamp-2"
+                    style={{ marginBottom: '0.5rem' }}
+                  >
                     {r.summary}
                   </div>
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center" style={{ gap: '0.5rem' }}>
                     <DepthBadge depth={r.depth} />
                     <span className="text-white/30 text-xs">{r.category}</span>
                   </div>
@@ -239,7 +309,7 @@ export default async function PostPage({ params }: PostPageProps) {
         )}
 
         {/* Back */}
-        <div className="mt-10 text-center">
+        <div style={{ marginTop: '2.5rem', textAlign: 'center' }}>
           <Link
             href="/"
             className="inline-flex items-center gap-2 text-amber-400/60 hover:text-amber-400 transition-colors text-sm"
