@@ -4,6 +4,7 @@ import { posts, getPostBySlug, getRelatedPosts, Post } from '@/data/posts';
 import DepthBadge from '@/components/DepthBadge';
 import TimelineView from '@/components/TimelineView';
 import KnowledgeGraphWrapper from '@/components/KnowledgeGraphWrapper';
+import AutoPlayVideo from '@/components/AutoPlayVideo';
 import relationsData from '@/data/relations.json';
 
 export async function generateStaticParams() {
@@ -275,8 +276,8 @@ export default async function PostPage({ params }: PostPageProps) {
           </span>
         </div>
 
-        {/* Media section — images (top) */}
-        {post.mediaUrls && post.mediaUrls.length > 0 && (
+        {/* Media section — images (top, skip if video exists) */}
+        {post.mediaUrls && post.mediaUrls.length > 0 && !(post.videoUrls && post.videoUrls.length > 0) && (
           <div
             style={{
               marginBottom: '1.5rem',
@@ -308,19 +309,7 @@ export default async function PostPage({ params }: PostPageProps) {
           <div style={{ marginBottom: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             {post.videoUrls.map((url, i) => (
               url.startsWith('/') || (url.startsWith('http') && !url.includes('t.me')) ? (
-                <video
-                  key={i}
-                  src={url}
-                  controls
-                  playsInline
-                  style={{
-                    width: '100%',
-                    borderRadius: '0.75rem',
-                    border: '1px solid rgba(212,146,42,0.15)',
-                    background: '#000',
-                    display: 'block',
-                  }}
-                />
+                <AutoPlayVideo key={i} src={url} />
               ) : (
                 <a
                   key={i}
