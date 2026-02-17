@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <!-- Amber portal radial gradient -->
+    <radialGradient id="portalGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#FDD96A" stop-opacity="1"/>
+      <stop offset="25%"  stop-color="#F0C050" stop-opacity="0.95"/>
+      <stop offset="50%"  stop-color="#E8A830" stop-opacity="0.75"/>
+      <stop offset="75%"  stop-color="#D4922A" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#C07020" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Outer glow filter -->
+    <filter id="portalGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Dark navy background -->
+  <rect width="64" height="64" rx="10" fill="#080E1A"/>
+
+  <!-- Amber portal glow -->
+  <circle cx="32" cy="30" r="22" fill="url(#portalGrad)" filter="url(#portalGlow)"/>
+
+  <!-- Concentric geometric ring decorations -->
+  <circle cx="32" cy="30" r="15" fill="none" stroke="rgba(212,146,42,0.28)" stroke-width="0.7"/>
+  <circle cx="32" cy="30" r="19" fill="none" stroke="rgba(212,146,42,0.16)" stroke-width="0.7"/>
+
+  <!-- ═══ Rabbit silhouette (dark navy, standing) ═══ -->
+
+  <!-- Left ear (slightly angled left) -->
+  <ellipse cx="28.5" cy="13.5" rx="2.8" ry="7.2"
+    fill="#1A2A40" transform="rotate(-7, 28.5, 13.5)"/>
+
+  <!-- Right ear (slightly angled right) -->
+  <ellipse cx="35.5" cy="13.5" rx="2.8" ry="7.2"
+    fill="#1A2A40" transform="rotate(7, 35.5, 13.5)"/>
+
+  <!-- Head -->
+  <circle cx="32" cy="25.5" r="6.5" fill="#1A2A40"/>
+
+  <!-- Body (slightly wider than head, tapers up) -->
+  <ellipse cx="32" cy="39" rx="8" ry="9.5" fill="#1A2A40"/>
+
+  <!-- Left foot -->
+  <ellipse cx="26" cy="47.5" rx="4.5" ry="2" fill="#1A2A40"/>
+
+  <!-- Right foot -->
+  <ellipse cx="38" cy="47.5" rx="4.5" ry="2" fill="#1A2A40"/>
+
+</svg>
