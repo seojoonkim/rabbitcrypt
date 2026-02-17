@@ -436,7 +436,7 @@ ML 스타트업 2회 엑싯 경험을 보유한 연쇄 창업자. 현재 대통�
     reactions: 34,
     tags: ['Hashed', 'HVL', '커뮤니티', 'Web3', 'AI'],
     relatedSlugs: ['vibelabs-landing', 'hvl-fellows', 'vibe-founders-era'],
-    mediaUrls: ['/media/posts/hvl-first-meetup-0.jpg'],
+    mediaUrls: [],
   },
 
   {
