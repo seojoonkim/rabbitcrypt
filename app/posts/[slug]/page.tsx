@@ -57,7 +57,7 @@ function renderContent(content: string, relatedPosts: Post[]) {
     
     // Bold headers inside paragraphs
     return (
-      <p key={i} className="mb-4 leading-relaxed text-white/80">
+      <p key={i} className="mb-6 leading-8 text-white/80">
         {renderInline(line)}
       </p>
     );
@@ -133,7 +133,10 @@ export default async function PostPage({ params }: PostPageProps) {
         </div>
 
         {/* Title */}
-        <h1 className="text-2xl sm:text-3xl font-bold text-white leading-tight mb-4">
+        <h1
+          className="text-2xl sm:text-3xl font-bold text-white leading-tight mb-4"
+          style={{ fontFamily: "var(--font-serif), 'Noto Serif KR', Georgia, serif" }}
+        >
           {post.title}
         </h1>
 
@@ -154,7 +157,10 @@ export default async function PostPage({ params }: PostPageProps) {
 
         {/* Summary / Lede */}
         <div className="bg-amber-400/5 border-l-4 border-amber-400/60 rounded-r-xl p-4 mb-8">
-          <p className="text-white/70 italic leading-relaxed text-sm">
+          <p
+            className="text-white/70 italic leading-relaxed text-sm"
+            style={{ fontFamily: "var(--font-serif), 'Noto Serif KR', Georgia, serif" }}
+          >
             {post.summary}
           </p>
         </div>
@@ -206,7 +212,7 @@ export default async function PostPage({ params }: PostPageProps) {
         {related.length > 0 && (
           <div className="mt-10 pt-8 border-t border-white/10">
             <h2 className="text-white/50 text-sm mb-4 flex items-center gap-2">
-              <span className="text-amber-400">🔗</span>
+              <span className="text-amber-400/60 font-mono">{'// '}</span>
               연관 글
             </h2>
             <div className="space-y-3">

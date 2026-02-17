@@ -163,7 +163,7 @@ export default function Home() {
 
           {/* ── Post grid ── */}
           <div className="max-w-4xl mx-auto px-4 py-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredPosts.map((post) => (
                 <Link
                   key={post.slug}

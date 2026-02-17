@@ -147,22 +147,23 @@ export default function CardSwipe({ posts }: CardSwipeProps) {
             </span>
           </div>
 
-          {/* ── Center: quote block ── */}
-          <div className="flex-1 flex flex-col justify-center">
+          {/* ── Center: quote block (pinned to ~40% of card height) ── */}
+          <div className="flex-1 flex flex-col justify-center pb-[20%]">
             {/* Terminal prompt decoration */}
             <div
-              className="font-mono text-3xl leading-none mb-5 select-none"
-              style={{ color: 'rgba(0,180,216,0.25)' }}
+              className="font-mono text-4xl leading-none mb-4 select-none"
+              style={{ color: 'rgba(0,180,216,0.30)' }}
             >
               &gt;_
             </div>
 
             {/* Main summary — serif for Korean readability */}
             <p
-              className="text-[#E6EDF3] leading-relaxed mb-6 max-w-2xl"
+              className="text-[#E6EDF3] leading-relaxed mb-0 max-w-2xl"
               style={{
                 fontFamily: 'var(--font-serif), "Noto Serif KR", Georgia, serif',
-                fontSize: 'clamp(1.15rem, 2.5vw, 1.6rem)',
+                fontSize: 'clamp(1.4rem, 3vw, 2.2rem)',
+                lineHeight: '1.75',
               }}
             >
               {post.summary}
