@@ -254,7 +254,7 @@ export default async function PostPage({ params }: PostPageProps) {
 
         {/* Title */}
         <h1
-          className="text-[2.25rem] sm:text-[3rem] font-bold"
+          className="text-[2.75rem] sm:text-[3.75rem] font-bold"
           style={{
             fontFamily: "var(--font-display), var(--font-serif), 'Noto Serif KR', Georgia, serif",
             color: '#F0E4CC',
