@@ -1,26 +1,131 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #0B0E1A;
+  --gold: #E8A830;
+  --gold-dim: rgba(232, 168, 48, 0.4);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0E1A;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(232, 168, 48, 0.3);
+  border-radius: 2px;
+}
+
+/* Prose styles for post content */
+.post-content {
+  font-family: var(--font-serif), Georgia, serif;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3 {
+  color: white;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+.post-content p {
+  margin-bottom: 1.25rem;
+}
+
+.post-content strong {
+  color: #E8A830;
+  font-weight: 600;
+}
+
+.post-content em {
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+}
+
+.post-content hr {
+  border-color: rgba(255, 255, 255, 0.1);
+  margin: 2rem 0;
+}
+
+.post-content blockquote {
+  border-left: 3px solid #E8A830;
+  padding-left: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+  margin: 1.5rem 0;
+}
+
+.post-content code {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  padding: 0.2em 0.4em;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.875em;
+  color: #E8A830;
+}
+
+.post-content pre {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.post-content pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.post-content ul,
+.post-content ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.post-content li {
+  margin-bottom: 0.5rem;
+}
+
+.post-content a {
+  color: #E8A830;
+  text-decoration: underline;
+  text-decoration-color: rgba(232, 168, 48, 0.4);
+}
+
+/* Animate-in utility */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-in {
+  animation: fadeIn 0.2s ease forwards;
+}
+
+/* Rabbit glow */
+.rabbit-glow {
+  text-shadow: 0 0 40px rgba(232, 168, 48, 0.3);
 }
