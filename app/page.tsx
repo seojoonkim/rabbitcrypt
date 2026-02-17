@@ -34,15 +34,14 @@ export default function Home() {
           Fixed Header — always on top
       ═══════════════════════════════════════════ */}
       <header
-        className="fixed top-0 left-0 right-0 z-50 h-12 flex items-center justify-between"
+        className="fixed top-0 left-0 right-0 z-50 h-12"
         style={{
           background: 'rgba(8,14,26,0.95)',
           backdropFilter: 'blur(12px)',
           borderBottom: '1px solid rgba(212,146,42,0.15)',
-          paddingLeft: '1.25rem',
-          paddingRight: '1.25rem',
         }}
       >
+        <div className="flex items-center justify-between h-full" style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 1.25rem' }}>
         {/* Logo */}
         <div className="flex items-center" style={{ gap: '0.5rem' }}>
           <img src="/favicon.svg" width="28" height="28" alt="Rabbit Crypt" style={{ display: 'block' }} />
@@ -70,6 +69,7 @@ export default function Home() {
             토끼굴
           </span>
         </div>
+        </div>
       </header>
 
       {/* ═══════════════════════════════════════════
@@ -86,12 +86,12 @@ export default function Home() {
             background: 'rgba(8,14,26,0.95)',
             backdropFilter: 'blur(12px)',
             borderBottom: '1px solid rgba(212,146,42,0.1)',
-            padding: '0.75rem 1.25rem',
+            padding: '0.75rem 0',
           }}
         >
           <div
             className="flex overflow-x-auto no-scrollbar"
-            style={{ gap: '0.5rem', maxWidth: '1100px', margin: '0 auto' }}
+            style={{ gap: '0.5rem', maxWidth: '1100px', margin: '0 auto', padding: '0 1.25rem' }}
           >
             <button
               onClick={() => setSelectedCategory('all')}
