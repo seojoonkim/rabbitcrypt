@@ -13,6 +13,13 @@ const CATEGORIES: Category[] = [
   '💭 단상',
 ];
 
+const categoryShort: Record<string, string> = {
+  '🐇 토끼굴': '토끼굴',
+  '🛠️ 빌더 일지': '빌더일지',
+  '📡 시그널': '시그널',
+  '💭 단상': '단상',
+};
+
 type View = 'swipe' | 'list';
 
 export default function Home() {
@@ -25,126 +32,222 @@ export default function Home() {
       : posts.filter((p) => p.category === selectedCategory);
 
   return (
-    <div className="min-h-screen bg-[#0B0E1A] flex flex-col">
-      {/* Header */}
-      <header className="pt-8 pb-4 px-5 flex flex-col items-center border-b border-white/5">
-        <div className="flex items-center gap-3 mb-1">
-          <span className="text-3xl rabbit-glow">🐇</span>
-          <h1 className="text-2xl font-bold text-white tracking-tight rabbit-glow">
+    <div className="bg-[#0D1117] text-[#E6EDF3]">
+      {/* ═══════════════════════════════════════════
+          Fixed Header — always on top
+      ═══════════════════════════════════════════ */}
+      <header
+        className="fixed top-0 left-0 right-0 z-50 h-12 flex items-center justify-between px-5"
+        style={{
+          background: 'rgba(13,17,23,0.95)',
+          backdropFilter: 'blur(8px)',
+          borderBottom: '1px solid #30363D',
+        }}
+      >
+        {/* Logo */}
+        <div className="flex items-center gap-2">
+          <span className="text-base select-none">🐇</span>
+          <span className="font-mono font-bold text-[#E6EDF3] text-sm terminal-cursor">
             Rabbit Crypt
-          </h1>
+          </span>
+          <span className="font-mono text-[#30363D] text-xs hidden sm:inline">·</span>
+          <span className="font-mono text-[#8B949E] text-xs hidden sm:inline">토끼굴</span>
         </div>
-        <p className="text-white/40 text-sm">토끼굴</p>
 
         {/* View toggle */}
-        <div className="flex gap-1 mt-5 bg-white/5 rounded-xl p-1">
+        <div className="flex items-center gap-1">
           <button
             onClick={() => setView('swipe')}
-            className={`px-4 py-1.5 rounded-lg text-sm transition-all ${
+            className="font-mono text-xs px-3 py-1 rounded border transition-all"
+            style={
               view === 'swipe'
-                ? 'bg-amber-400/20 text-amber-400 border border-amber-400/30'
-                : 'text-white/40 hover:text-white/60'
-            }`}
+                ? {
+                    color: '#00B4D8',
+                    borderColor: 'rgba(0,180,216,0.5)',
+                    background: 'rgba(0,180,216,0.1)',
+                  }
+                : {
+                    color: '#8B949E',
+                    borderColor: '#30363D',
+                    background: 'transparent',
+                  }
+            }
           >
-            ✦ 인사이트 카드
+            [카드]
           </button>
           <button
             onClick={() => setView('list')}
-            className={`px-4 py-1.5 rounded-lg text-sm transition-all ${
+            className="font-mono text-xs px-3 py-1 rounded border transition-all"
+            style={
               view === 'list'
-                ? 'bg-amber-400/20 text-amber-400 border border-amber-400/30'
-                : 'text-white/40 hover:text-white/60'
-            }`}
+                ? {
+                    color: '#00B4D8',
+                    borderColor: 'rgba(0,180,216,0.5)',
+                    background: 'rgba(0,180,216,0.1)',
+                  }
+                : {
+                    color: '#8B949E',
+                    borderColor: '#30363D',
+                    background: 'transparent',
+                  }
+            }
           >
-            ≡ 전체 글
+            [목록]
           </button>
         </div>
       </header>
 
-      {/* Swipe View */}
+      {/* ═══════════════════════════════════════════
+          SWIPE VIEW — fullscreen fixed overlay
+      ═══════════════════════════════════════════ */}
       {view === 'swipe' && (
-        <div className="flex-1" style={{ minHeight: '60vh' }}>
+        <div
+          className="fixed left-0 right-0 bottom-0"
+          style={{ top: '48px' }}
+        >
           <CardSwipe posts={filteredPosts} />
         </div>
       )}
 
-      {/* List View */}
+      {/* ═══════════════════════════════════════════
+          LIST VIEW — scrollable
+      ═══════════════════════════════════════════ */}
       {view === 'list' && (
-        <div className="flex-1 px-4 py-6 max-w-2xl mx-auto w-full">
-          {/* Category filter */}
-          <div className="flex gap-2 overflow-x-auto pb-3 mb-6 no-scrollbar">
-            <button
-              onClick={() => setSelectedCategory('all')}
-              className={`flex-shrink-0 px-3 py-1.5 rounded-full text-sm border transition-all ${
-                selectedCategory === 'all'
-                  ? 'bg-amber-400/20 text-amber-400 border-amber-400/40'
-                  : 'border-white/10 text-white/40 hover:text-white/60'
-              }`}
-            >
-              전체
-            </button>
-            {CATEGORIES.map((cat) => (
+        <div className="pt-12 min-h-screen">
+          {/* Category filter — sticky below header */}
+          <div
+            className="sticky z-40 px-4 py-3"
+            style={{
+              top: '48px',
+              background: 'rgba(13,17,23,0.95)',
+              backdropFilter: 'blur(8px)',
+              borderBottom: '1px solid #30363D',
+            }}
+          >
+            <div className="flex gap-2 overflow-x-auto no-scrollbar max-w-4xl mx-auto">
               <button
-                key={cat}
-                onClick={() => setSelectedCategory(cat)}
-                className={`flex-shrink-0 px-3 py-1.5 rounded-full text-sm border transition-all ${
-                  selectedCategory === cat
-                    ? 'bg-amber-400/20 text-amber-400 border-amber-400/40'
-                    : 'border-white/10 text-white/40 hover:text-white/60'
-                }`}
+                onClick={() => setSelectedCategory('all')}
+                className="flex-shrink-0 font-mono text-xs px-3 py-1 rounded border transition-all"
+                style={
+                  selectedCategory === 'all'
+                    ? {
+                        color: '#00B4D8',
+                        borderColor: 'rgba(0,180,216,0.5)',
+                        background: 'rgba(0,180,216,0.1)',
+                      }
+                    : { color: '#8B949E', borderColor: '#30363D' }
+                }
               >
-                {cat}
+                [전체]
               </button>
-            ))}
+              {CATEGORIES.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setSelectedCategory(cat)}
+                  className="flex-shrink-0 font-mono text-xs px-3 py-1 rounded border transition-all"
+                  style={
+                    selectedCategory === cat
+                      ? {
+                          color: '#00B4D8',
+                          borderColor: 'rgba(0,180,216,0.5)',
+                          background: 'rgba(0,180,216,0.1)',
+                        }
+                      : { color: '#8B949E', borderColor: '#30363D' }
+                  }
+                >
+                  [{categoryShort[cat]}]
+                </button>
+              ))}
+            </div>
           </div>
 
-          {/* Post list */}
-          <div className="space-y-3">
-            {filteredPosts.map((post) => (
-              <Link
-                key={post.slug}
-                href={`/posts/${post.slug}`}
-                className="block bg-[#131726] border border-white/8 rounded-2xl p-5 hover:border-amber-400/30 transition-all group"
-              >
-                <div className="flex items-start justify-between gap-3 mb-2">
-                  <h2 className="text-white font-medium text-[15px] leading-snug group-hover:text-amber-100 transition-colors">
+          {/* ── Post grid ── */}
+          <div className="max-w-4xl mx-auto px-4 py-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {filteredPosts.map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/posts/${post.slug}`}
+                  className="block rounded-lg p-5 transition-all duration-200 group"
+                  style={{
+                    background: '#161B22',
+                    border: '1px solid #30363D',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = 'rgba(0,180,216,0.5)';
+                    e.currentTarget.style.boxShadow = '0 0 16px rgba(0,180,216,0.1)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = '#30363D';
+                    e.currentTarget.style.boxShadow = 'none';
+                  }}
+                >
+                  {/* Category + depth row */}
+                  <div className="flex items-center gap-2 mb-3">
+                    <span
+                      className="font-mono text-xs px-2 py-0.5 rounded"
+                      style={{
+                        color: '#00B4D8',
+                        border: '1px solid rgba(0,180,216,0.3)',
+                        background: 'rgba(0,180,216,0.07)',
+                      }}
+                    >
+                      [{categoryShort[post.category]}]
+                    </span>
+                    <DepthBadge depth={post.depth} />
+                  </div>
+
+                  {/* Title */}
+                  <h2
+                    className="text-[#E6EDF3] text-[15px] leading-snug mb-2 line-clamp-2 transition-colors"
+                    style={{ fontFamily: 'var(--font-serif), "Noto Serif KR", Georgia, serif' }}
+                  >
                     {post.title}
                   </h2>
-                  <span className="text-white/30 text-xs flex-shrink-0 mt-0.5">
-                    {new Date(post.date).toLocaleDateString('ko-KR', {
-                      month: 'short',
-                      day: 'numeric',
-                    })}
-                  </span>
-                </div>
-                <p className="text-white/50 text-sm leading-relaxed mb-3 line-clamp-2">
-                  {post.summary}
-                </p>
-                <div className="flex items-center gap-3">
-                  <span className="text-xs text-white/30">{post.category}</span>
-                  <DepthBadge depth={post.depth} />
-                  <span className="text-white/30 text-xs ml-auto">❤️ {post.reactions}</span>
-                </div>
-              </Link>
-            ))}
+
+                  {/* Summary */}
+                  <p className="text-[#8B949E] text-sm leading-relaxed mb-4 line-clamp-2">
+                    {post.summary}
+                  </p>
+
+                  {/* Meta */}
+                  <div className="flex items-center justify-between font-mono text-xs text-[#8B949E]">
+                    <span>{post.date}</span>
+                    <span>❤ {post.reactions}</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+
+            {filteredPosts.length === 0 && (
+              <p className="text-center font-mono text-[#8B949E] text-sm py-16">
+                // no posts in this category
+              </p>
+            )}
           </div>
+
+          {/* Footer */}
+          <footer
+            className="text-center font-mono text-xs text-[#8B949E] py-8"
+            style={{ borderTop: '1px solid #30363D' }}
+          >
+            <p>// Rabbit Crypt · 토끼굴</p>
+            <p className="mt-2">
+              <a
+                href="https://t.me/simon_rabbit_hole"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors"
+                style={{ color: '#8B949E' }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = '#00B4D8')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = '#8B949E')}
+              >
+                @simon_rabbit_hole
+              </a>
+            </p>
+          </footer>
         </div>
       )}
-
-      {/* Footer */}
-      <footer className="text-center text-white/20 text-xs py-6 border-t border-white/5">
-        <p>Rabbit Crypt · 토끼굴</p>
-        <p className="mt-1">
-          <a
-            href="https://t.me/simon_rabbit_hole"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-amber-400/60 transition-colors"
-          >
-            @simon_rabbit_hole
-          </a>
-        </p>
-      </footer>
     </div>
   );
 }

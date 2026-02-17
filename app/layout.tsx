@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Noto_Serif_KR, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 
@@ -6,11 +6,14 @@ const notoSerif = Noto_Serif_KR({
   subsets: ['latin'],
   weight: ['400', '700'],
   variable: '--font-serif',
+  display: 'swap',
 });
 
 const jetbrains = JetBrains_Mono({
   subsets: ['latin'],
+  weight: ['400', '500', '700'],
   variable: '--font-mono',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -23,6 +26,10 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: '#0D1117',
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -30,7 +37,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko" className={`${notoSerif.variable} ${jetbrains.variable}`}>
-      <body className="bg-[#0B0E1A] text-white antialiased min-h-screen">
+      <body className="bg-[#0D1117] text-[#E6EDF3] antialiased min-h-screen">
         {children}
       </body>
     </html>
