@@ -58,53 +58,61 @@ export default function Home() {
       <div className="pt-12 min-h-screen">
           {/* Category filter — sticky below header */}
           <div
-            className="sticky z-40 px-4 py-3"
+            className="sticky z-40"
             style={{
               top: '48px',
               background: 'rgba(13,17,23,0.95)',
               backdropFilter: 'blur(8px)',
               borderBottom: '1px solid #30363D',
+              padding: '0.875rem 1.25rem',
             }}
           >
-            <div className="flex overflow-x-auto no-scrollbar max-w-4xl mx-auto" style={{ gap: '0.5rem' }}>
+            <div
+              className="flex overflow-x-auto no-scrollbar max-w-4xl mx-auto"
+              style={{ gap: '0.625rem' }}
+            >
               <button
                 onClick={() => setSelectedCategory('all')}
-                className="flex-shrink-0 font-mono text-xs px-3 py-1 rounded border transition-all"
-                style={
-                  selectedCategory === 'all'
+                className="flex-shrink-0 font-mono rounded border transition-all"
+                style={{
+                  fontSize: '0.8125rem',
+                  padding: '0.375rem 1rem',
+                  ...(selectedCategory === 'all'
                     ? {
                         color: '#00B4D8',
                         borderColor: 'rgba(0,180,216,0.5)',
                         background: 'rgba(0,180,216,0.1)',
                       }
-                    : { color: '#8B949E', borderColor: '#30363D' }
-                }
+                    : { color: '#8B949E', borderColor: '#30363D' }),
+                }}
               >
-                [전체]
+                전체
               </button>
               {CATEGORIES.map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
-                  className="flex-shrink-0 font-mono text-xs px-3 py-1 rounded border transition-all"
-                  style={
-                    selectedCategory === cat
+                  className="flex-shrink-0 font-mono rounded border transition-all"
+                  style={{
+                    fontSize: '0.8125rem',
+                    padding: '0.375rem 1rem',
+                    ...(selectedCategory === cat
                       ? {
                           color: '#00B4D8',
                           borderColor: 'rgba(0,180,216,0.5)',
                           background: 'rgba(0,180,216,0.1)',
                         }
-                      : { color: '#8B949E', borderColor: '#30363D' }
-                  }
+                      : { color: '#8B949E', borderColor: '#30363D' }),
+                  }}
                 >
-                  [{categoryShort[cat]}]
+                  {categoryShort[cat]}
                 </button>
               ))}
             </div>
           </div>
 
           {/* ── Post grid ── */}
-          <div className="max-w-4xl mx-auto" style={{ padding: '1.5rem 1.25rem 4rem' }}>
+          <div className="max-w-4xl mx-auto" style={{ padding: '2rem 1.25rem 7rem' }}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredPosts.map((post) => (
                 <Link
