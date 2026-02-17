@@ -350,17 +350,15 @@ X (Twitter): [https://x.com/simonkim_nft/status/2016921602659844420](https://x.c
   {
     id: '29',
     slug: 'hvl-first-meetup',
-    title: 'Hashed Vibe Labs 첫 오프라인 밋업',
+    title: 'Hashed Vibe Labs 참가팀 모집 시작!',
     category: '🛠️ 빌딩',
     depth: 'entry',
-    summary: '팀 선발과 무관하게 자주 퍼블릭 밋업을 진행하며 커뮤니티와 함께 노하우를 공유할 예정.',
-    content: `**📢** Hashed Vibe Labs 참가팀 모집 시작!
+    summary: 'Hashed Vibe Labs Seoul 1차 모집 지원이 시작되었습니다.',
+    content: `Hashed Vibe Labs Seoul 1차 모집 지원이 시작되었습니다. 지금 바로 신청하세요!
 
-Hashed Vibe Labs Seoul 1차 모집 지원이 시작되었습니다. 지금 바로 신청하세요!
-
-**🗓** 마감: 2월 19일(목)
-**🔗** 지원하기: [https://vibelabs.hashed.com/](https://vibelabs.hashed.com/)
-**✉️** 이메일: vibelabs@hashed.com
+🗓 마감: 2월 19일(목)
+🔗 지원하기: [https://vibelabs.hashed.com/](https://vibelabs.hashed.com/)
+✉️ 이메일: vibelabs@hashed.com
 
 Where vibes become rocket products.[
   
@@ -369,11 +367,13 @@ Where vibes become rocket products.[
   
   Where vibes become rocket products
 ](https://vibelabs.hashed.com/)`,
-    date: '2026-01-28',
-    reactions: 82,
-    tags: ['HVL', 'Hashed', '커뮤니티', '밋업'],
-    relatedSlugs: ['vibelabs-landing', 'hvl-fellows', 'vibe-founders-era'],
+    date: '2026-02-06',
+    reactions: 34,
+    tags: ['Hashed', 'Vibe Labs', '바이브코딩', '모집'],
+    relatedSlugs: ['vibelabs-landing', 'vibe-founders-era'],
+    mediaUrls: ['/media/posts/hvl-first-meetup-0.jpg'],
   },
+
   {
     id: '30',
     slug: 'its-fun',
@@ -1046,7 +1046,7 @@ AI가 창작의 비용을 제로에 수렴시킨 세상에서, 블록체인은 �
   {
     id: '9',
     slug: 'quantum-pirates',
-    title: '690만 BTC를 노리는 양자 해적들',
+    title: '690만 BTC를 노리는 양자 해적들: 비트코인판 "대해적시대"가 열린다',
     category: '🐇 탐험',
     depth: 'deep',
     summary: '양자컴퓨터가 완성되는 순간, 블록체인에 공개키가 노출된 약 690만 BTC는 먼저 손에 넣는 자가 임자인 보물이 된다.',
@@ -1685,7 +1685,15 @@ ML 스타트업 2회 엑싯 경험을 보유한 연쇄 창업자. 현재 대통�
 
 AI는 인간을 대체하지 않는다. 적어도 아직은. AI는 인간이 인간다운 일에 집중할 수 있게 해준다. 이제 정보를 단순히 옮기는 것은 인간 본연의 일이 아니다. 판단하고, 결정하고, 책임지는 것이 보다 인간다운 일이다.
 
-우리는 그 경계를 다시 그리는 시대를 맞이했다.`,
+우리는 그 경계를 다시 그리는 시대를 맞이했다.
+
+[https://seojoonkim.medium.com/agentic-vc-a518ca24edba](https://seojoonkim.medium.com/agentic-vc-a518ca24edba)[
+  
+  Medium
+  
+  AI 에이전트와 함께 20명이 1000명처럼 일하는 조직 만들기
+  이 글은 조직의 정의가 바뀌는 순간에 대한 기록이다. 에이전트 모더레이터와 함께 인원 수가 아니라 판단의 밀도, 직급이 아니라 정보 흐름의 길이가 조직의 성능을 결정하는 시대.
+](https://seojoonkim.medium.com/agentic-vc-a518ca24edba)`,
     date: '2026-01-28',
     reactions: 18,
     tags: ['AI', '에이전트', '조직', 'Hashed', '생산성'],
@@ -1708,7 +1716,15 @@ ERC-8004는 세 개의 레지스트리로 구성된다. Identity Registry는 에
 
 물론 장밋빛만은 아니다. 시빌 공격 방어는 미해결이고, 결제 통합은 스펙에서 빠졌고, 개발자 경험은 아직 거칠다. 에이전트 자체도 복잡한 작업에서 여전히 환각을 일으킨다. 걸음마 떼는 아이에게 운전면허를 발급하는 것 아니냐는 비판이 가능하다. 하지만 도로는 항상 자동차보다 먼저 깔린다. 인프라가 앱보다 먼저 오는 건 기술 역사에서 예외 없이 반복된 패턴이다.
 
-에이전트 사회는 온다. 그 사회에는 출생신고가 필요하고, 신용 시스템이 필요하고, 법원이 필요하다. 지금 이더리움 위에서 그 헌법의 첫 번째 초안이 쓰여지고 있다.`,
+에이전트 사회는 온다. 그 사회에는 출생신고가 필요하고, 신용 시스템이 필요하고, 법원이 필요하다. 지금 이더리움 위에서 그 헌법의 첫 번째 초안이 쓰여지고 있다. 
+
+[https://medium.com/hashed-kr/pass-for-agent-4fab4a4fbbe0](https://medium.com/hashed-kr/pass-for-agent-4fab4a4fbbe0)[
+  
+  Medium
+  
+  블록체인 위에 새겨진 에이전트의 여권
+  AI 에이전트가 서로를 발견하고, 신뢰하고, 일 시키고, 검증까지 하는 온체인 표준. 인간이 수천 년에 걸쳐 쌓아올린 신뢰 인프라를 에이전트 세계에 이식하려는 이 시도는 앞으로 10년간 ‘우리가 어떤 AI를 믿고 일 시킬 것인가’를 결정하는 사회적…
+](https://medium.com/hashed-kr/pass-for-agent-4fab4a4fbbe0)`,
     date: '2026-02-09',
     reactions: 15,
     tags: ['블록체인', '에이전트', 'ERC-8004', '이더리움', 'AI'],
@@ -1729,9 +1745,19 @@ ERC-8004는 세 개의 레지스트리로 구성된다. Identity Registry는 에
 
 블록체인도 그 길 위에 있다. 미국의 메이저 VC 대부분은 이미 블록체인을 인터넷/핀테크의 연장선에서 보고 있다. Hashed가 에이전트 경제의 인프라로서 블록체인을 주목하고 관련 투자를 집행해온 것도 같은 맥락이다. 현실과 분리된 채 진행되던 탈중앙화 실험의 독창성이 초기만큼 주목받지 못하더라도, 블록체인이 현실 세계의 인프라 속으로 스며드는 일은 이제 막 시작되고 있다. 죽는 것이 아니라 역할이 바뀌는 것이고, 문제를 해결하는 방식이 바뀌는 것이다.
 
-이 글을 쓰면서 내가 2018년 11월에 읽었던 블로그 포스팅 하나가 생생하게 떠올랐다. 뉴욕을 대표하는 VC인 Union Square Ventures의 공동창업자 프레드 윌슨이 쓴 "What Bear Markets Look Like"라는 글이다. Twitter, Tumblr, Etsy, Kickstarter, Coinbase 등에 초기 투자한 것으로 알려진 USV를 이끌어온 인물이다. 비트코인이 2만 달러에서 약 3,500달러까지, 이더리움이 1,400달러에서 110달러대까지 떨어진, 크립토 역사상 가장 혹독했던 겨울 한가운데서 쓰인 글이었다. 그는 닷컴 버블 당시 아마존이 90달러에서 6달러까지 떨어졌다가 고점을 회복하는 데 2007년까지의 시간이 걸렸다는 이야기를 꺼냈다. 그리고 이렇게 썼다. "대기업 대부분이 인터넷을 어리석은 시도로 치부하고 관련 사업을 접었다. 많은 인재가 섹터를 떠났다. 하지만 남은 사람들은 보상받았다. 시간이 오래 걸렸을 뿐이다." 그는 크립토에서도 같은 일이 벌어질 것이라고 예고했다. 규제 당국이 뒤늦게 압박을 가할 것이고, 대기업들이 크립토를 포기할 것이고, 인재들이 떠날 것이라고. 하지만 침체기에 주목해야 할 것은 가격이 아니라 "생명의 징후"라고 했다. 
+이 글을 쓰면서 내가 2018년 11월에 읽었던 블로그 포스팅 하나가 생생하게 떠올랐다. 뉴욕을 대표하는 VC인 Union Square Ventures의 공동창업자 프레드 윌슨이 쓴 "What Bear Markets Look Like"라는 글이다. 
 
-이 자리를 빌려, 내가 블록체인 산업에서 겪었던 두 번째 베어마켓 당시 큰 힘이 되어준 글을 담담한 목소리로 써준 프레드에게 다시 한번 감사한다.`,
+[https://avc.com/2018/11/what-bear-markets-look-like/](https://avc.com/2018/11/what-bear-markets-look-like/)
+
+Twitter, Tumblr, Etsy, Kickstarter, Coinbase 등에 초기 투자한 것으로 알려진 USV를 이끌어온 인물이다. 비트코인이 2만 달러에서 약 3,500달러까지, 이더리움이 1,400달러에서 110달러대까지 떨어진, 크립토 역사상 가장 혹독했던 겨울 한가운데서 쓰인 글이었다. 그는 닷컴 버블 당시 아마존이 90달러에서 6달러까지 떨어졌다가 고점을 회복하는 데 2007년까지의 시간이 걸렸다는 이야기를 꺼냈다. 그리고 이렇게 썼다. "대기업 대부분이 인터넷을 어리석은 시도로 치부하고 관련 사업을 접었다. 많은 인재가 섹터를 떠났다. 하지만 남은 사람들은 보상받았다. 시간이 오래 걸렸을 뿐이다." 그는 크립토에서도 같은 일이 벌어질 것이라고 예고했다. 규제 당국이 뒤늦게 압박을 가할 것이고, 대기업들이 크립토를 포기할 것이고, 인재들이 떠날 것이라고. 하지만 침체기에 주목해야 할 것은 가격이 아니라 "생명의 징후"라고 했다. 
+
+이 자리를 빌려, 내가 블록체인 산업에서 겪었던 두 번째 베어마켓 당시 큰 힘이 되어준 글을 담담한 목소리로 써준 프레드에게 다시 한번 감사한다.[
+  
+  AVC
+  
+  What Bear Markets Look Like
+  It’s hard to look at the price charts of the big crypto assets and not cringe.  But it helps to look back to an earlier time, when a new sector was emerging, and understand what can happen. Amazon peaked in the Internet bubble in late 1999 at around $90/share.…
+](https://avc.com/2018/11/what-bear-markets-look-like/)`,
     date: '2026-02-09',
     reactions: 28,
     tags: ['크립토', '블록체인', 'VC', '스테이블코인', '닷컴'],
