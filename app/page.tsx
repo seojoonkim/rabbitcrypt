@@ -6,16 +6,16 @@ import { posts, Category } from '@/data/posts';
 import DepthBadge from '@/components/DepthBadge';
 
 const CATEGORIES: Category[] = [
-  '🐇 토끼굴',
-  '🛠️ 빌더 일지',
+  '🐇 탐험',
+  '🛠️ 빌딩',
   '📡 시그널',
   '💭 단상',
   '📖 소설',
 ];
 
 const categoryShort: Record<string, string> = {
-  '🐇 토끼굴': '토끼굴',
-  '🛠️ 빌더 일지': '빌더일지',
+  '🐇 탐험': '토끼굴',
+  '🛠️ 빌딩': '빌더일지',
   '📡 시그널': '시그널',
   '💭 단상': '단상',
   '📖 소설': '소설',

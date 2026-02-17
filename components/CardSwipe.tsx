@@ -10,8 +10,8 @@ interface CardSwipeProps {
 }
 
 const categoryShort: Record<string, string> = {
-  '🐇 토끼굴': '토끼굴',
-  '🛠️ 빌더 일지': '빌더일지',
+  '🐇 탐험': '토끼굴',
+  '🛠️ 빌딩': '빌더일지',
   '📡 시그널': '시그널',
   '💭 단상': '단상',
 };

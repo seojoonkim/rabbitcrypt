@@ -171,8 +171,8 @@ export default async function PostPage({ params }: PostPageProps) {
   ).slice(0, 4);
 
   const categoryColors: Record<string, string> = {
-    '🐇 토끼굴': '#D4922A',
-    '🛠️ 빌더 일지': '#9BA8C0',
+    '🐇 탐험': '#D4922A',
+    '🛠️ 빌딩': '#9BA8C0',
     '📡 시그널': '#A88CC0',
     '💭 단상': '#C08888',
   };
@@ -538,7 +538,7 @@ export default async function PostPage({ params }: PostPageProps) {
             className="inline-flex items-center text-sm hover-amber"
             style={{ color: 'rgba(212,146,42,0.55)', gap: '0.5rem' }}
           >
-            🐇 토끼굴로 돌아가기
+            🐇 탐험로 돌아가기
           </Link>
         </div>
       </article>
