@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Noto_Serif_KR, JetBrains_Mono, Playfair_Display, Noto_Sans_KR, Inter } from 'next/font/google';
+import { Noto_Serif_KR, JetBrains_Mono, Playfair_Display, Noto_Sans_KR, Inter, Cinzel } from 'next/font/google';
 import './globals.css';
 
 const notoSerif = Noto_Serif_KR({
@@ -28,6 +28,13 @@ const notoSans = Noto_Sans_KR({
   subsets: ['latin'],
   weight: ['300', '400'],
   variable: '--font-sans',
+  display: 'swap',
+});
+
+const cinzel = Cinzel({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-logo',
   display: 'swap',
 });
 
@@ -65,7 +72,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className={`${notoSerif.variable} ${jetbrains.variable} ${playfairDisplay.variable} ${notoSans.variable} ${inter.variable}`}>
+    <html lang="ko" className={`${notoSerif.variable} ${jetbrains.variable} ${playfairDisplay.variable} ${notoSans.variable} ${inter.variable} ${cinzel.variable}`}>
       <body
         className="antialiased min-h-screen"
         style={{ background: '#080E1A', color: '#F0E4CC' }}

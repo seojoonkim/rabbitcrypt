@@ -50,11 +50,12 @@ export default function Home() {
             <img src="/logo.png" width="40" height="40" alt="Rabbit Crypt" style={{ display: 'block', borderRadius: '6px' }} />
             <span
               style={{
-                fontFamily: "var(--font-display), var(--font-serif), 'Noto Serif KR', Georgia, serif",
-                fontWeight: 700,
+                fontFamily: "var(--font-logo), Cinzel, Georgia, serif",
+                fontWeight: 600,
                 color: '#F0E4CC',
                 fontSize: '1.25rem',
-                letterSpacing: '0.01em',
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase' as const,
               }}
             >
               Rabbit Crypt
@@ -296,9 +297,10 @@ export default function Home() {
         >
           <p
             style={{
-              fontFamily: "var(--font-display), var(--font-serif), 'Noto Serif KR', serif",
+              fontFamily: "var(--font-logo), Cinzel, Georgia, serif",
               color: 'rgba(212,146,42,0.4)',
               fontSize: '0.875rem',
+              letterSpacing: '0.06em',
               marginBottom: '0.5rem',
             }}
           >
