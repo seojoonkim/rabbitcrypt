@@ -47,13 +47,13 @@ export default function Home() {
       >
         <div className="flex items-center justify-between h-full" style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 1.25rem' }}>
           <div className="flex items-center" style={{ gap: '0.5rem' }}>
-            <img src="/logo.png" width="34" height="34" alt="Rabbit Crypt" style={{ display: 'block', borderRadius: '5px' }} />
+            <img src="/logo.png" width="40" height="40" alt="Rabbit Crypt" style={{ display: 'block', borderRadius: '6px' }} />
             <span
               style={{
                 fontFamily: "var(--font-display), var(--font-serif), 'Noto Serif KR', Georgia, serif",
                 fontWeight: 700,
                 color: '#F0E4CC',
-                fontSize: '1.0625rem',
+                fontSize: '1.25rem',
                 letterSpacing: '0.01em',
               }}
             >
@@ -69,7 +69,7 @@ export default function Home() {
                 fontWeight: 300,
               }}
             >
-              토끼굴
+              읽기 전과 후의 세계가 다른 글
             </span>
           </div>
         </div>
