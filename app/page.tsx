@@ -56,11 +56,13 @@ export default function Home() {
           LIST VIEW — scrollable
       ═══════════════════════════════════════════ */}
       <div className="pt-12 min-h-screen">
-          {/* Category filter — sticky below header */}
+          {/* Category filter — fixed below header */}
           <div
-            className="sticky z-40"
+            className="fixed z-40"
             style={{
               top: '48px',
+              left: 0,
+              right: 0,
               background: 'rgba(13,17,23,0.95)',
               backdropFilter: 'blur(8px)',
               borderBottom: '1px solid #30363D',
@@ -112,7 +114,8 @@ export default function Home() {
           </div>
 
           {/* ── Post grid ── */}
-          <div className="max-w-4xl mx-auto" style={{ padding: '2rem 1.25rem 7rem' }}>
+          {/* paddingTop = 헤더(48px) + 필터바(~64px) + 여유 */}
+          <div className="max-w-4xl mx-auto" style={{ padding: '7.5rem 1.25rem 7rem' }}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredPosts.map((post) => (
                 <Link
