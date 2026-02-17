@@ -92,22 +92,22 @@ export default function Home() {
         >
           <div
             className="flex overflow-x-auto no-scrollbar"
-            style={{ gap: '0.5rem', maxWidth: '1000px', margin: '0 auto', padding: '0 1.25rem' }}
+            style={{ gap: '1.5rem', maxWidth: '1000px', margin: '0 auto', padding: '0 1.25rem' }}
           >
             <button
               onClick={() => setSelectedCategory('all')}
               className="flex-shrink-0 transition-all"
               style={{
-                fontSize: '0.8125rem',
-                padding: '0.375rem 1.125rem',
-                borderRadius: '999px',
+                fontSize: '0.875rem',
+                padding: '0.375rem 0.25rem',
                 fontFamily: "var(--font-sans), 'Noto Sans KR', sans-serif",
-                fontWeight: 400,
-                border: '1px solid',
+                background: 'transparent',
+                border: 'none',
                 cursor: 'pointer',
+                borderBottom: '2px solid',
                 ...(selectedCategory === 'all'
-                  ? { color: '#080E1A', borderColor: '#D4922A', background: '#D4922A' }
-                  : { color: 'rgba(240,228,204,0.5)', borderColor: 'rgba(212,146,42,0.2)', background: 'transparent' }),
+                  ? { color: '#D4922A', fontWeight: 700, borderBottomColor: '#D4922A' }
+                  : { color: 'rgba(240,228,204,0.4)', fontWeight: 400, borderBottomColor: 'transparent' }),
               }}
             >
               전체
@@ -118,16 +118,16 @@ export default function Home() {
                 onClick={() => setSelectedCategory(cat)}
                 className="flex-shrink-0 transition-all"
                 style={{
-                  fontSize: '0.8125rem',
-                  padding: '0.375rem 1.125rem',
-                  borderRadius: '999px',
+                  fontSize: '0.875rem',
+                  padding: '0.375rem 0.25rem',
                   fontFamily: "var(--font-sans), 'Noto Sans KR', sans-serif",
-                  fontWeight: 400,
-                  border: '1px solid',
+                  background: 'transparent',
+                  border: 'none',
                   cursor: 'pointer',
+                  borderBottom: '2px solid',
                   ...(selectedCategory === cat
-                    ? { color: '#080E1A', borderColor: '#D4922A', background: '#D4922A' }
-                    : { color: 'rgba(240,228,204,0.5)', borderColor: 'rgba(212,146,42,0.2)', background: 'transparent' }),
+                    ? { color: '#D4922A', fontWeight: 700, borderBottomColor: '#D4922A' }
+                    : { color: 'rgba(240,228,204,0.4)', fontWeight: 400, borderBottomColor: 'transparent' }),
                 }}
               >
                 {categoryShort[cat]}
