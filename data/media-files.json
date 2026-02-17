@@ -1,43 +1,26 @@
 {
-  "agentlinter-dev-log": [
-    "/media/posts/agentlinter-dev-log-0.jpg"
-  ],
-  "claude-md-english": [
-    "/media/posts/claude-md-english-0.jpg"
-  ],
+  "agentlinter-dev-log": ["/media/posts/agentlinter-dev-log-0.jpg"],
+  "agentlinter-v040": ["/media/posts/agentlinter-v040-0.jpg"],
+  "claude-md-english": ["/media/posts/claude-md-english-0.jpg"],
   "mrinank-anthropic": [
     "/media/posts/mrinank-anthropic-0.jpg",
     "/media/posts/mrinank-anthropic-1.jpg"
   ],
-  "tail-stopped": [
-    "/media/posts/tail-stopped-0.jpg"
-  ],
-  "zeon-moltbook-vol1": [
-    "/media/posts/zeon-moltbook-vol1-0.jpg"
-  ],
+  "tail-stopped": ["/media/posts/tail-stopped-0.jpg"],
+  "zeon-moltbook-vol1": ["/media/posts/zeon-moltbook-vol1-0.jpg"],
   "ip-tvw": [
     "/media/posts/ip-tvw-0.jpg",
     "/media/posts/ip-tvw-1.mp4"
   ],
-  "hvl-fellows": [
-    "/media/posts/hvl-fellows-0.jpg"
-  ],
-  "quantum-pirates": [
-    "/media/posts/quantum-pirates-0.jpg"
-  ],
+  "hvl-fellows": ["/media/posts/hvl-fellows-0.jpg"],
+  "quantum-pirates": ["/media/posts/quantum-pirates-0.jpg"],
   "china-ai-frontier": [
     "/media/posts/china-ai-frontier-0.jpg",
     "/media/posts/china-ai-frontier-1.mp4"
   ],
-  "seedance-30": [
-    "/media/posts/seedance-30-0.jpg"
-  ],
-  "agent-siblings": [
-    "/media/posts/agent-siblings-0.jpg"
-  ],
-  "matchhz": [
-    "/media/posts/matchhz-0.jpg"
-  ],
+  "seedance-30": ["/media/posts/seedance-30-0.jpg"],
+  "agent-siblings": ["/media/posts/agent-siblings-0.jpg"],
+  "matchhz": ["/media/posts/matchhz-0.jpg"],
   "dollar-two-faces": [
     "/media/posts/dollar-two-faces-0.jpg",
     "/media/posts/dollar-two-faces-1.jpg"
@@ -50,30 +33,6 @@
     "/media/posts/robot-goku-5000-0.jpg",
     "/media/posts/robot-goku-5000-1.mp4"
   ],
-  "vibelabs-landing": [
-    "/media/posts/vibelabs-landing-0.jpg"
-  ],
-  "vibe-coding-tip": [
-    "/media/posts/vibe-coding-tip-0.jpg"
-  ],
-  "agentic-org": [
-    "/media/posts/agentic-org-0.jpg"
-  ],
-  "abu-dhabi-museum": [
-    "/media/posts/abu-dhabi-museum-0.jpg",
-    "/media/posts/abu-dhabi-museum-1.jpg",
-    "/media/posts/abu-dhabi-museum-2.jpg",
-    "/media/posts/abu-dhabi-museum-3.jpg",
-    "/media/posts/abu-dhabi-museum-4.jpg",
-    "/media/posts/abu-dhabi-museum-5.jpg",
-    "/media/posts/abu-dhabi-museum-6.jpg",
-    "/media/posts/abu-dhabi-museum-7.jpg",
-    "/media/posts/abu-dhabi-museum-8.jpg"
-  ],
-  "agent-passport": [
-    "/media/posts/agent-passport-0.jpg"
-  ],
-  "crypto-not-dead": [
-    "/media/posts/crypto-not-dead-0.jpg"
-  ]
+  "vibelabs-landing": ["/media/posts/vibelabs-landing-0.jpg"],
+  "vibe-coding-tip": ["/media/posts/vibe-coding-tip-0.jpg"]
 }
