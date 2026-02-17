@@ -213,3 +213,58 @@ body {
 .animate-in {
   animation: fadeIn 0.2s ease forwards;
 }
+
+/* ─── Layout: Explicit padding overrides (Tailwind v4 fallback) ─── */
+article {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+article h1 {
+  font-family: 'Noto Serif KR', Georgia, serif !important;
+  font-size: 1.75rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  color: #E6EDF3;
+  padding: 0;
+}
+
+article p, .post-content p {
+  font-family: 'Noto Serif KR', Georgia, serif !important;
+  font-size: 1rem;
+  line-height: 1.9;
+  margin-bottom: 1.5rem;
+  color: rgba(230, 237, 243, 0.85);
+}
+
+article h2, article h3 {
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: #00B4D8;
+}
+
+/* sticky header bar */
+.sticky {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* list view container */
+main {
+  padding: 1rem 1rem 4rem;
+  max-width: 100%;
+}
+
+/* card swipe: ensure full viewport */
+.card-container {
+  width: 100vw;
+  height: 100dvh;
+  padding: 0;
+}
+
+/* inner card content padding */
+.card-content {
+  padding: 2rem 1.5rem;
+}
