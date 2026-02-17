@@ -90,14 +90,6 @@ function renderContent(content: string, relatedPosts: Post[]) {
       );
     }
 
-    if (line.startsWith('*') && line.endsWith('*') && line.length > 2) {
-      return (
-        <p key={i} className="italic" style={{ margin: '0.5rem 0', color: 'rgba(240,228,204,0.55)' }}>
-          {line.slice(1, -1)}
-        </p>
-      );
-    }
-
     return (
       <p
         key={i}
@@ -110,13 +102,20 @@ function renderContent(content: string, relatedPosts: Post[]) {
 }
 
 function renderInline(text: string) {
-  const parts = text.split(/(\*\*[^*]+\*\*|`[^`]+`|\[[^\]]+\]\([^)]+\))/g);
+  const parts = text.split(/(\*\*[^*]+\*\*|\*[^*]+\*|`[^`]+`|\[[^\]]+\]\([^)]+\))/g);
   return parts.map((part, i) => {
     if (part.startsWith('**') && part.endsWith('**')) {
       return (
         <strong key={i} style={{ color: '#E8A830', fontWeight: 600 }}>
           {part.slice(2, -2)}
         </strong>
+      );
+    }
+    if (part.startsWith('*') && part.endsWith('*') && !part.startsWith('**') && part.length > 2) {
+      return (
+        <em key={i} style={{ color: 'rgba(240,228,204,0.55)', fontStyle: 'italic' }}>
+          {part.slice(1, -1)}
+        </em>
       );
     }
     if (part.startsWith('`') && part.endsWith('`')) {
