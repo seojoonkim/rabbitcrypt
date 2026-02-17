@@ -154,6 +154,8 @@ export default function Home() {
                     background: '#0D1826',
                     border: '1px solid rgba(212,146,42,0.08)',
                     padding: '1.25rem 1.375rem',
+                    display: 'flex',
+                    flexDirection: 'column',
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.borderColor = 'rgba(212,146,42,0.35)';
@@ -165,7 +167,7 @@ export default function Home() {
                   }}
                 >
                   {/* Card with thumbnail */}
-                  <div style={{ display: 'flex', gap: '1rem' }}>
+                  <div style={{ display: 'flex', gap: '1rem', flex: 1 }}>
                     <div style={{ flex: 1, minWidth: 0 }}>
                       {/* Category */}
                       <div style={{ marginBottom: '0.625rem' }}>
@@ -213,19 +215,6 @@ export default function Home() {
                         {post.summary}
                       </p>
 
-                      {/* Meta */}
-                      <div
-                        className="flex items-center justify-between"
-                        style={{
-                          color: 'rgba(240,228,204,0.25)',
-                          fontFamily: "var(--font-sans), 'Noto Sans KR', sans-serif",
-                          fontWeight: 300,
-                          fontSize: '0.75rem',
-                        }}
-                      >
-                        <span>{post.date}</span>
-                        <span>❤ {post.reactions}</span>
-                      </div>
                     </div>
 
                     {/* Thumbnail — aligned to title top */}
@@ -259,6 +248,21 @@ export default function Home() {
                         }}
                       />
                     )}
+                  </div>
+                  {/* Meta — pinned to bottom */}
+                  <div
+                    className="flex items-center justify-between"
+                    style={{
+                      color: 'rgba(240,228,204,0.25)',
+                      fontFamily: "var(--font-sans), 'Noto Sans KR', sans-serif",
+                      fontWeight: 300,
+                      fontSize: '0.75rem',
+                      marginTop: 'auto',
+                      paddingTop: '0.75rem',
+                    }}
+                  >
+                    <span>{post.date}</span>
+                    <span>❤ {post.reactions}</span>
                   </div>
                 </Link>
               );
