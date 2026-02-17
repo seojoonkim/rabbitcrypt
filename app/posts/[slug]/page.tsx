@@ -306,7 +306,14 @@ export default async function PostPage({ params }: PostPageProps) {
 
         {/* Media section — images */}
         {post.mediaUrls && post.mediaUrls.length > 0 && (
-          <div style={{ marginTop: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <div
+            style={{
+              marginTop: '1.5rem',
+              display: 'grid',
+              gridTemplateColumns: post.mediaUrls.length === 1 ? '1fr' : 'repeat(2, 1fr)',
+              gap: '0.75rem',
+            }}
+          >
             {post.mediaUrls.map((url, i) => (
               <img
                 key={i}
@@ -314,6 +321,8 @@ export default async function PostPage({ params }: PostPageProps) {
                 alt=""
                 style={{
                   width: '100%',
+                  aspectRatio: post.mediaUrls!.length === 1 ? 'auto' : '1 / 1',
+                  objectFit: 'cover',
                   borderRadius: '0.75rem',
                   border: '1px solid rgba(212,146,42,0.15)',
                   display: 'block',
