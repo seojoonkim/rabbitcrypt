@@ -193,7 +193,7 @@ export default async function PostPage({ params }: PostPageProps) {
       >
         <div
           className="flex items-center"
-          style={{ maxWidth: '1100px', margin: '0 auto', padding: '0.75rem 1.25rem', gap: '0.75rem' }}
+          style={{ maxWidth: '1000px', margin: '0 auto', padding: '0.75rem 1.25rem', gap: '0.75rem' }}
         >
           <Link
             href="/"
@@ -217,7 +217,7 @@ export default async function PostPage({ params }: PostPageProps) {
         </div>
       </div>
 
-      <article style={{ maxWidth: '1100px', margin: '0 auto', padding: '2rem 1.25rem 4rem' }}>
+      <article style={{ maxWidth: '1000px', margin: '0 auto', padding: '2rem 1.25rem 4rem' }}>
         {/* Category */}
         <div
           className="text-sm font-medium"

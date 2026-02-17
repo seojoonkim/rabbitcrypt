@@ -41,7 +41,7 @@ export default function Home() {
           borderBottom: '1px solid rgba(212,146,42,0.15)',
         }}
       >
-        <div className="flex items-center justify-between h-full" style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 1.25rem' }}>
+        <div className="flex items-center justify-between h-full" style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 1.25rem' }}>
         {/* Logo */}
         <div className="flex items-center" style={{ gap: '0.5rem' }}>
           <img src="/favicon.svg" width="28" height="28" alt="Rabbit Crypt" style={{ display: 'block' }} />
@@ -75,7 +75,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           LIST VIEW — scrollable
       ═══════════════════════════════════════════ */}
-      <div className="pt-12 min-h-screen" style={{ width: '100%', maxWidth: '1100px', margin: '0 auto' }}>
+      <div className="pt-12 min-h-screen" style={{ width: '100%', maxWidth: '1000px', margin: '0 auto' }}>
         {/* Category filter — fixed below header */}
         <div
           className="fixed z-40"
@@ -91,7 +91,7 @@ export default function Home() {
         >
           <div
             className="flex overflow-x-auto no-scrollbar"
-            style={{ gap: '0.5rem', maxWidth: '1100px', margin: '0 auto', padding: '0 1.25rem' }}
+            style={{ gap: '0.5rem', maxWidth: '1000px', margin: '0 auto', padding: '0 1.25rem' }}
           >
             <button
               onClick={() => setSelectedCategory('all')}
@@ -152,7 +152,7 @@ export default function Home() {
         </div>
 
         {/* ── Post grid ── */}
-        <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '7.5rem 1.25rem 7rem', width: '100%' }}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '7.5rem 1.25rem 7rem', width: '100%' }}>
           <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: '1.25rem' }}>
             {filteredPosts.map((post) => (
               <Link

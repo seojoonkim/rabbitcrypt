@@ -239,7 +239,7 @@ body::before {
 
 /* ─── Layout: Explicit padding overrides (Tailwind v4 fallback) ─── */
 article {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 2rem 1.25rem 4rem;
 }
