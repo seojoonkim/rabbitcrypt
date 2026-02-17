@@ -24,10 +24,11 @@ const categoryShort: Record<string, string> = {
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState<Category | 'all'>('all');
 
+  const sortedPosts = [...posts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   const filteredPosts =
     selectedCategory === 'all'
-      ? posts
-      : posts.filter((p) => p.category === selectedCategory);
+      ? sortedPosts
+      : sortedPosts.filter((p) => p.category === selectedCategory);
 
   return (
     <div style={{ background: '#080E1A', color: '#F0E4CC', minHeight: '100vh' }}>

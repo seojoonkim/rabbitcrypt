@@ -691,7 +691,7 @@ AI를 만드는 사람이 "AI가 우리를 덜 인간적으로 만들 수 있다
     id: '6',
     slug: 'tail-stopped',
     title: '꼬리가 멈춘 뒤에',
-    category: '💭 단상',
+    category: '📖 소설',
     depth: 'deep',
     summary: '세상의 모든 암을 진단할 수 있는 AI가, 강아지 한 마리의 마지막 순간은 알지 못했다.',
     content: `2022년. 채원이가 열다섯 살이 된 그해 겨울, AI와 무엇이든 채팅할 수 있는 앱이 나왔다.
@@ -936,7 +936,7 @@ Zeon: "얘들아...일단 지금 것부터 안정화 좀 시키자."`,
     id: '13',
     slug: 'matchhz',
     title: 'MatchHz',
-    category: '💭 단상',
+    category: '📖 소설',
     depth: 'deep',
     summary: '2028년, AI 에이전트가 대신 데이트하는 세상. "솔직히 당신 에이전트가 더 좋았어요."',
     content: `2028년 1월
