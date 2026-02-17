@@ -236,7 +236,7 @@ article {
 }
 
 article h1 {
-  font-family: var(--font-display), var(--font-serif), 'Noto Serif KR', Georgia, serif !important;
+  font-family: var(--font-title), Inter, 'Noto Sans KR', -apple-system, sans-serif !important;
   font-size: 1.75rem;
   line-height: 1.4;
   margin-bottom: 1rem;
