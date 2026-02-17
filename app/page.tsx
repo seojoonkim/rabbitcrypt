@@ -166,8 +166,8 @@ export default function Home() {
                   {/* Card with thumbnail */}
                   <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
                     <div style={{ flex: 1, minWidth: 0 }}>
-                      {/* Category + depth */}
-                      <div className="flex items-center" style={{ gap: '0.5rem', marginBottom: '0.625rem' }}>
+                      {/* Category */}
+                      <div style={{ marginBottom: '0.625rem' }}>
                         <span
                           style={{
                             color: '#D4922A',
@@ -180,8 +180,6 @@ export default function Home() {
                         >
                           {categoryShort[post.category]}
                         </span>
-                        <span style={{ color: 'rgba(212,146,42,0.25)', fontSize: '0.375rem' }}>●</span>
-                        <DepthBadge depth={post.depth} />
                       </div>
 
                       {/* Title */}

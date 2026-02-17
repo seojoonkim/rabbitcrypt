@@ -1752,9 +1752,9 @@ export const postsByCategory = (category: Category): Post[] =>
 
 export const depthLabel = (depth: DepthLevel): string => {
   const map: Record<DepthLevel, string> = {
-    entry: '입구 · 5분',
-    mid: '중간 · 15분',
-    deep: '심층 · 30분+',
+    entry: '입구 · 2분',
+    mid: '중간 · 5분',
+    deep: '심층 · 10분+',
   };
   return map[depth];
 };
