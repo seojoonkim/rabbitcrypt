@@ -94,7 +94,7 @@ function renderContent(content: string, relatedPosts: Post[]) {
     return (
       <p
         key={i}
-        style={{ marginBottom: '1.5rem', lineHeight: '1.9', color: 'rgba(240,228,204,0.82)' }}
+        style={{ marginBottom: '1.75rem', lineHeight: '2', fontSize: '1.0625rem', color: 'rgba(240,228,204,0.85)' }}
       >
         {renderInline(line)}
       </p>
@@ -217,7 +217,7 @@ export default async function PostPage({ params }: PostPageProps) {
         </div>
       </div>
 
-      <article style={{ maxWidth: '1000px', margin: '0 auto', padding: '2rem 1.25rem 4rem' }}>
+      <article style={{ maxWidth: '1000px', margin: '0 auto', padding: '2.5rem 1.25rem 4rem' }}>
         {/* Category */}
         <div
           className="text-sm font-medium"
@@ -233,7 +233,7 @@ export default async function PostPage({ params }: PostPageProps) {
 
         {/* Title */}
         <h1
-          className="text-2xl sm:text-3xl font-bold leading-tight"
+          className="text-[1.625rem] sm:text-3xl font-bold leading-tight"
           style={{
             fontFamily: "var(--font-display), var(--font-serif), 'Noto Serif KR', Georgia, serif",
             color: '#F0E4CC',
@@ -336,7 +336,7 @@ export default async function PostPage({ params }: PostPageProps) {
         {/* Content */}
         <div
           className="post-content"
-          style={{ lineHeight: '1.9', fontFamily: "'Noto Serif KR', Georgia, serif" }}
+          style={{ lineHeight: '2', fontSize: '1.0625rem', fontFamily: "'Noto Serif KR', Georgia, serif" }}
         >
           {renderContent(post.content, related)}
         </div>

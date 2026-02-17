@@ -152,8 +152,8 @@ export default function Home() {
         </div>
 
         {/* ── Post grid ── */}
-        <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '7.5rem 1.25rem 7rem', width: '100%' }}>
-          <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: '1.25rem' }}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '7.5rem 1rem 7rem', width: '100%' }}>
+          <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: '1rem' }}>
             {filteredPosts.map((post) => (
               <Link
                 key={post.slug}
@@ -162,7 +162,7 @@ export default function Home() {
                 style={{
                   background: '#0D1826',
                   border: '1px solid rgba(212,146,42,0.12)',
-                  padding: '1.25rem',
+                  padding: '1rem 1.125rem',
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.borderColor = 'rgba(212,146,42,0.45)';
@@ -197,7 +197,7 @@ export default function Home() {
 
                     {/* Title */}
                     <h2
-                      className="text-[15px] leading-snug line-clamp-2 transition-colors"
+                      className="text-base leading-snug line-clamp-2 transition-colors"
                       style={{
                         color: '#F0E4CC',
                         marginBottom: '0.5rem',
