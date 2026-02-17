@@ -1,4 +1,4 @@
-export type Category = '🐇 탐험' | '🛠️ 빌딩' | '📡 시그널' | '💭 단상' | '📖 소설';
+export type Category = '🐇 탐험' | '🛠️ 빌딩' | '💭 단상' | '📖 소설';
 export type DepthLevel = 'entry' | 'mid' | 'deep';
 
 export interface Post {
@@ -83,7 +83,7 @@ Hashed가 찾는 사람들도 결국 그런 이들이다. 누구나 만들 수 �
     id: '21',
     slug: 'moltbot-anthropic-moat',
     title: "Clawdbot에서 Moltbot으로: Anthropic은 '해자(Moat)'를 스스로 메워버렸나?",
-    category: '📡 시그널',
+    category: '🐇 탐험',
     depth: 'mid',
     summary: '상표권 방어라는 정당한 권리를 행사하면서 생태계 확장의 기회를 차단한 Anthropic의 결정.',
     content: `몇시간 전에 벌어진, Anthropic이 오픈소스 프로젝트 Clawdbot에 상표권 침해를 제기하며 이름을 변경하게 한 사건은, 단순 법적 조치를 넘어 AI 플랫폼 전쟁의 흐름을 읽는 시그널이다. 결과적으로 Clawdbot은 Moltbot으로, 캐릭터는 Molty로 재탄생했다. GitHub 스타 6만 개를 기록하며 폭발적으로 성장하던 '킬러 앱'이 하루아침에 강제 리브랜딩을 당한 것이다. 물론 법적으로 "Clawd"와 "Claude"의 유사성을 근거로 한 상표권 방어는 기업의 정당한 권리이자 책무다. 하지만 비즈니스 전략의 차원에서 이 결정은 '소탐대실'의 전형이 될 위험이 크다.
@@ -183,7 +183,7 @@ Moltbot의 'Molt(탈피)'는 상징적이다. 그것은 단순히 이름의 탈�
     id: '25',
     slug: 'gemini-snow-bunny',
     title: 'Gemini 3.5의 "Snow Bunny" leak으로 X가 시끄럽다',
-    category: '📡 시그널',
+    category: '🐇 탐험',
     depth: 'mid',
     summary: '언뜻 보면 "이게 진짜면 게임 끝"이지만, 이 레이스는 모델 성능의 싸움이 아니라 어떤 세계관을 믿게 만드느냐의 싸움이다.',
     content: `Gemini 3.5의 "Snow Bunny" leak으로 X가 시끄럽다. 언뜻 보면 "이게 진짜면 게임 끝 아니냐" 싶은 장면들이 튀어나오지만, 차분히 한 발 물러서 생각해보면 조금 다른 생각이 든다.
@@ -840,7 +840,7 @@ IP의 미래는 세계관을 가장 잘 만든 자가 아니라, 그 세계를 �
     id: '10',
     slug: 'china-ai-frontier',
     title: '중국 프론티어 모델들이 세상을 잡아먹기 시작했다',
-    category: '📡 시그널',
+    category: '🐇 탐험',
     depth: 'mid',
     summary: '모델 성능, 토큰 비용, 전력. AI 경쟁의 세 축에서 중국은 둘을 잡았고, 나머지 하나도 빠르게 좁히고 있다.',
     content: `Seedance 2.0으로 재미삼아 만들어본 Hashed Vibe Labs 홍보 영상. 한 번 만에 나왔다. 캐릭터 일관성, 카메라 워크, 배경음악, 키보드 효과음까지, 프롬프트 몇 줄의 결과로 전부 AI가 알아서 붙였다.
@@ -867,7 +867,7 @@ IP의 미래는 세계관을 가장 잘 만든 자가 아니라, 그 세계를 �
     id: '11',
     slug: 'seedance-30',
     title: 'Seedance 3.0 스펙 루머',
-    category: '📡 시그널',
+    category: '🐇 탐험',
     depth: 'entry',
     summary: '2.0 버전의 1/8 가격으로 10분 이상 영상 생성. 래퍼들은 모두 문을 닫게 되지 않을까.',
     content: `Seedance 2.0 후기를 쓴게 바로 이전 포스팅이었는데, 며칠을 기다려주지 않고 3.0 루머가 나왔다.
@@ -1018,7 +1018,7 @@ Aave가 JPM 달러를 담보로 받는 건 크립토의 항복이 아니다. 그
     id: '15',
     slug: 'messenger-b2a',
     title: '메신저의 새로운 전쟁터, B2A 시장이 열렸다',
-    category: '📡 시그널',
+    category: '🐇 탐험',
     depth: 'mid',
     summary: 'API를 열지 않는 메신저는 스마트폰 시대에 문자 전송만 고집했던 피처폰과 같은 길을 걷게 될 것이다.',
     content: `OpenClaw가 이틀 전 2026.2.15 업데이트에서 실시간 스트리밍 대화를 내놓았다. 이제 텔레그램과 디스코드에서는 AI의 사고가 글자 단위로 흘러나온다.
@@ -1049,7 +1049,7 @@ API를 열지 않는 메신저는 스마트폰 시대에 문자 전송만 고집
     id: '16',
     slug: 'robot-goku-5000',
     title: '5천 달러짜리 손오공',
-    category: '📡 시그널',
+    category: '🐇 탐험',
     depth: 'mid',
     summary: '2026년 춘절 갈라. Unitree Robotics의 H2 휴머노이드 로봇이 손오공을 연기했다. 이것은 기술 과시가 아니라 문화적 예방접종이다.',
     content: `2026년 설날, CCTV 춘절 갈라가 시작되었다. 사람들은 손오공을 보았다. 근두운 위에서 검을 휘두르는 손오공을. 그런데 그 손오공은 배우가 아니었다. Unitree Robotics의 H2 휴머노이드 로봇이었다.
@@ -1080,7 +1080,7 @@ API를 열지 않는 메신저는 스마트폰 시대에 문자 전송만 고집
     id: '17',
     slug: 'hvl-fellows',
     title: 'Hashed Vibe Labs Fellows 소개',
-    category: '📡 시그널',
+    category: '🐇 탐험',
     depth: 'entry',
     summary: '세계적인 오픈소스 프로젝트 개발자부터 칸 광고제 수상 크리에이터, 세계 3대 해커, 아직 고등학생인 차세대 개발자까지.',
     content: `Hashed Vibe Labs 선발 팀에 어드바이저 역할을 해주실 분들을 펠로십 프로그램을 통해 모시게 되었는데, 정말 놀라운 분들이 많이 함께해 주셨다.

@@ -8,15 +8,13 @@ import DepthBadge from '@/components/DepthBadge';
 const CATEGORIES: Category[] = [
   '🐇 탐험',
   '🛠️ 빌딩',
-  '📡 시그널',
   '💭 단상',
   '📖 소설',
 ];
 
 const categoryShort: Record<string, string> = {
-  '🐇 탐험': '토끼굴',
-  '🛠️ 빌딩': '빌더일지',
-  '📡 시그널': '시그널',
+  '🐇 탐험': '탐험',
+  '🛠️ 빌딩': '빌딩',
   '💭 단상': '단상',
   '📖 소설': '소설',
 };
@@ -175,60 +173,99 @@ export default function Home() {
                   e.currentTarget.style.boxShadow = 'none';
                 }}
               >
-                {/* Category + depth row */}
-                <div className="flex items-center" style={{ gap: '0.5rem', marginBottom: '0.75rem' }}>
-                  {/* Category pill */}
-                  <span
-                    className="text-xs"
-                    style={{
-                      color: '#D4922A',
-                      fontFamily: "var(--font-sans), 'Noto Sans KR', sans-serif",
-                      fontWeight: 400,
-                      borderBottom: '1px solid rgba(212,146,42,0.4)',
-                      paddingBottom: '1px',
-                    }}
-                  >
-                    {categoryShort[post.category]}
-                  </span>
-                  <span style={{ color: 'rgba(212,146,42,0.3)', fontSize: '0.625rem' }}>·</span>
-                  <DepthBadge depth={post.depth} />
-                </div>
+                {/* Card inner: text left, thumbnail right */}
+                <div style={{ display: 'flex', gap: '0.875rem', alignItems: 'flex-start' }}>
+                  {/* Text content */}
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    {/* Category + depth row */}
+                    <div className="flex items-center" style={{ gap: '0.5rem', marginBottom: '0.75rem' }}>
+                      <span
+                        className="text-xs"
+                        style={{
+                          color: '#D4922A',
+                          fontFamily: "var(--font-sans), 'Noto Sans KR', sans-serif",
+                          fontWeight: 400,
+                          borderBottom: '1px solid rgba(212,146,42,0.4)',
+                          paddingBottom: '1px',
+                        }}
+                      >
+                        {categoryShort[post.category]}
+                      </span>
+                      <span style={{ color: 'rgba(212,146,42,0.3)', fontSize: '0.625rem' }}>·</span>
+                      <DepthBadge depth={post.depth} />
+                    </div>
 
-                {/* Title */}
-                <h2
-                  className="text-[15px] leading-snug line-clamp-2 transition-colors"
-                  style={{
-                    color: '#F0E4CC',
-                    marginBottom: '0.5rem',
-                    fontFamily: "var(--font-serif), 'Noto Serif KR', Georgia, serif",
-                  }}
-                >
-                  {post.title}
-                </h2>
+                    {/* Title */}
+                    <h2
+                      className="text-[15px] leading-snug line-clamp-2 transition-colors"
+                      style={{
+                        color: '#F0E4CC',
+                        marginBottom: '0.5rem',
+                        fontFamily: "var(--font-serif), 'Noto Serif KR', Georgia, serif",
+                      }}
+                    >
+                      {post.title}
+                    </h2>
 
-                {/* Summary */}
-                <p
-                  className="text-sm leading-relaxed line-clamp-2"
-                  style={{
-                    color: '#8A7A5E',
-                    marginBottom: '1rem',
-                    fontFamily: "var(--font-serif), 'Noto Serif KR', Georgia, serif",
-                  }}
-                >
-                  {post.summary}
-                </p>
+                    {/* Summary */}
+                    <p
+                      className="text-sm leading-relaxed line-clamp-2"
+                      style={{
+                        color: '#8A7A5E',
+                        marginBottom: '1rem',
+                        fontFamily: "var(--font-serif), 'Noto Serif KR', Georgia, serif",
+                      }}
+                    >
+                      {post.summary}
+                    </p>
 
-                {/* Meta */}
-                <div
-                  className="flex items-center justify-between text-xs"
-                  style={{
-                    color: '#8A7A5E',
-                    fontFamily: "var(--font-sans), 'Noto Sans KR', sans-serif",
-                    fontWeight: 300,
-                  }}
-                >
-                  <span>{post.date}</span>
-                  <span>❤ {post.reactions}</span>
+                    {/* Meta */}
+                    <div
+                      className="flex items-center justify-between text-xs"
+                      style={{
+                        color: '#8A7A5E',
+                        fontFamily: "var(--font-sans), 'Noto Sans KR', sans-serif",
+                        fontWeight: 300,
+                      }}
+                    >
+                      <span>{post.date}</span>
+                      <span>❤ {post.reactions}</span>
+                    </div>
+                  </div>
+
+                  {/* Thumbnail (if post has media) */}
+                  {post.mediaUrls && post.mediaUrls.length > 0 && (
+                    <img
+                      src={post.mediaUrls[0]}
+                      alt=""
+                      style={{
+                        width: '80px',
+                        height: '80px',
+                        objectFit: 'cover',
+                        borderRadius: '0.5rem',
+                        border: '1px solid rgba(212,146,42,0.15)',
+                        flexShrink: 0,
+                      }}
+                    />
+                  )}
+                  {(!post.mediaUrls || post.mediaUrls.length === 0) && post.videoUrls && post.videoUrls.length > 0 && (
+                    <div
+                      style={{
+                        width: '80px',
+                        height: '80px',
+                        borderRadius: '0.5rem',
+                        border: '1px solid rgba(212,146,42,0.15)',
+                        background: 'rgba(212,146,42,0.06)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        flexShrink: 0,
+                        fontSize: '1.5rem',
+                      }}
+                    >
+                      🎬
+                    </div>
+                  )}
                 </div>
               </Link>
             ))}
