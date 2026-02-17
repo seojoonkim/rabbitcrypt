@@ -90,7 +90,7 @@ export default function Home() {
           }}
         >
           <div
-            className="flex overflow-x-auto no-scrollbar max-w-4xl mx-auto"
+            className="flex overflow-x-auto no-scrollbar max-w-[1100px] mx-auto"
             style={{ gap: '0.5rem' }}
           >
             <button
@@ -152,7 +152,7 @@ export default function Home() {
         </div>
 
         {/* ── Post grid ── */}
-        <div className="max-w-4xl mx-auto" style={{ padding: '7.5rem 1.25rem 7rem' }}>
+        <div className="max-w-[1100px] mx-auto" style={{ padding: '7.5rem 1.25rem 7rem' }}>
           <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: '1.25rem' }}>
             {filteredPosts.map((post) => (
               <Link
