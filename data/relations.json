@@ -1,0 +1,376 @@
+{
+  "rabbit-crypt-name": [
+    {
+      "slug": "mrinank-anthropic",
+      "score": 76
+    },
+    {
+      "slug": "tail-stopped",
+      "score": 72
+    },
+    {
+      "slug": "matchhz",
+      "score": 68
+    },
+    {
+      "slug": "dollar-two-faces",
+      "score": 55
+    },
+    {
+      "slug": "ip-tvw",
+      "score": 52
+    }
+  ],
+  "agentlinter-dev-log": [
+    {
+      "slug": "agentlinter-v040",
+      "score": 93
+    },
+    {
+      "slug": "claude-md-english",
+      "score": 88
+    },
+    {
+      "slug": "agent-siblings",
+      "score": 76
+    },
+    {
+      "slug": "zeon-moltbook-vol1",
+      "score": 68
+    },
+    {
+      "slug": "hvl-fellows",
+      "score": 60
+    }
+  ],
+  "agentlinter-v040": [
+    {
+      "slug": "agentlinter-dev-log",
+      "score": 93
+    },
+    {
+      "slug": "claude-md-english",
+      "score": 79
+    },
+    {
+      "slug": "quantum-pirates",
+      "score": 73
+    },
+    {
+      "slug": "agent-siblings",
+      "score": 65
+    },
+    {
+      "slug": "hvl-fellows",
+      "score": 58
+    }
+  ],
+  "claude-md-english": [
+    {
+      "slug": "agentlinter-dev-log",
+      "score": 88
+    },
+    {
+      "slug": "agentlinter-v040",
+      "score": 79
+    },
+    {
+      "slug": "agent-siblings",
+      "score": 72
+    },
+    {
+      "slug": "zeon-moltbook-vol1",
+      "score": 65
+    },
+    {
+      "slug": "messenger-b2a",
+      "score": 60
+    }
+  ],
+  "mrinank-anthropic": [
+    {
+      "slug": "rabbit-crypt-name",
+      "score": 76
+    },
+    {
+      "slug": "tail-stopped",
+      "score": 74
+    },
+    {
+      "slug": "matchhz",
+      "score": 70
+    },
+    {
+      "slug": "ip-tvw",
+      "score": 62
+    },
+    {
+      "slug": "china-ai-frontier",
+      "score": 55
+    }
+  ],
+  "tail-stopped": [
+    {
+      "slug": "matchhz",
+      "score": 83
+    },
+    {
+      "slug": "mrinank-anthropic",
+      "score": 74
+    },
+    {
+      "slug": "rabbit-crypt-name",
+      "score": 72
+    },
+    {
+      "slug": "ip-tvw",
+      "score": 62
+    },
+    {
+      "slug": "dollar-two-faces",
+      "score": 58
+    }
+  ],
+  "zeon-moltbook-vol1": [
+    {
+      "slug": "agent-siblings",
+      "score": 91
+    },
+    {
+      "slug": "agentlinter-dev-log",
+      "score": 68
+    },
+    {
+      "slug": "claude-md-english",
+      "score": 65
+    },
+    {
+      "slug": "messenger-b2a",
+      "score": 58
+    },
+    {
+      "slug": "china-ai-frontier",
+      "score": 55
+    }
+  ],
+  "ip-tvw": [
+    {
+      "slug": "dollar-two-faces",
+      "score": 83
+    },
+    {
+      "slug": "quantum-pirates",
+      "score": 76
+    },
+    {
+      "slug": "robot-goku-5000",
+      "score": 65
+    },
+    {
+      "slug": "tail-stopped",
+      "score": 62
+    },
+    {
+      "slug": "mrinank-anthropic",
+      "score": 60
+    }
+  ],
+  "quantum-pirates": [
+    {
+      "slug": "dollar-two-faces",
+      "score": 82
+    },
+    {
+      "slug": "ip-tvw",
+      "score": 76
+    },
+    {
+      "slug": "agentlinter-v040",
+      "score": 72
+    },
+    {
+      "slug": "china-ai-frontier",
+      "score": 58
+    },
+    {
+      "slug": "robot-goku-5000",
+      "score": 52
+    }
+  ],
+  "china-ai-frontier": [
+    {
+      "slug": "seedance-30",
+      "score": 94
+    },
+    {
+      "slug": "robot-goku-5000",
+      "score": 88
+    },
+    {
+      "slug": "messenger-b2a",
+      "score": 72
+    },
+    {
+      "slug": "ip-tvw",
+      "score": 62
+    },
+    {
+      "slug": "hvl-fellows",
+      "score": 58
+    }
+  ],
+  "seedance-30": [
+    {
+      "slug": "china-ai-frontier",
+      "score": 94
+    },
+    {
+      "slug": "robot-goku-5000",
+      "score": 82
+    },
+    {
+      "slug": "messenger-b2a",
+      "score": 65
+    },
+    {
+      "slug": "ip-tvw",
+      "score": 58
+    },
+    {
+      "slug": "hvl-fellows",
+      "score": 54
+    }
+  ],
+  "agent-siblings": [
+    {
+      "slug": "zeon-moltbook-vol1",
+      "score": 91
+    },
+    {
+      "slug": "agentlinter-dev-log",
+      "score": 75
+    },
+    {
+      "slug": "claude-md-english",
+      "score": 72
+    },
+    {
+      "slug": "messenger-b2a",
+      "score": 65
+    },
+    {
+      "slug": "china-ai-frontier",
+      "score": 60
+    }
+  ],
+  "matchhz": [
+    {
+      "slug": "tail-stopped",
+      "score": 83
+    },
+    {
+      "slug": "mrinank-anthropic",
+      "score": 70
+    },
+    {
+      "slug": "rabbit-crypt-name",
+      "score": 68
+    },
+    {
+      "slug": "ip-tvw",
+      "score": 58
+    },
+    {
+      "slug": "agent-siblings",
+      "score": 55
+    }
+  ],
+  "dollar-two-faces": [
+    {
+      "slug": "ip-tvw",
+      "score": 83
+    },
+    {
+      "slug": "quantum-pirates",
+      "score": 82
+    },
+    {
+      "slug": "tail-stopped",
+      "score": 58
+    },
+    {
+      "slug": "agentlinter-v040",
+      "score": 55
+    },
+    {
+      "slug": "mrinank-anthropic",
+      "score": 55
+    }
+  ],
+  "messenger-b2a": [
+    {
+      "slug": "china-ai-frontier",
+      "score": 72
+    },
+    {
+      "slug": "agentlinter-dev-log",
+      "score": 68
+    },
+    {
+      "slug": "agent-siblings",
+      "score": 65
+    },
+    {
+      "slug": "seedance-30",
+      "score": 65
+    },
+    {
+      "slug": "zeon-moltbook-vol1",
+      "score": 58
+    }
+  ],
+  "robot-goku-5000": [
+    {
+      "slug": "china-ai-frontier",
+      "score": 88
+    },
+    {
+      "slug": "seedance-30",
+      "score": 82
+    },
+    {
+      "slug": "ip-tvw",
+      "score": 65
+    },
+    {
+      "slug": "messenger-b2a",
+      "score": 60
+    },
+    {
+      "slug": "hvl-fellows",
+      "score": 55
+    }
+  ],
+  "hvl-fellows": [
+    {
+      "slug": "agentlinter-dev-log",
+      "score": 72
+    },
+    {
+      "slug": "china-ai-frontier",
+      "score": 68
+    },
+    {
+      "slug": "agentlinter-v040",
+      "score": 65
+    },
+    {
+      "slug": "zeon-moltbook-vol1",
+      "score": 62
+    },
+    {
+      "slug": "agent-siblings",
+      "score": 60
+    }
+  ]
+}
