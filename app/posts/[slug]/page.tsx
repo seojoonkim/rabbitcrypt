@@ -249,7 +249,7 @@ export default async function PostPage({ params }: PostPageProps) {
             fontWeight: 300,
           }}
         >
-          {post.category}
+          {post.category.replace(/^[^\p{L}]+/u, '')}
         </div>
 
         {/* Title */}
