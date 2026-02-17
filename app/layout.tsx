@@ -34,6 +34,12 @@ const notoSans = Noto_Sans_KR({
 export const metadata: Metadata = {
   title: 'Rabbit Crypt · 토끼굴',
   description: 'Simon(@simonkim_nft)의 토끼굴 블로그. 읽기 전과 읽은 후의 세계가 한 뼘 정도 어긋나 있는 글.',
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/apple-icon.png',
+  },
   openGraph: {
     title: 'Rabbit Crypt · 토끼굴',
     description: '기술, 크립토, AI의 심층을 파고드는 블로그',
