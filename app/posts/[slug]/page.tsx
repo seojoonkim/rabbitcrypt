@@ -5,6 +5,7 @@ import DepthBadge from '@/components/DepthBadge';
 import TimelineView from '@/components/TimelineView';
 import KnowledgeGraphWrapper from '@/components/KnowledgeGraphWrapper';
 import AutoPlayVideo from '@/components/AutoPlayVideo';
+import TweetEmbed from '@/components/TweetEmbed';
 import relationsData from '@/data/relations.json';
 
 export async function generateStaticParams() {
@@ -66,6 +67,12 @@ function renderContent(content: string, relatedPosts: Post[]) {
       );
     }
 
+    // Twitter/X embed: standalone URL or markdown link on its own line
+    const tweetUrlMatch = line.trim().match(/^(?:\[.*?\]\()?(https?:\/\/(?:twitter\.com|x\.com)\/[^/]+\/status\/\d+[^\s)]*)\)?$/);
+    if (tweetUrlMatch) {
+      return <TweetEmbed key={i} url={tweetUrlMatch[1].replace(/\)$/, '')} />;
+    }
+
     if (line.trim() === '---') {
       return <hr key={i} style={{ borderColor: 'rgba(212,146,42,0.15)', margin: '1.5rem 0' }} />;
     }
@@ -94,7 +101,7 @@ function renderContent(content: string, relatedPosts: Post[]) {
     return (
       <p
         key={i}
-        style={{ marginBottom: '1.75rem', lineHeight: '2', fontSize: '1.0625rem', color: 'rgba(240,228,204,0.85)' }}
+        style={{ marginBottom: '2.25rem', lineHeight: '2.05', fontSize: '1.125rem', color: 'rgba(240,228,204,0.85)' }}
       >
         {renderInline(line)}
       </p>
@@ -103,7 +110,7 @@ function renderContent(content: string, relatedPosts: Post[]) {
 }
 
 function renderInline(text: string) {
-  const parts = text.split(/(\*\*[^*]+\*\*|`[^`]+`)/g);
+  const parts = text.split(/(\*\*[^*]+\*\*|`[^`]+`|\[[^\]]+\]\([^)]+\))/g);
   return parts.map((part, i) => {
     if (part.startsWith('**') && part.endsWith('**')) {
       return (
@@ -126,6 +133,21 @@ function renderInline(text: string) {
         >
           {part.slice(1, -1)}
         </code>
+      );
+    }
+    // Markdown link: [text](url)
+    const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (linkMatch) {
+      return (
+        <a
+          key={i}
+          href={linkMatch[2]}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: '#4A9EED', textDecoration: 'underline', textUnderlineOffset: '3px' }}
+        >
+          {linkMatch[1]}
+        </a>
       );
     }
     return <span key={i}>{part}</span>;
@@ -217,7 +239,7 @@ export default async function PostPage({ params }: PostPageProps) {
         </div>
       </div>
 
-      <article style={{ maxWidth: '1000px', margin: '0 auto', padding: '2.5rem 1.25rem 4rem' }}>
+      <article style={{ maxWidth: '720px', margin: '0 auto', padding: '3.5rem 1.5rem 5rem' }}>
         {/* Category */}
         <div
           className="text-sm font-medium"
@@ -233,11 +255,13 @@ export default async function PostPage({ params }: PostPageProps) {
 
         {/* Title */}
         <h1
-          className="text-[1.625rem] sm:text-3xl font-bold leading-tight"
+          className="text-[2rem] sm:text-[2.75rem] font-bold"
           style={{
             fontFamily: "var(--font-display), var(--font-serif), 'Noto Serif KR', Georgia, serif",
             color: '#F0E4CC',
-            marginBottom: '1rem',
+            marginBottom: '1.25rem',
+            lineHeight: '1.2',
+            letterSpacing: '-0.02em',
           }}
         >
           {post.title}
@@ -248,9 +272,9 @@ export default async function PostPage({ params }: PostPageProps) {
           className="flex flex-wrap items-center"
           style={{
             gap: '0.75rem',
-            marginBottom: '1.5rem',
-            paddingBottom: '1.5rem',
-            borderBottom: '1px solid rgba(212,146,42,0.12)',
+            marginBottom: '2.5rem',
+            paddingBottom: '1.75rem',
+            borderBottom: '1px solid rgba(212,146,42,0.08)',
           }}
         >
           <DepthBadge depth={post.depth} />
@@ -280,7 +304,9 @@ export default async function PostPage({ params }: PostPageProps) {
         {post.mediaUrls && post.mediaUrls.length > 0 && !(post.videoUrls && post.videoUrls.length > 0) && (
           <div
             style={{
-              marginBottom: '1.5rem',
+              marginBottom: '2.5rem',
+              marginLeft: '-2rem',
+              marginRight: '-2rem',
               display: 'grid',
               gridTemplateColumns: post.mediaUrls.length === 1 ? '1fr' : 'repeat(2, 1fr)',
               gap: '0.75rem',
@@ -295,8 +321,7 @@ export default async function PostPage({ params }: PostPageProps) {
                   width: '100%',
                   aspectRatio: post.mediaUrls!.length === 1 ? 'auto' : '1 / 1',
                   objectFit: 'cover',
-                  borderRadius: '0.75rem',
-                  border: '1px solid rgba(212,146,42,0.15)',
+                  borderRadius: '0.5rem',
                   display: 'block',
                 }}
               />
@@ -336,7 +361,7 @@ export default async function PostPage({ params }: PostPageProps) {
         {/* Content */}
         <div
           className="post-content"
-          style={{ lineHeight: '2', fontSize: '1.0625rem', fontFamily: "'Noto Serif KR', Georgia, serif" }}
+          style={{ lineHeight: '2.05', fontSize: '1.125rem', fontFamily: "'Noto Serif KR', Georgia, serif", letterSpacing: '0.01em' }}
         >
           {renderContent(post.content, related)}
         </div>
