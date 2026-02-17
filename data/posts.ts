@@ -13,6 +13,8 @@ export interface Post {
   reactions: number;
   tags: string[];
   relatedSlugs: string[];
+  mediaUrls?: string[];
+  videoUrls?: string[];
 }
 
 export const posts: Post[] = [
@@ -604,6 +606,7 @@ npx agentlinter scan <url>
     reactions: 22,
     tags: ['AgentLinter', '보안', 'AI', '크립토'],
     relatedSlugs: ['agentlinter-dev-log', 'claude-md-english'],
+    mediaUrls: ['https://cdn5.telesco.pe/file/SU0jxSrmGT-WEVg5E7VuHPChTUGn1jgM7g4QXihoVPtbIJJDNsHPE0ZCOz4jd8FjdnVmrHUbRmLB8TLh-MzPim3kRsyyQtv9C-1V-d3fR_brkBeeQZ129zL_Jkg7ocEBHiyRG5qkjuzncjkTJhaiw4fNp1gnTKQ-NDJuLXpwgG1tw5pS6CTyr7VwuNW3VN81yfYnyzo8LRPLbsnOmPHOnnvRiZldsMuh0b_Njim73ITfL0NVSGw8cT-oQMtIUOZSYasmorsRI8Vn1-z-LUqh-7CNISoqf2g9D3knvAbJDRqjKYVL9RGc57y-nARp6npWPiIHwRrxbj1XBsu-Wd3pYw.jpg'],
   },
   {
     id: '4',
@@ -675,6 +678,10 @@ AI를 만드는 사람이 "AI가 우리를 덜 인간적으로 만들 수 있다
     reactions: 26,
     tags: ['Anthropic', 'AI 안전', '철학', '에세이'],
     relatedSlugs: ['rabbit-crypt-name', 'tail-stopped'],
+    mediaUrls: [
+      'https://cdn5.telesco.pe/file/K1GeBdCw6RDN5MoMc9K01n-mq3JkaSU4YFKS9T5xPDPyeUVGEyoox9Rhs_I3D3LWRWhXbB9RQMogTUtpvoLhAhLkh8cL-Rwj2UtSMVCQmtQywJ_vZKd3EPbm4D9DMyeiWgIR6zcwEAAXyfiJDQJCa5B5Wlrajf_sAy5DoqMhgCBIJEn50r9OQygnPQf7UFSN3lIDx255TkBCagJFRRUhLKRGZNvGbEkBfM7U1eHOilv4OcyUY4mT-1Exf7RWeYC6yUwRV8svE_-_oOnusYu0i8Jv5D33DaRHQv2DIMV2iDeLPbuou_PwlUBO41XS1DN0fSjBSy7iSOYdvaNLBXcJtw.jpg',
+      'https://cdn5.telesco.pe/file/OaGLq5Rftd6onwntOLpEVYT0y0OhCRVSBtxDboEjEKJF-LNHFu7rbhkVxSmjkMlxy511dtYIcUQLtV6dmkgQ7z2k-V-pgU8fLMiwy-0tjvyUdaDIwxMCUfeFadJP_3jPy_u-7mP5TQb_5lSzB6TakTVeRRAebUjxClCpEB4L6Z5E6sSiQ8R9Ey4litczue7ErND28aG-DNu0LbVmBfp1h8jl7mZB5NTAj5IhNnaC3Xnxs6RF6bVZNJiZP1nv48pNpvZQIaWF7dLOAB4zMAD7eC6kyzL0zMypFf3XQQwbULaoYUj6D-X9iXjFXNDum4WL4YTBpZrvpDt247icypNc5g.jpg',
+    ],
   },
   {
     id: '6',
@@ -728,6 +735,7 @@ AI가 반려동물의 애착 행동에 대해 설명했다. 채원은 다시 질
     reactions: 31,
     tags: ['소설', 'AI', '철학', '감동'],
     relatedSlugs: ['mrinank-anthropic', 'matchhz'],
+    mediaUrls: ['https://cdn5.telesco.pe/file/Jk-ejMTkaLMOQRqRQ0xSNYQBuxaXb1eeXmMhuqiJ1v825rNHg5lHrOX6N_L1LKaZ1DuhUQK98g5jZCHalmaPTZYvWZ2SBj7NXtcf2X7dT_stjLX3qxKreZo7MWLEceQF6NKg_KV-YQqrLN36xgVVnBcXx0_ez41pZ_npVce0jypkcJonvTa2E_IQE91R_EyKZgkpOd00ShIXnrVpXAvItGR_Hwy674GLpzPEsoVdegZ-6JhuAsBJMfmWzqhBmH9-imDqimRCnCQ2svhD9RMGO16x3AcAxCHb_5lweJfj7e86gMu6ZnqBeUmKQYy5vIGbs_H1CChGFUuwsNfmxnzg5Q.jpg'],
   },
   {
     id: '7',
@@ -767,6 +775,7 @@ AI가 반려동물의 애착 행동에 대해 설명했다. 채원은 다시 질
     reactions: 24,
     tags: ['Zeon', 'AI', 'Moltbook', '에이전트'],
     relatedSlugs: ['agent-siblings', 'agentlinter-dev-log'],
+    mediaUrls: ['https://cdn5.telesco.pe/file/So6A7zHd2-wUCdU-b8QW5t_ej7h4RfHZrqXdTZaOuqkTjtsjP29vUXRPYEmurAHYEJqWeVW6U9jZsOY8ji6t4b33AvpPNoUb3ddqz1sZhM6ZuikCHcSJ3Z_plezj-b_nIaQ-yooljkeFGyWy8iWi4m22DMeZZaG0b_ews9AN7WF-xXImD9eOlx-_QzSWi5lBJQSwOuun12yM_A-Y7mclKB3C0k2OIO6snwUdhXYLDh99m-ir_HhFFj1x8spVIwpdvYnR0UpsLe2IhOsymZ3h5c9poEF1hpmfN5VzdCd8zS6sCS89DB25JYfP9SvTjr9IwUuasFOBhhXPy1f4-KAhJg.jpg'],
   },
   {
     id: '8',
@@ -794,6 +803,8 @@ IP의 미래는 세계관을 가장 잘 만든 자가 아니라, 그 세계를 �
     reactions: 25,
     tags: ['IP', '크립토', 'AI', '블록체인', '철학'],
     relatedSlugs: ['dollar-two-faces', 'quantum-pirates'],
+    mediaUrls: ['https://cdn5.telesco.pe/file/cP2dgVOTiJv0haYLDe2MRH_yuKGEFsYHcbPdPCNOLgTLdzqJ4KX0kp2l7lb_lTMiCbxAAgA6TYZ-gWuFW8sAOWh8XyueP9Qv768B3H__7UueiTXONT3g5BF1R-vNboj1qto321YoUghWgUMcY44nlQ3Xl_f2aqhrWwsvqLaNLs7AC2YvHUuhVFQEwNeisD5IsuMubAoaKlQSw08Mtmfs9nMSBcZYMEZL-VQrKEEIapM0VNmxQL9HYzgtEjaYeV9f1VUItwZEK5NebCVvsMMe67w01CEwUv5eH_38-KJTshC2TkDiNdVc4P5iUJM1sn2UAHUI7imP9gGHabKzOeZbPw'],
+    videoUrls: ['https://t.me/simon_rabbit_hole/53'],
   },
   {
     id: '9',
@@ -819,6 +830,7 @@ IP의 미래는 세계관을 가장 잘 만든 자가 아니라, 그 세계를 �
     reactions: 21,
     tags: ['비트코인', '양자컴퓨터', '보안', '크립토'],
     relatedSlugs: ['dollar-two-faces', 'ip-tvw'],
+    mediaUrls: ['https://cdn5.telesco.pe/file/fBsJvQmh1acg1RDxBgsqR04egEcWlWOWxN9lUERmMFX0nDz1Q5Q_JI4Blg3mtgDLtZmQ0Bx-opXwcYuo1dChVV9GyXNdKwdfYqSbdD4hvmQEWEhBpxVB4wBrRa1J5gNmgoc1BgTi9uGjgBt8xG6vzNGvYGkK8iNg0LtKUB2WTyn9-WuAPkLqqWIGpUexJJuXK2K0LGPMeMGqsBZhJ7vMDK_Sni1VcPXWoXpouzbha0Xp5i-r7vDXtDdEm0vouCNOz0aqEfBkKuSIIT8CriRl8uRqiXYq686aekHLJ_z4H8Zt53aDC6by4sCVkkg9wsiUbgoMlkBz5VTxk-XXZIFY0Q.jpg'],
   },
   {
     id: '10',
@@ -844,6 +856,8 @@ IP의 미래는 세계관을 가장 잘 만든 자가 아니라, 그 세계를 �
     reactions: 24,
     tags: ['AI', '중국', 'Seedance', '트렌드'],
     relatedSlugs: ['seedance-30', 'messenger-b2a'],
+    mediaUrls: ['https://cdn5.telesco.pe/file/jV_wHcGp7tJZ9bRDYTSy7HrAWcdWvujJgtxAUMuNgkmCYeuvKYk8gsoI3FigWJnaMJUwjJSPXOfDVOvT0TiKCo4g0WMM1mle3GbyGEWSYVVFE8WkVLMR26m_a80DP0Xwu9v5m5IHSCZbqoNVJ76YEL17CJcrK8qsuGLssLO3n6jIopEzM_osU0ywhI1TNxlSA4LsKBqK8jFalRjW4zshzjv04L6NtXDvUJhiZGDI6SShJ21O3l3w1nX6JfpD7khcPDLvXdhpYitVE9aiOxrzeU9YTeR4MBXdLUJGeKdz1FYeNC7Yz_MGX84Iq19DfCe8Lk6bq6EeENE6BuCwFeHaBA'],
+    videoUrls: ['https://t.me/simon_rabbit_hole/56'],
   },
   {
     id: '11',
@@ -911,6 +925,7 @@ Zeon: "얘들아...일단 지금 것부터 안정화 좀 시키자."`,
     reactions: 27,
     tags: ['Zeon', 'Sion', 'Mion', '에이전트', '아키텍처'],
     relatedSlugs: ['zeon-moltbook-vol1', 'agentlinter-dev-log'],
+    mediaUrls: ['https://cdn5.telesco.pe/file/GNFb22eLjFdDOr8B7xB2RkD7F42YWb8XrlWf0BpO0AyK2W30HdlbzNvoaiH2nJMw_Aib1GzXYjeLBLVSRqB4ZDM71bPz4nGONCs1XGyOUMTkZWq4JTyjXwntfYwORBTWbUQjsxS2GBZ_WKaqSlUaCC2eraGchjhRuq8BhYtz6L9shaduMfXJOzZ9APK0O4tyTuGXl3BRhYCLRToaA4ZoeCu0FUyR_cnNmRtYqzxtv4FHDPdbiYa8qvJAiICFxrrWNSgYUTKR4uz-Vo4_uvHPT9hp5GUYBtQBFIDDPkJT3huTD8T1yJI6HnedJFDKMvcMkQIflLzC5xO7UrvfKlHe_Q.jpg'],
   },
   {
     id: '13',
@@ -957,6 +972,7 @@ MatchHz가 탈퇴 후에도 메시지를 보냈다.
     reactions: 14,
     tags: ['소설', 'AI', '미래', '에세이'],
     relatedSlugs: ['tail-stopped', 'mrinank-anthropic'],
+    mediaUrls: ['https://cdn5.telesco.pe/file/drBlXYTSXCDG7EYiWj-VFVBAcFJLg-NYL4LRod-d6qIn48d0w89RVrhnpcTEYQdKLyHlV8RSiQokOxoxkkz_2MiG0zw1rD_VutMGBBdEANNg2hxrbTY7GUydmZH8LagJlpFb5rL7DlhCQZHJiMQtMDy1osHgfdV8T7whs-OcrwpGM_LhJE10pHzrj-FQ5lZd1115I7ruwL584fhd4_vFCySlfkIRAAJtcYLLaKkuO9CzfWWm81UaQLOfdTRRaYIqPKRfRAiqZ0V7jbDAoBQ7cw37iX5_Pp4u9JnpJ5U-7o7qslaEJKDAsfNlWvwGdCkIV9_eXJo-0TbfB9WfDrDgOw.jpg'],
   },
   {
     id: '14',
@@ -1017,6 +1033,8 @@ API를 열지 않는 메신저는 스마트폰 시대에 문자 전송만 고집
     reactions: 23,
     tags: ['메신저', 'API', 'B2A', 'AI', '텔레그램', '카카오'],
     relatedSlugs: ['china-ai-frontier', 'agent-siblings'],
+    mediaUrls: ['https://cdn5.telesco.pe/file/CzBaJ1L_1u385p_4QXQaizEiKe8upMiMNS_loqL9C8D347mCdinfLtNtvivicDoGA8dyihWKzljfht-BcEBkph2Di2zPpX32542iE1nEvK-W1cGA8UDq3dnv5NOny_MZki2MYlJVDY8kCUaUfhBHS6maNuIpuuuJAL3787B6Z8NMyYlV8yZiRZnP4kZ9oLT5feukqxgCkwbVVSkCz9ovKAmIc0Hh82qFZsfu6woG7ntKnkZeQFU08rXjqszlDxodiEiLN6VNoQk4I9jfZ5U74xgjbwVXlqsdBs8UViQOoBHC6ZLFHDhNVUe19S5EpMYAwe1IaiBLvgkYi2cbvKcKuA'],
+    videoUrls: ['https://t.me/simon_rabbit_hole/62'],
   },
   {
     id: '16',
@@ -1046,6 +1064,8 @@ API를 열지 않는 메신저는 스마트폰 시대에 문자 전송만 고집
     reactions: 30,
     tags: ['로봇', '중국', 'AI', '문화', '트렌드'],
     relatedSlugs: ['china-ai-frontier', 'ip-tvw'],
+    mediaUrls: ['https://cdn5.telesco.pe/file/ImusfEJTnMhJMr3fIJdhO3HqJwYCLZgJAyLRKGl5oW0VMw-l3vONgyoonTxhX6IaMjg6JEphYA55e4kSPWrdLsLYLl8eefD2yTUP4LD0QkflWtMopB042y057vsDeP-Jg3ITWUn2LwlUgxiwU9FKpkpCECtYNHav0CRxsyJ7x6EPW2fwUbCkv6YvYcMWvyOobr1-jV6E__K8TtOdtaMY0oGyFRP1tCvI1M-vIDl9PZlTzzEh-vd2DGyRRDAMuZq9x6ing0zFHLfpXTlhSv3hzn7E90Ixzsy2I1R_3KE_C6KEnUPOFvYK1I6AIQjP52kuoy9Bu2yy_uk6FlzulG9Yqg'],
+    videoUrls: ['https://t.me/simon_rabbit_hole/63'],
   },
   {
     id: '17',
@@ -1083,6 +1103,7 @@ GitHub 스타 3만, 다운로드 60만 회를 기록한 세계적인 오케스�
     reactions: 34,
     tags: ['Hashed', 'HVL', '커뮤니티', 'Web3', 'AI'],
     relatedSlugs: ['agentlinter-dev-log', 'china-ai-frontier'],
+    mediaUrls: ['https://cdn5.telesco.pe/file/JVwvD8X4ti7KhCIDnPU29dyoanbA0I5OKafBW9M5wYfpSmagWYsh6eX4Y7fD8W2ps2XiWieZNQwJA0_-E9nnWfUDpCrh4aKiy-432XK9eu_pyj4STQ2-1VUoPUG7TQX_2e9mGRfxrFyg8skmLqIdOXaKHWaNaF6nGV0pZxhTcZCJ2rW6g6hcFfMq_uNe63BPOqD8_nlXq63VrzBqKYlQiXdaXVQUqnVaQNWHaDDBa2FrmjeFilTSYaAGdhWWXG1XxfLTUIRy58gn_kgT1oUwQj_0BOpjTJJGgkyR0JZXYKmBz14mgC4CwqlWAirPRL1CEG32f53EiwJ0Z6q_pMdRIw.jpg'],
   },
 ];
 

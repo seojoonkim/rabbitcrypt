@@ -304,6 +304,56 @@ export default async function PostPage({ params }: PostPageProps) {
           {renderContent(post.content, related)}
         </div>
 
+        {/* Media section — images */}
+        {post.mediaUrls && post.mediaUrls.length > 0 && (
+          <div style={{ marginTop: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            {post.mediaUrls.map((url, i) => (
+              <img
+                key={i}
+                src={url}
+                alt=""
+                style={{
+                  width: '100%',
+                  borderRadius: '0.75rem',
+                  border: '1px solid rgba(212,146,42,0.15)',
+                  display: 'block',
+                }}
+              />
+            ))}
+          </div>
+        )}
+
+        {/* Media section — videos (Telegram link) */}
+        {post.videoUrls && post.videoUrls.length > 0 && (
+          <div style={{ marginTop: '1rem', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+            {post.videoUrls.map((url, i) => (
+              <a
+                key={i}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  borderRadius: '0.75rem',
+                  border: '1px solid rgba(212,146,42,0.25)',
+                  background: 'rgba(212,146,42,0.06)',
+                  color: '#E8A830',
+                  fontSize: '0.875rem',
+                  fontWeight: 500,
+                  padding: '0.625rem 1rem',
+                  textDecoration: 'none',
+                  width: 'fit-content',
+                }}
+              >
+                <span style={{ fontSize: '1rem' }}>▶</span>
+                텔레그램에서 영상 보기
+              </a>
+            ))}
+          </div>
+        )}
+
         {/* Tags */}
         <div
           className="flex flex-wrap"
