@@ -1,13 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #0D1117;
-  --bg-panel: #161B22;
-  --teal: #00B4D8;
-  --teal-dim: rgba(0, 180, 216, 0.15);
-  --text: #E6EDF3;
-  --text-muted: #8B949E;
-  --border: #30363D;
+  --bg: #080E1A;
+  --bg-panel: #0D1826;
+  --amber: #D4922A;
+  --amber-light: #E8A830;
+  --amber-dim: rgba(212, 146, 42, 0.15);
+  --text: #F0E4CC;
+  --text-muted: #8A7A5E;
+  --border: rgba(212, 146, 42, 0.15);
 }
 
 * {
@@ -20,24 +21,50 @@ html,
 body {
   height: 100%;
   overflow-x: hidden;
-  background: #0D1117;
+  background: #080E1A;
 }
 
-/* Body font: mono for UI, Korean chars fall back through stack */
+/* Base font: elegant serif */
 body {
-  font-family: var(--font-mono), 'Menlo', 'Monaco', 'Courier New', 'Noto Sans KR', sans-serif;
+  font-family: var(--font-serif), 'Noto Serif KR', Georgia, serif;
 }
 
-/* ─── Terminal cursor blink ─── */
+/* ─── Grain noise overlay (film texture) ─── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20200%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cfilter%20id%3D%22n%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.8%22%20numOctaves%3D%224%22%20stitchTiles%3D%22stitch%22%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20filter%3D%22url(%23n)%22%2F%3E%3C%2Fsvg%3E");
+  opacity: 0.028;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ─── Geometric background — concentric glow + vertical lines ─── */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 50% 35%, rgba(212,146,42,0.05) 0%, transparent 55%),
+    radial-gradient(circle at 50% 35%, transparent 28%, rgba(212,146,42,0.03) 29%, transparent 30%),
+    radial-gradient(circle at 50% 35%, transparent 42%, rgba(212,146,42,0.02) 43%, transparent 44%),
+    radial-gradient(circle at 50% 35%, transparent 56%, rgba(212,146,42,0.015) 57%, transparent 58%),
+    repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(212,146,42,0.012) 79px, rgba(212,146,42,0.012) 80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ─── Amber cursor blink ─── */
 @keyframes cursor-blink {
   0%, 49% { opacity: 1; }
   50%, 100% { opacity: 0; }
 }
 
-.terminal-cursor::after {
+.amber-cursor::after {
   content: '▋';
-  color: #00B4D8;
-  animation: cursor-blink 1.2s step-end infinite;
+  color: #D4922A;
+  animation: cursor-blink 1.4s step-end infinite;
   margin-left: 2px;
   font-size: 0.8em;
 }
@@ -71,100 +98,96 @@ body {
   height: 4px;
 }
 ::-webkit-scrollbar-track {
-  background: #0D1117;
+  background: #080E1A;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 180, 216, 0.25);
+  background: rgba(212, 146, 42, 0.25);
   border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 180, 216, 0.45);
+  background: rgba(212, 146, 42, 0.45);
 }
 
 /* ─── No-scrollbar utility ─── */
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-/* ─── Teal glow utilities ─── */
-.teal-glow {
-  box-shadow: 0 0 16px rgba(0, 180, 216, 0.2);
+/* ─── Amber glow utilities ─── */
+.amber-glow {
+  box-shadow: 0 0 20px rgba(212, 146, 42, 0.2);
 }
-.teal-glow-sm {
-  box-shadow: 0 0 8px rgba(0, 180, 216, 0.15);
+.amber-glow-sm {
+  box-shadow: 0 0 10px rgba(212, 146, 42, 0.15);
 }
 
 /* ─── Subtle bg radial gradient for swipe cards ─── */
 .card-bg-glow {
   background:
-    radial-gradient(ellipse 60% 50% at 20% 60%, rgba(0, 180, 216, 0.05) 0%, transparent 70%),
-    #0D1117;
+    radial-gradient(ellipse 60% 50% at 20% 60%, rgba(212, 146, 42, 0.04) 0%, transparent 70%),
+    #080E1A;
 }
 
 /* ─── Prose styles for post content ─── */
 .post-content {
   font-family: var(--font-serif), 'Noto Serif KR', Georgia, serif;
   line-height: 1.9;
-  color: #E6EDF3;
+  color: #F0E4CC;
 }
 
 .post-content h1,
 .post-content h2,
 .post-content h3 {
-  color: #E6EDF3;
+  color: #F0E4CC;
   margin-top: 2rem;
   margin-bottom: 0.75rem;
   font-weight: 700;
-  font-family: var(--font-mono), monospace;
+  font-family: var(--font-display), var(--font-serif), 'Noto Serif KR', Georgia, serif;
 }
-
-.post-content h1::before { content: '# '; color: #00B4D8; }
-.post-content h2::before { content: '## '; color: #00B4D8; }
-.post-content h3::before { content: '### '; color: #8B949E; }
 
 .post-content p {
   margin-bottom: 1.5rem;
 }
 
 .post-content strong {
-  color: #00B4D8;
+  color: #E8A830;
   font-weight: 600;
 }
 
 .post-content em {
-  color: #8B949E;
+  color: #8A7A5E;
   font-style: italic;
 }
 
 .post-content hr {
   border: none;
-  border-top: 1px solid #30363D;
+  border-top: 1px solid rgba(212, 146, 42, 0.15);
   margin: 2rem 0;
 }
 
 .post-content blockquote {
-  border-left: 2px solid #00B4D8;
+  border-left: 2px solid rgba(212, 146, 42, 0.6);
   padding-left: 1rem;
-  color: #8B949E;
+  color: #8A7A5E;
   font-style: italic;
   margin: 1.5rem 0;
-  background: rgba(0, 180, 216, 0.04);
+  background: rgba(212, 146, 42, 0.04);
   padding: 0.75rem 1rem;
   border-radius: 0 4px 4px 0;
 }
 
 .post-content code {
-  background: rgba(0, 180, 216, 0.08);
-  border: 1px solid rgba(0, 180, 216, 0.2);
+  background: rgba(212, 146, 42, 0.08);
+  border: 1px solid rgba(212, 146, 42, 0.2);
   border-radius: 3px;
   padding: 0.15em 0.4em;
   font-family: var(--font-mono), 'Menlo', 'Monaco', monospace;
   font-size: 0.875em;
-  color: #00B4D8;
+  color: #E8A830;
 }
 
 .post-content pre {
-  background: #161B22;
-  border: 1px solid #30363D;
+  background: #0D1826;
+  border: 1px solid rgba(212, 146, 42, 0.15);
   border-radius: 6px;
   padding: 1rem;
   overflow-x: auto;
@@ -175,7 +198,7 @@ body {
   background: none;
   border: none;
   padding: 0;
-  color: #E6EDF3;
+  color: #F0E4CC;
   font-size: 0.875rem;
 }
 
@@ -190,19 +213,32 @@ body {
 }
 
 .post-content li::marker {
-  color: #00B4D8;
+  color: #D4922A;
 }
 
 .post-content a {
-  color: #00B4D8;
+  color: #D4922A;
   text-decoration: underline;
-  text-decoration-color: rgba(0, 180, 216, 0.35);
+  text-decoration-color: rgba(212, 146, 42, 0.35);
   transition: color 0.15s;
 }
 
 .post-content a:hover {
-  color: #E6EDF3;
+  color: #F0E4CC;
 }
+
+/* ─── Hover utilities (for server components — no JS event handlers) ─── */
+.hover-amber { transition: color 0.15s; }
+.hover-amber:hover { color: #D4922A; }
+
+.hover-cream { transition: color 0.15s; }
+.hover-cream:hover { color: #F0E4CC; }
+
+.hover-amber-muted { transition: color 0.15s; }
+.hover-amber-muted:hover { color: rgba(212,146,42,0.8); }
+
+.card-hover-border { transition: border-color 0.2s; }
+.card-hover-border:hover { border-color: rgba(212,146,42,0.35) !important; }
 
 /* ─── Animate-in ─── */
 @keyframes fadeIn {
@@ -222,11 +258,11 @@ article {
 }
 
 article h1 {
-  font-family: 'Noto Serif KR', Georgia, serif !important;
+  font-family: var(--font-display), var(--font-serif), 'Noto Serif KR', Georgia, serif !important;
   font-size: 1.75rem;
   line-height: 1.4;
   margin-bottom: 1rem;
-  color: #E6EDF3;
+  color: #F0E4CC;
   padding: 0;
 }
 
@@ -235,14 +271,14 @@ article p, .post-content p {
   font-size: 1rem;
   line-height: 1.9;
   margin-bottom: 1.5rem;
-  color: rgba(230, 237, 243, 0.85);
+  color: rgba(240, 228, 204, 0.85);
 }
 
 article h2, article h3 {
-  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  font-family: var(--font-display), var(--font-serif), 'Noto Serif KR', Georgia, serif;
   margin-top: 2rem;
   margin-bottom: 0.75rem;
-  color: #00B4D8;
+  color: #D4922A;
 }
 
 /* sticky header bar */

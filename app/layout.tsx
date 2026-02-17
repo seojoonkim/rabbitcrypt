@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Noto_Serif_KR, JetBrains_Mono } from 'next/font/google';
+import { Noto_Serif_KR, JetBrains_Mono, Playfair_Display, Noto_Sans_KR } from 'next/font/google';
 import './globals.css';
 
 const notoSerif = Noto_Serif_KR({
@@ -16,6 +16,21 @@ const jetbrains = JetBrains_Mono({
   display: 'swap',
 });
 
+const playfairDisplay = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  style: ['normal', 'italic'],
+  variable: '--font-display',
+  display: 'swap',
+});
+
+const notoSans = Noto_Sans_KR({
+  subsets: ['latin'],
+  weight: ['300', '400'],
+  variable: '--font-sans',
+  display: 'swap',
+});
+
 export const metadata: Metadata = {
   title: 'Rabbit Crypt · 토끼굴',
   description: 'Simon(@simonkim_nft)의 토끼굴 블로그. 읽기 전과 읽은 후의 세계가 한 뼘 정도 어긋나 있는 글.',
@@ -27,7 +42,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: '#0D1117',
+  themeColor: '#080E1A',
 };
 
 export default function RootLayout({
@@ -36,8 +51,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className={`${notoSerif.variable} ${jetbrains.variable}`}>
-      <body className="bg-[#0D1117] text-[#E6EDF3] antialiased min-h-screen">
+    <html lang="ko" className={`${notoSerif.variable} ${jetbrains.variable} ${playfairDisplay.variable} ${notoSans.variable}`}>
+      <body
+        className="antialiased min-h-screen"
+        style={{ background: '#080E1A', color: '#F0E4CC' }}
+      >
         {children}
       </body>
     </html>

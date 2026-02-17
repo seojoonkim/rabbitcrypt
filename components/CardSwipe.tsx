@@ -82,8 +82,15 @@ export default function CardSwipe({ posts }: CardSwipeProps) {
   const post = posts[currentIndex];
   if (!post) {
     return (
-      <div className="h-full flex items-center justify-center text-[#8B949E] font-mono text-sm">
-        // no posts found
+      <div
+        className="h-full flex items-center justify-center text-sm"
+        style={{
+          color: '#8A7A5E',
+          fontFamily: "var(--font-sans), 'Noto Sans KR', sans-serif",
+          fontWeight: 300,
+        }}
+      >
+        글이 없어요
       </div>
     );
   }
@@ -109,12 +116,12 @@ export default function CardSwipe({ posts }: CardSwipeProps) {
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseUp}
       >
-        {/* Subtle radial teal glow — decorative */}
+        {/* Amber radial glow — decorative */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              'radial-gradient(ellipse 50% 40% at 15% 55%, rgba(0,180,216,0.06) 0%, transparent 70%)',
+              'radial-gradient(ellipse 50% 40% at 15% 55%, rgba(212,146,42,0.05) 0%, transparent 70%)',
           }}
         />
 
@@ -128,42 +135,63 @@ export default function CardSwipe({ posts }: CardSwipeProps) {
               ? 'card-enter-right'
               : ''
           }`}
-          style={{ transform: liveTransform, transition: dragStartX !== null ? 'none' : undefined, padding: '1.5rem 1.5rem 1rem' }}
+          style={{
+            transform: liveTransform,
+            transition: dragStartX !== null ? 'none' : undefined,
+            padding: '1.5rem 1.5rem 1rem',
+          }}
         >
           {/* ── Top row: category badge + counter ── */}
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.5rem' }}>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              marginBottom: '1.5rem',
+            }}
+          >
+            {/* Category — amber underline pill */}
             <span
-              className="font-mono text-xs px-2.5 py-1 rounded"
+              className="text-xs"
               style={{
-                color: '#00B4D8',
-                border: '1px solid rgba(0,180,216,0.35)',
-                background: 'rgba(0,180,216,0.08)',
+                color: '#D4922A',
+                fontFamily: "var(--font-sans), 'Noto Sans KR', sans-serif",
+                fontWeight: 400,
+                borderBottom: '1px solid rgba(212,146,42,0.4)',
+                paddingBottom: '1px',
               }}
             >
-              [{catLabel}]
+              {catLabel}
             </span>
-            <span className="font-mono text-xs text-[#8B949E]">
+            <span
+              className="text-xs"
+              style={{
+                color: '#8A7A5E',
+                fontFamily: "var(--font-sans), 'Noto Sans KR', sans-serif",
+                fontWeight: 300,
+              }}
+            >
               {String(currentIndex + 1).padStart(2, '0')}&nbsp;/&nbsp;{String(posts.length).padStart(2, '0')}
             </span>
           </div>
 
-          {/* ── Center: quote block (pinned to ~40% of card height) ── */}
-          <div className="flex-1 flex flex-col justify-center pb-[20%]">
-            {/* Terminal prompt decoration */}
+          {/* ── Center: quote block ── */}
+          <div className="flex-1 flex flex-col justify-center" style={{ paddingBottom: '20%' }}>
+            {/* Amber decorative mark */}
             <div
-              className="font-mono text-4xl leading-none mb-4 select-none"
-              style={{ color: 'rgba(0,180,216,0.30)' }}
+              className="text-4xl leading-none select-none"
+              style={{ color: 'rgba(212,146,42,0.2)', marginBottom: '1rem' }}
             >
-              &gt;_
+              ❝
             </div>
 
-            {/* Main summary — serif for Korean readability */}
+            {/* Main summary */}
             <p
-              className="text-[#E6EDF3] max-w-2xl"
               style={{
                 fontFamily: "'Noto Serif KR', Georgia, serif",
                 fontSize: 'clamp(1.2rem, 4vw, 1.8rem)',
                 lineHeight: '1.7',
+                color: '#F0E4CC',
                 padding: '0 0.5rem',
               }}
             >
@@ -174,31 +202,58 @@ export default function CardSwipe({ posts }: CardSwipeProps) {
           {/* ── Bottom: meta row ── */}
           <div
             className="mt-auto"
-            style={{ borderTop: '1px solid #30363D', paddingTop: '1.25rem' }}
+            style={{ borderTop: '1px solid rgba(212,146,42,0.12)', paddingTop: '1.25rem' }}
           >
             {/* Title */}
-            <p className="font-mono text-[#8B949E] text-sm line-clamp-1" style={{ marginBottom: '1rem' }}>
-              <span style={{ color: 'rgba(0,180,216,0.5)' }}>// </span>
+            <p
+              className="text-sm line-clamp-1"
+              style={{
+                color: '#8A7A5E',
+                marginBottom: '1rem',
+                fontFamily: "var(--font-serif), 'Noto Serif KR', serif",
+              }}
+            >
               {post.title}
             </p>
 
             {/* Badges + CTA */}
-            <div className="flex items-center justify-between flex-wrap" style={{ gap: '0.75rem' }}>
+            <div
+              className="flex items-center justify-between flex-wrap"
+              style={{ gap: '0.75rem' }}
+            >
               <div className="flex items-center flex-wrap" style={{ gap: '0.75rem' }}>
                 <DepthBadge depth={post.depth} />
-                <span className="font-mono text-[#8B949E] text-xs">{post.date}</span>
-                <span className="font-mono text-[#8B949E] text-xs">❤ {post.reactions}</span>
+                <span
+                  className="text-xs"
+                  style={{
+                    color: '#8A7A5E',
+                    fontFamily: "var(--font-sans), 'Noto Sans KR', sans-serif",
+                    fontWeight: 300,
+                  }}
+                >
+                  {post.date}
+                </span>
+                <span
+                  className="text-xs"
+                  style={{
+                    color: '#8A7A5E',
+                    fontFamily: "var(--font-sans), 'Noto Sans KR', sans-serif",
+                    fontWeight: 300,
+                  }}
+                >
+                  ❤ {post.reactions}
+                </span>
               </div>
               <Link
                 href={`/posts/${post.slug}`}
-                className="font-mono text-sm transition-colors group flex items-center gap-1"
-                style={{ color: '#00B4D8' }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = '#E6EDF3')}
-                onMouseLeave={(e) => (e.currentTarget.style.color = '#00B4D8')}
+                className="text-sm transition-colors group flex items-center"
+                style={{ color: '#D4922A', gap: '0.25rem' }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = '#F0E4CC')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = '#D4922A')}
                 onClick={(e) => e.stopPropagation()}
               >
                 전체 읽기
-                <span className="group-hover:translate-x-0.5 inline-block transition-transform">→</span>
+                <span className="inline-block transition-transform">→</span>
               </Link>
             </div>
           </div>
@@ -206,32 +261,39 @@ export default function CardSwipe({ posts }: CardSwipeProps) {
       </div>
 
       {/* ─── Progress bar ─── */}
-      <div className="h-[2px] bg-[#161B22]">
+      <div style={{ height: '2px', background: '#0D1826' }}>
         <div
           className="h-full transition-all duration-300"
-          style={{ width: `${progress}%`, background: '#00B4D8' }}
+          style={{ width: `${progress}%`, background: '#D4922A' }}
         />
       </div>
 
       {/* ─── Bottom nav ─── */}
       <div
         className="flex items-center justify-between"
-        style={{ borderTop: '1px solid #161B22', padding: '0.75rem 1.5rem' }}
+        style={{ borderTop: '1px solid #0D1826', padding: '0.75rem 1.5rem' }}
       >
         <button
           onClick={goPrev}
           disabled={currentIndex === 0}
-          className="font-mono text-xs transition-colors disabled:opacity-20"
-          style={{ color: '#8B949E' }}
-          onMouseEnter={(e) => {
-            if (!e.currentTarget.disabled) e.currentTarget.style.color = '#00B4D8';
+          className="text-xs transition-colors disabled:opacity-20"
+          style={{
+            color: '#8A7A5E',
+            fontFamily: "var(--font-sans), 'Noto Sans KR', sans-serif",
+            fontWeight: 300,
+            background: 'none',
+            border: 'none',
+            cursor: 'pointer',
           }}
-          onMouseLeave={(e) => (e.currentTarget.style.color = '#8B949E')}
+          onMouseEnter={(e) => {
+            if (!e.currentTarget.disabled) e.currentTarget.style.color = '#D4922A';
+          }}
+          onMouseLeave={(e) => (e.currentTarget.style.color = '#8A7A5E')}
         >
           ← prev
         </button>
 
-        {/* Progress dots (max 9 shown) */}
+        {/* Progress dots */}
         <div className="flex items-center" style={{ gap: '0.25rem' }}>
           {posts.slice(0, Math.min(posts.length, 9)).map((_, i) => (
             <button
@@ -241,7 +303,10 @@ export default function CardSwipe({ posts }: CardSwipeProps) {
               style={{
                 width: i === currentIndex % 9 ? '16px' : '5px',
                 height: '5px',
-                background: i === currentIndex % 9 ? '#00B4D8' : '#30363D',
+                background: i === currentIndex % 9 ? '#D4922A' : 'rgba(212,146,42,0.2)',
+                border: 'none',
+                cursor: 'pointer',
+                padding: 0,
               }}
             />
           ))}
@@ -250,12 +315,19 @@ export default function CardSwipe({ posts }: CardSwipeProps) {
         <button
           onClick={goNext}
           disabled={currentIndex >= posts.length - 1}
-          className="font-mono text-xs transition-colors disabled:opacity-20"
-          style={{ color: '#8B949E' }}
-          onMouseEnter={(e) => {
-            if (!e.currentTarget.disabled) e.currentTarget.style.color = '#00B4D8';
+          className="text-xs transition-colors disabled:opacity-20"
+          style={{
+            color: '#8A7A5E',
+            fontFamily: "var(--font-sans), 'Noto Sans KR', sans-serif",
+            fontWeight: 300,
+            background: 'none',
+            border: 'none',
+            cursor: 'pointer',
           }}
-          onMouseLeave={(e) => (e.currentTarget.style.color = '#8B949E')}
+          onMouseEnter={(e) => {
+            if (!e.currentTarget.disabled) e.currentTarget.style.color = '#D4922A';
+          }}
+          onMouseLeave={(e) => (e.currentTarget.style.color = '#8A7A5E')}
         >
           next →
         </button>

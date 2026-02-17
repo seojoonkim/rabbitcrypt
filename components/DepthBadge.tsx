@@ -7,21 +7,15 @@ interface DepthBadgeProps {
   className?: string;
 }
 
-const depthStyle: Record<DepthLevel, { color: string; border: string; bg: string }> = {
+const depthStyle: Record<DepthLevel, { color: string }> = {
   entry: {
-    color: '#3FB950',
-    border: 'rgba(63, 185, 80, 0.35)',
-    bg: 'rgba(63, 185, 80, 0.08)',
+    color: '#D4922A',
   },
   mid: {
-    color: '#D29922',
-    border: 'rgba(210, 153, 34, 0.35)',
-    bg: 'rgba(210, 153, 34, 0.08)',
+    color: '#C86428',
   },
   deep: {
-    color: '#F85149',
-    border: 'rgba(248, 81, 73, 0.35)',
-    bg: 'rgba(248, 81, 73, 0.08)',
+    color: '#B85020',
   },
 };
 
@@ -29,14 +23,15 @@ export default function DepthBadge({ depth, className = '' }: DepthBadgeProps) {
   const s = depthStyle[depth];
   return (
     <span
-      className={`inline-flex items-center px-2 py-0.5 text-xs font-mono rounded ${className}`}
+      className={`inline-flex items-center text-xs ${className}`}
       style={{
         color: s.color,
-        border: `1px solid ${s.border}`,
-        background: s.bg,
+        fontFamily: "var(--font-sans), 'Noto Sans KR', sans-serif",
+        fontWeight: 300,
+        letterSpacing: '0.02em',
       }}
     >
-      [{depthLabel(depth)}]
+      {depthLabel(depth)}
     </span>
   );
 }
