@@ -808,7 +808,6 @@ IP의 미래는 세계관을 가장 잘 만든 자가 아니라, 그 세계를 �
     relatedSlugs: ['dollar-two-faces', 'quantum-pirates'],
     mediaUrls: ['/media/posts/ip-tvw-0.jpg'],
     videoUrls: ['/media/posts/ip-tvw-1.mp4'],
-    videoUrls: ['https://t.me/simon_rabbit_hole/53'],
   },
   {
     id: '9',
@@ -862,7 +861,6 @@ IP의 미래는 세계관을 가장 잘 만든 자가 아니라, 그 세계를 �
     relatedSlugs: ['seedance-30', 'messenger-b2a'],
     mediaUrls: ['/media/posts/china-ai-frontier-0.jpg'],
     videoUrls: ['/media/posts/china-ai-frontier-1.mp4'],
-    videoUrls: ['https://t.me/simon_rabbit_hole/56'],
   },
   {
     id: '11',
@@ -1045,7 +1043,6 @@ API를 열지 않는 메신저는 스마트폰 시대에 문자 전송만 고집
     relatedSlugs: ['china-ai-frontier', 'agent-siblings'],
     mediaUrls: ['/media/posts/messenger-b2a-0.jpg'],
     videoUrls: ['/media/posts/messenger-b2a-1.mp4'],
-    videoUrls: ['https://t.me/simon_rabbit_hole/62'],
   },
   {
     id: '16',
@@ -1077,7 +1074,6 @@ API를 열지 않는 메신저는 스마트폰 시대에 문자 전송만 고집
     relatedSlugs: ['china-ai-frontier', 'ip-tvw'],
     mediaUrls: ['/media/posts/robot-goku-5000-0.jpg'],
     videoUrls: ['/media/posts/robot-goku-5000-1.mp4'],
-    videoUrls: ['https://t.me/simon_rabbit_hole/63'],
   },
   {
     id: '17',
