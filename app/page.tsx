@@ -189,9 +189,9 @@ export default function Home() {
                           color: '#F0E4CC',
                           marginBottom: '0.5rem',
                           fontFamily: "var(--font-serif), 'Noto Serif KR', Georgia, serif",
-                          fontSize: '1.0625rem',
-                          lineHeight: '1.45',
-                          fontWeight: 600,
+                          fontSize: '1.25rem',
+                          lineHeight: '1.4',
+                          fontWeight: 700,
                         }}
                       >
                         {post.title}
