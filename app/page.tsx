@@ -233,30 +233,27 @@ export default function Home() {
                         alt=""
                         className="group-hover:scale-[1.05] transition-transform duration-300"
                         style={{
-                          width: '88px',
-                          height: '88px',
+                          width: '60px',
+                          height: '60px',
                           objectFit: 'cover',
-                          borderRadius: '0.5rem',
+                          borderRadius: '0.375rem',
                           flexShrink: 0,
                         }}
                       />
                     )}
                     {hasVideo && (
-                      <div
+                      <img
+                        src={post.videoUrls![0].replace(/\.mp4$/, '-thumb.jpg')}
+                        alt=""
+                        className="group-hover:scale-[1.05] transition-transform duration-300"
                         style={{
-                          width: '88px',
-                          height: '88px',
-                          borderRadius: '0.5rem',
-                          background: 'rgba(212,146,42,0.06)',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
+                          width: '60px',
+                          height: '60px',
+                          objectFit: 'cover',
+                          borderRadius: '0.375rem',
                           flexShrink: 0,
-                          fontSize: '1.75rem',
                         }}
-                      >
-                        🎬
-                      </div>
+                      />
                     )}
                   </div>
                 </Link>
