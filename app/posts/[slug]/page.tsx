@@ -26,7 +26,7 @@ function renderContent(content: string, relatedPosts: Post[]) {
           style={{
             marginTop: '1.5rem',
             marginBottom: '0.75rem',
-            fontFamily: "var(--font-display), var(--font-serif), 'Noto Serif KR', serif",
+            fontFamily: "var(--font-title), Inter, 'Noto Sans KR', -apple-system, sans-serif",
             color: '#F0E4CC',
           }}
         >
@@ -42,7 +42,7 @@ function renderContent(content: string, relatedPosts: Post[]) {
           style={{
             marginTop: '2rem',
             marginBottom: '1rem',
-            fontFamily: "var(--font-display), var(--font-serif), 'Noto Serif KR', serif",
+            fontFamily: "var(--font-title), Inter, 'Noto Sans KR', -apple-system, sans-serif",
             color: '#F0E4CC',
           }}
         >
@@ -58,7 +58,7 @@ function renderContent(content: string, relatedPosts: Post[]) {
           style={{
             marginTop: '2rem',
             marginBottom: '1rem',
-            fontFamily: "var(--font-display), var(--font-serif), 'Noto Serif KR', serif",
+            fontFamily: "var(--font-title), Inter, 'Noto Sans KR', -apple-system, sans-serif",
             color: '#F0E4CC',
           }}
         >
