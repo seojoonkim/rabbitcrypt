@@ -275,6 +275,73 @@ export default async function PostPage({ params }: PostPageProps) {
           </span>
         </div>
 
+        {/* Media section — images (top) */}
+        {post.mediaUrls && post.mediaUrls.length > 0 && (
+          <div
+            style={{
+              marginBottom: '1.5rem',
+              display: 'grid',
+              gridTemplateColumns: post.mediaUrls.length === 1 ? '1fr' : 'repeat(2, 1fr)',
+              gap: '0.75rem',
+            }}
+          >
+            {post.mediaUrls.map((url, i) => (
+              <img
+                key={i}
+                src={url}
+                alt=""
+                style={{
+                  width: '100%',
+                  aspectRatio: post.mediaUrls!.length === 1 ? 'auto' : '1 / 1',
+                  objectFit: 'cover',
+                  borderRadius: '0.75rem',
+                  border: '1px solid rgba(212,146,42,0.15)',
+                  display: 'block',
+                }}
+              />
+            ))}
+          </div>
+        )}
+
+        {/* Media section — videos (top) */}
+        {post.videoUrls && post.videoUrls.length > 0 && (
+          <div style={{ marginBottom: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            {post.videoUrls.map((url, i) => (
+              url.startsWith('/') || (url.startsWith('http') && !url.includes('t.me')) ? (
+                <video
+                  key={i}
+                  src={url}
+                  controls
+                  playsInline
+                  style={{
+                    width: '100%',
+                    borderRadius: '0.75rem',
+                    border: '1px solid rgba(212,146,42,0.15)',
+                    background: '#000',
+                    display: 'block',
+                  }}
+                />
+              ) : (
+                <a
+                  key={i}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.5rem',
+                    color: '#D4922A',
+                    fontSize: '0.875rem',
+                  }}
+                >
+                  🎬 영상 보기 (텔레그램)
+                </a>
+              )
+            ))}
+          </div>
+        )}
+
         {/* Summary / Lede */}
         <div
           className="rounded-r-xl"
@@ -304,80 +371,7 @@ export default async function PostPage({ params }: PostPageProps) {
           {renderContent(post.content, related)}
         </div>
 
-        {/* Media section — images */}
-        {post.mediaUrls && post.mediaUrls.length > 0 && (
-          <div
-            style={{
-              marginTop: '1.5rem',
-              display: 'grid',
-              gridTemplateColumns: post.mediaUrls.length === 1 ? '1fr' : 'repeat(2, 1fr)',
-              gap: '0.75rem',
-            }}
-          >
-            {post.mediaUrls.map((url, i) => (
-              <img
-                key={i}
-                src={url}
-                alt=""
-                style={{
-                  width: '100%',
-                  aspectRatio: post.mediaUrls!.length === 1 ? 'auto' : '1 / 1',
-                  objectFit: 'cover',
-                  borderRadius: '0.75rem',
-                  border: '1px solid rgba(212,146,42,0.15)',
-                  display: 'block',
-                }}
-              />
-            ))}
-          </div>
-        )}
-
-        {/* Media section — videos */}
-        {post.videoUrls && post.videoUrls.length > 0 && (
-          <div style={{ marginTop: '1rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            {post.videoUrls.map((url, i) => (
-              url.startsWith('/') || url.startsWith('http') && !url.includes('t.me') ? (
-                <video
-                  key={i}
-                  src={url}
-                  controls
-                  playsInline
-                  style={{
-                    width: '100%',
-                    borderRadius: '0.75rem',
-                    border: '1px solid rgba(212,146,42,0.15)',
-                    background: '#000',
-                    display: 'block',
-                  }}
-                />
-              ) : (
-                <a
-                  key={i}
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '0.5rem',
-                    borderRadius: '0.75rem',
-                    border: '1px solid rgba(212,146,42,0.25)',
-                    background: 'rgba(212,146,42,0.06)',
-                    color: '#E8A830',
-                    fontSize: '0.875rem',
-                    fontWeight: 500,
-                    padding: '0.625rem 1rem',
-                    textDecoration: 'none',
-                    width: 'fit-content',
-                  }}
-                >
-                  <span style={{ fontSize: '1rem' }}>▶</span>
-                  텔레그램에서 영상 보기
-                </a>
-              )
-            ))}
-          </div>
-        )}
+        {/* videos rendered at top — see above */}
 
         {/* Tags */}
         <div
