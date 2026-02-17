@@ -202,12 +202,12 @@ export default async function PostPage({ params }: PostPageProps) {
   const topTag = post.tags[0] || '';
 
   return (
-    <div className="min-h-screen" style={{ background: '#080E1A', color: '#F0E4CC' }}>
+    <div className="min-h-screen" style={{ background: 'linear-gradient(180deg, #060A14 0%, #080E1A 15%, #0A1220 50%, #080E1A 100%)', color: '#F0E4CC' }}>
       {/* Header bar */}
       <div
         className="sticky top-0 z-30"
         style={{
-          background: 'rgba(8,14,26,0.92)',
+          background: 'rgba(4,7,14,0.98)',
           backdropFilter: 'blur(12px)',
           borderBottom: '1px solid rgba(212,146,42,0.12)',
         }}
@@ -244,11 +244,11 @@ export default async function PostPage({ params }: PostPageProps) {
         <h1
           className="font-bold"
           style={{
-            fontFamily: "var(--font-display), var(--font-serif), 'Noto Serif KR', Georgia, serif",
+            fontFamily: "var(--font-title), Inter, 'Noto Sans KR', -apple-system, sans-serif",
             color: '#F0E4CC',
             marginBottom: '1.25rem',
             lineHeight: '1.15',
-            letterSpacing: '-0.02em',
+            letterSpacing: '-0.03em',
             fontSize: 'clamp(2.5rem, 5vw, 3.75rem)',
           }}
         >

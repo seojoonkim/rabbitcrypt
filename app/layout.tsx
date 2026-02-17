@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Noto_Serif_KR, JetBrains_Mono, Playfair_Display, Noto_Sans_KR } from 'next/font/google';
+import { Noto_Serif_KR, JetBrains_Mono, Playfair_Display, Noto_Sans_KR, Inter } from 'next/font/google';
 import './globals.css';
 
 const notoSerif = Noto_Serif_KR({
@@ -31,6 +31,13 @@ const notoSans = Noto_Sans_KR({
   display: 'swap',
 });
 
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-title',
+  display: 'swap',
+});
+
 export const metadata: Metadata = {
   title: 'Rabbit Crypt · 토끼굴',
   description: 'Simon(@simonkim_nft)의 토끼굴 블로그. 읽기 전과 읽은 후의 세계가 한 뼘 정도 어긋나 있는 글.',
@@ -58,7 +65,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className={`${notoSerif.variable} ${jetbrains.variable} ${playfairDisplay.variable} ${notoSans.variable}`}>
+    <html lang="ko" className={`${notoSerif.variable} ${jetbrains.variable} ${playfairDisplay.variable} ${notoSans.variable} ${inter.variable}`}>
       <body
         className="antialiased min-h-screen"
         style={{ background: '#080E1A', color: '#F0E4CC' }}

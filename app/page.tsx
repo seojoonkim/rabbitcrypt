@@ -36,7 +36,7 @@ export default function Home() {
   const rest = filteredPosts;
 
   return (
-    <div style={{ background: '#080E1A', color: '#F0E4CC', minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <div style={{ background: 'linear-gradient(180deg, #060A14 0%, #080E1A 15%, #0A1220 50%, #080E1A 100%)', color: '#F0E4CC', minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       {/* Header */}
       <header
         className="fixed top-0 left-0 right-0 z-50 h-14"
@@ -188,10 +188,11 @@ export default function Home() {
                         style={{
                           color: '#F0E4CC',
                           marginBottom: '0.5rem',
-                          fontFamily: "var(--font-serif), 'Noto Serif KR', Georgia, serif",
+                          fontFamily: "var(--font-title), Inter, 'Noto Sans KR', -apple-system, sans-serif",
                           fontSize: '1.25rem',
-                          lineHeight: '1.4',
+                          lineHeight: '1.35',
                           fontWeight: 700,
+                          letterSpacing: '-0.02em',
                         }}
                       >
                         {post.title}
