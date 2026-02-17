@@ -69,7 +69,7 @@ export default function Home() {
                 fontWeight: 300,
               }}
             >
-              읽기 전과 후의 세계가 다른 글
+              읽기 전과 후의 세계가 한 뼘 정도 어긋나는 토끼굴
             </span>
           </div>
         </div>
