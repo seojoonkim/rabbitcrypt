@@ -29,7 +29,7 @@ export default function Home() {
       : sortedPosts.filter((p) => p.category === selectedCategory);
 
   return (
-    <div style={{ background: '#080E1A', color: '#F0E4CC', minHeight: '100vh' }}>
+    <div style={{ background: '#080E1A', color: '#F0E4CC', minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       {/* ═══════════════════════════════════════════
           Fixed Header — always on top
       ═══════════════════════════════════════════ */}
@@ -75,7 +75,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           LIST VIEW — scrollable
       ═══════════════════════════════════════════ */}
-      <div className="pt-12 min-h-screen">
+      <div className="pt-12 min-h-screen" style={{ width: '100%', maxWidth: '1100px', margin: '0 auto' }}>
         {/* Category filter — fixed below header */}
         <div
           className="fixed z-40"
@@ -90,8 +90,8 @@ export default function Home() {
           }}
         >
           <div
-            className="flex overflow-x-auto no-scrollbar max-w-[1100px] mx-auto"
-            style={{ gap: '0.5rem' }}
+            className="flex overflow-x-auto no-scrollbar"
+            style={{ gap: '0.5rem', maxWidth: '1100px', margin: '0 auto' }}
           >
             <button
               onClick={() => setSelectedCategory('all')}
@@ -152,7 +152,7 @@ export default function Home() {
         </div>
 
         {/* ── Post grid ── */}
-        <div className="max-w-[1100px] mx-auto" style={{ padding: '7.5rem 1.25rem 7rem' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '7.5rem 1.25rem 7rem', width: '100%' }}>
           <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: '1.25rem' }}>
             {filteredPosts.map((post) => (
               <Link
