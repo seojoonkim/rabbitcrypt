@@ -246,7 +246,7 @@ article h1 {
 
 article p, .post-content p {
   font-family: 'Noto Serif KR', Georgia, serif !important;
-  font-size: 1rem;
+  font-size: 0.9375rem;
   line-height: 1.9;
   margin-bottom: 1.5rem;
   color: rgba(240, 228, 204, 0.85);
