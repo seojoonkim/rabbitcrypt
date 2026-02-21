@@ -24,16 +24,35 @@ const MEDIA_MIN_SIZE = 5 * 1024; // 5KB
 const MAX_RETRIES = 3;
 const DELAY_MS = 800;
 
-// slug → telegram msg ID 매핑 (이미 posts.ts에 있지만 telegramMsgId 없는 것들)
+// slug → telegram msg ID 매핑 (이미 posts.ts에 있지만 미디어 누락된 것들)
 const BACKFILL_MAP = {
-  'uncertainty-machine': 67,
-  'counting-assistant': 68,
-  'sano-intro': 69,
-  'naming-the-universe': 70,
-  'web4-write-access': 71,
-  'transistor-moment': 72,
-  '14-5-hours': 73,
-  'sano-godaddy-war': 74,
+  // 이전 세션에서 수동 추가된 8개 (이미 처리됨 — 재실행해도 Already exists로 스킵)
+  'uncertainty-machine':      67,
+  'counting-assistant':       68,
+  'sano-intro':               69,
+  'naming-the-universe':      70,
+  'web4-write-access':        71,
+  'transistor-moment':        72,
+  '14-5-hours':               73,
+  'sano-godaddy-war':         74,
+  // 2차 백필: 채널엔 이미지 있는데 posts.ts에 빠진 17개
+  'vibe-founders-era':        5,
+  'moltbot-anthropic-moat':   10,
+  'overnight-success':        11,
+  'bitcoin-energy':           14,
+  'gemini-snow-bunny':        17,
+  'figma-last-manual':        18,
+  'ai-unbundling':            19,
+  'prompt-guard-dev':         21,
+  'hvl-first-meetup':         30,
+  'click-theology':           26,
+  'thank-you-mirror':         27,
+  'ai-hires-ai':              28,
+  'agentlinter-v040':         45,
+  'seedance-30':              57,
+  'agentic-org':              32,
+  'agent-passport':           42,
+  'crypto-is-dead':           43,
 };
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }

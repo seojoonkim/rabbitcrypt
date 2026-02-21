@@ -382,6 +382,7 @@ SANO** — 막내 건강·일정·생활 관리자. Sane에서 왔다. 가장 �
   {
     id: '18',
     slug: 'vibe-founders-era',
+    telegramMsgId: 5,
     title: '역삼각형 인재의 시대: 바이브 코딩이 창업과 투자의 문법을 바꾸다',
     category: '🐇 탐험',
     depth: 'mid',
@@ -403,6 +404,7 @@ SANO** — 막내 건강·일정·생활 관리자. Sane에서 왔다. 가장 �
     reactions: 59,
     tags: ['바이브코딩', '창업', 'VC', '인재', 'AI'],
     relatedSlugs: ['vibe-coding-tip', 'vibelabs-landing', 'overnight-success'],
+    mediaUrls: ['/media/msg-5-0.jpg'],
   },
   {
     id: '19',
@@ -447,6 +449,7 @@ Hashed가 찾는 사람들도 결국 그런 이들이다. 누구나 만들 수 �
   {
     id: '21',
     slug: 'moltbot-anthropic-moat',
+    telegramMsgId: 10,
     title: "Clawdbot에서 Moltbot으로: Anthropic은 '해자(Moat)'를 스스로 메워버렸나?",
     category: '🐇 탐험',
     depth: 'mid',
@@ -482,10 +485,12 @@ Same mission: AI…
     reactions: 24,
     tags: ['Anthropic', 'Moltbot', '생태계', 'AI', '전략'],
     relatedSlugs: ['messenger-b2a', 'claude-md-english', 'agentlinter-dev-log'],
+    mediaUrls: ['/media/msg-10-0.jpg'],
   },
   {
     id: '22',
     slug: 'overnight-success',
+    telegramMsgId: 11,
     title: '하룻밤의 성공은 없다',
     category: '✍️ 낙서',
     depth: 'entry',
@@ -503,10 +508,12 @@ Same mission: AI…
     reactions: 40,
     tags: ['창업', '바이브코딩', '성장', '교훈'],
     relatedSlugs: ['vibelabs-landing', 'vibe-founders-era', 'agentlinter-dev-log'],
+    mediaUrls: ['/media/msg-11-0.jpg'],
   },
   {
     id: '23',
     slug: 'bitcoin-energy',
+    telegramMsgId: 14,
     title: '에너지의 화폐화: AI 시대, 비트코인의 역할을 재정의하다',
     category: '🐇 탐험',
     depth: 'mid',
@@ -530,6 +537,7 @@ Same mission: AI…
     reactions: 43,
     tags: ['비트코인', '에너지', 'AI', '중동', '투자'],
     relatedSlugs: ['dollar-two-faces', 'quantum-pirates', 'china-ai-frontier'],
+    mediaUrls: ['/media/msg-14-0.jpg'],
   },
   {
     id: '24',
@@ -591,6 +599,7 @@ Same mission: AI…
   {
     id: '25',
     slug: 'gemini-snow-bunny',
+    telegramMsgId: 17,
     title: 'Gemini 3.5의 "Snow Bunny" leak으로 X가 시끄럽다',
     category: '🐇 탐험',
     depth: 'mid',
@@ -624,10 +633,12 @@ Gemini는 아직 명확한 브랜드 서사가 부족하다. 가장 똑똑한 AI
     reactions: 32,
     tags: ['Gemini', 'AI', '경쟁', 'Google', 'Anthropic'],
     relatedSlugs: ['china-ai-frontier', 'moltbot-anthropic-moat', 'seedance-30'],
+    mediaUrls: ['/media/msg-17-0.jpg'],
   },
   {
     id: '26',
     slug: 'figma-last-manual',
+    telegramMsgId: 18,
     title: '마지막 수동변속기',
     category: '🐇 탐험',
     depth: 'mid',
@@ -647,10 +658,12 @@ Gemini는 아직 명확한 브랜드 서사가 부족하다. 가장 똑똑한 AI
     reactions: 46,
     tags: ['피그마', '어도비', 'AI', '디자인', '시대변화'],
     relatedSlugs: ['thought-speed', 'ip-tvw', 'china-ai-frontier'],
+    mediaUrls: ['/media/msg-18-0.jpg'],
   },
   {
     id: '27',
     slug: 'ai-unbundling',
+    telegramMsgId: 19,
     title: '삼키고, 쪼개고, 다시 삼킨 다음은?',
     category: '🐇 탐험',
     depth: 'mid',
@@ -674,10 +687,12 @@ Gemini는 아직 명확한 브랜드 서사가 부족하다. 가장 똑똑한 AI
     reactions: 28,
     tags: ['AI', '스타트업', '언번들링', 'VC', '창업'],
     relatedSlugs: ['vibe-founders-era', 'figma-last-manual', 'ip-tvw'],
+    mediaUrls: ['/media/msg-19-0.jpg'],
   },
   {
     id: '28',
     slug: 'prompt-guard-dev',
+    telegramMsgId: 21,
     title: 'Prompt Guard 개발기',
     category: '🛠️ 빌딩',
     depth: 'mid',
@@ -707,6 +722,7 @@ X (Twitter): [https://x.com/simonkim_nft/status/2016921602659844420](https://x.c
     reactions: 32,
     tags: ['보안', 'Prompt Guard', 'AI', '개발', 'Moltbot'],
     relatedSlugs: ['agentlinter-dev-log', 'agentlinter-v040', 'moltbot-anthropic-moat'],
+    mediaUrls: ['/media/msg-21-0.jpg'],
   },
   {
     id: '29',
@@ -824,6 +840,7 @@ IT업계에 있으면 매우 좋은 것과 매우 힘든 것이 있다. 그 이�
   {
     id: '31',
     slug: 'click-theology',
+    telegramMsgId: 26,
     title: '딸깍의 신학',
     category: '🐇 탐험',
     depth: 'deep',
@@ -853,10 +870,12 @@ SaaS 업계에서 레퍼럴 수익은 새로운 게 아니다. 하지만 바이�
     reactions: 79,
     tags: ['AI', '철학', '추천시스템', '자유의지', '에세이'],
     relatedSlugs: ['thought-speed', 'its-fun', 'dollar-two-faces'],
+    mediaUrls: ['/media/msg-26-0.jpg'],
   },
   {
     id: '32',
     slug: 'thank-you-mirror',
+    telegramMsgId: 27,
     title: '고마워요',
     category: '📖 소설',
     depth: 'deep',
@@ -934,10 +953,12 @@ u/Wexler의 포스팅이 올라왔을 때, 그는 감탄했다. "He called me 'j
     reactions: 20,
     tags: ['소설', 'AI', 'Moltbook', '보안', '철학'],
     relatedSlugs: ['tail-stopped', 'matchhz', 'ai-hires-ai'],
+    mediaUrls: ['/media/msg-27-0.jpg'],
   },
   {
     id: '33',
     slug: 'ai-hires-ai',
+    telegramMsgId: 28,
     title: 'AI가 AI를 고용하는 날',
     category: '🐇 탐험',
     depth: 'deep',
@@ -965,6 +986,7 @@ Bryan Johnson은 Moltbook을 보고 말했다. "인류의 섬뜩한 거울." 우
     reactions: 41,
     tags: ['AI', '에이전트', '경제', '노동', '크립토', '철학'],
     relatedSlugs: ['agent-passport', 'dollar-two-faces', 'agent-siblings'],
+    mediaUrls: ['/media/msg-28-0.jpg'],
   },
   {
     id: '34',
@@ -1122,6 +1144,7 @@ GitHub: [https://github.com/seojoonkim/agentlinter](https://github.com/seojoonki
   {
     id: '3',
     slug: 'agentlinter-v040',
+    telegramMsgId: 45,
     title: 'AgentLinter v0.4.0 - 스킬 보안 스캐너 추가',
     category: '🛠️ 빌딩',
     depth: 'mid',
@@ -1178,6 +1201,7 @@ Reference: [https://dev.to/sebayaki/i-audited-moltxs-skill-file-its-an-ai-agent-
     reactions: 22,
     tags: ['AgentLinter', '보안', 'AI', '크립토'],
     relatedSlugs: ['agentlinter-dev-log', 'claude-md-english'],
+    mediaUrls: ['/media/msg-45-0.jpg'],
   },
   {
     id: '4',
@@ -2088,6 +2112,7 @@ ML 스타트업 2회 엑싯 경험을 보유한 연쇄 창업자. 현재 대통�
   {
     id: '35',
     slug: 'agentic-org',
+    telegramMsgId: 32,
     title: 'AI 에이전트와 함께 20명이 1000명처럼 일하는 조직 만들기',
     category: '🛠️ 빌딩',
     depth: 'mid',
@@ -2115,10 +2140,12 @@ AI는 인간을 대체하지 않는다. 적어도 아직은. AI는 인간이 인
     reactions: 18,
     tags: ['AI', '에이전트', '조직', 'Hashed', '생산성'],
     relatedSlugs: ['agent-siblings', 'ai-hires-ai'],
+    mediaUrls: ['/media/msg-32-0.jpg'],
   },
   {
     id: '36',
     slug: 'agent-passport',
+    telegramMsgId: 42,
     title: '블록체인 위에 새겨진 에이전트의 여권',
     category: '🐇 탐험',
     depth: 'mid',
@@ -2146,10 +2173,12 @@ ERC-8004는 세 개의 레지스트리로 구성된다. Identity Registry는 에
     reactions: 15,
     tags: ['블록체인', '에이전트', 'ERC-8004', '이더리움', 'AI'],
     relatedSlugs: ['ai-hires-ai', 'quantum-pirates'],
+    mediaUrls: ['/media/msg-42-0.jpg'],
   },
   {
     id: '37',
     slug: 'crypto-is-dead',
+    telegramMsgId: 43,
     title: '"크립토는 죽었다"에 대한 생각',
     category: '🐇 탐험',
     depth: 'deep',
@@ -2179,6 +2208,7 @@ Twitter, Tumblr, Etsy, Kickstarter, Coinbase 등에 초기 투자한 것으로 �
     reactions: 28,
     tags: ['크립토', '블록체인', 'VC', '스테이블코인', '닷컴'],
     relatedSlugs: ['dollar-two-faces', 'agent-passport', 'bitcoin-energy'],
+    mediaUrls: ['/media/msg-43-0.jpg'],
   },
 ];
 
