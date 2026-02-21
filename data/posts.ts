@@ -2208,7 +2208,28 @@ Twitter, Tumblr, Etsy, Kickstarter, Coinbase 등에 초기 투자한 것으로 �
     tags: ['크립토', '블록체인', 'VC', '스테이블코인', '닷컴'],
     relatedSlugs: ['dollar-two-faces', 'agent-passport', 'bitcoin-energy'],
     mediaUrls: ['/media/msg-43-0.jpg'],
-  },
+  },,
+  {
+    id: 'rabbit-hole-intro',
+    slug: 'rabbit-hole-intro',
+    telegramMsgId: 4,
+    title: '토끼굴 하나 팠습니다.',
+    category: '✍️ 낙서',
+    depth: 'entry',
+    summary: '정제되지 않은 생각, 반쯤 익은 아이디어, 가끔은 그냥 중얼거림. 토끼굴의 첫 번째 글.',
+    content: `정제되지 않은 생각, 반쯤 익은 아이디어, 가끔은 그냥 중얼거림.
+회사 공식 채널 아니고, 회사 공식 의견은 더더욱 아닙니다.
+여긴 그냥 제 머릿속이에요. 정리 안 됨 주의.
+
+따라 내려올 분만.
+
+- Simon`,
+    date: '2026-01-27',
+    reactions: 259,
+    tags: ['토끼굴', '소개', 'Simon'],
+    relatedSlugs: [],
+  }
+
 ];
 
 export const getPostBySlug = (slug: string): Post | undefined =>
