@@ -46,31 +46,18 @@ export default function Home() {
         }}
       >
         <div className="flex items-center justify-between h-full" style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 1.25rem' }}>
-          <div className="flex items-center" style={{ gap: '0.5rem' }}>
-            <img src="/logo.png" width="40" height="40" alt="Rabbit Crypt" style={{ display: 'block', borderRadius: '6px' }} />
+          <div className="flex items-center">
             <span
               style={{
-                fontFamily: "var(--font-logo), Cinzel, Georgia, serif",
+                fontFamily: "var(--font-logo), 'Cormorant Garamond', Georgia, serif",
                 fontWeight: 600,
                 color: '#F0E4CC',
-                fontSize: '1.25rem',
-                letterSpacing: '0.08em',
+                fontSize: '1.35rem',
+                letterSpacing: '0.18em',
                 textTransform: 'uppercase' as const,
               }}
             >
               Rabbit Crypt
-            </span>
-            <span style={{ color: 'rgba(212,146,42,0.3)', fontSize: '0.75rem' }} className="hidden sm:inline">·</span>
-            <span
-              className="hidden sm:inline"
-              style={{
-                fontFamily: "var(--font-sans), 'Noto Sans KR', sans-serif",
-                color: '#8A7A5E',
-                fontSize: '0.75rem',
-                fontWeight: 300,
-              }}
-            >
-              읽기 전과 후의 세계가 한 뼘 정도 어긋나는 토끼굴
             </span>
           </div>
         </div>
@@ -301,14 +288,15 @@ export default function Home() {
         >
           <p
             style={{
-              fontFamily: "var(--font-logo), Cinzel, Georgia, serif",
+              fontFamily: "var(--font-logo), 'Cormorant Garamond', Georgia, serif",
               color: 'rgba(212,146,42,0.4)',
-              fontSize: '0.875rem',
-              letterSpacing: '0.06em',
+              fontSize: '0.9rem',
+              letterSpacing: '0.18em',
+              textTransform: 'uppercase' as const,
               marginBottom: '0.5rem',
             }}
           >
-            Rabbit Crypt · 토끼굴
+            Rabbit Crypt
           </p>
           <p>
             <a
