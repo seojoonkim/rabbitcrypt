@@ -24,29 +24,49 @@ function getThumb(post: (typeof posts)[number]) {
   return null;
 }
 
+/* ─── Date formatter ─── */
+function formatDate(dateStr: string) {
+  const parts = dateStr.split('-');
+  const months = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+  return `${months[parseInt(parts[1]) - 1]} ${parseInt(parts[2])}`;
+}
+
+/* ─── Category color map ─── */
+const categoryColors: Record<string, string> = {
+  '🐇 탐험': '#D4922A',
+  '✍️ 낙서': '#8B7CF6',
+  '🛠️ 빌딩': '#2DD4BF',
+  '📖 소설': '#F472B6',
+};
+
 /* ─── PostCard component ─── */
 function PostCard({ post }: { post: (typeof posts)[number] }) {
   const thumb = getThumb(post);
   const hasVideo = !thumb && post.videoUrls && post.videoUrls.length > 0;
+  const catColor = categoryColors[post.category] ?? '#D4922A';
 
   return (
     <Link
       href={`/posts/${post.slug}`}
-      className="block transition-all duration-200 group"
+      className="block group"
       style={{
         background: '#0D1826',
-        border: '1px solid rgba(212,146,42,0.08)',
+        border: '1px solid rgba(212,146,42,0.06)',
+        borderLeft: `3px solid ${catColor}55`,
         padding: '1.25rem 1.375rem',
         display: 'flex',
         flexDirection: 'column',
+        transition: 'background 0.2s ease, border-left-color 0.2s ease, box-shadow 0.2s ease',
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.borderColor = 'rgba(212,146,42,0.35)';
         e.currentTarget.style.background = '#0F1D2E';
+        e.currentTarget.style.borderLeftColor = catColor;
+        e.currentTarget.style.boxShadow = `inset 4px 0 20px ${catColor}18`;
       }}
       onMouseLeave={(e) => {
-        e.currentTarget.style.borderColor = 'rgba(212,146,42,0.08)';
         e.currentTarget.style.background = '#0D1826';
+        e.currentTarget.style.borderLeftColor = `${catColor}55`;
+        e.currentTarget.style.boxShadow = 'none';
       }}
     >
       {/* Card content row */}
@@ -144,7 +164,7 @@ function PostCard({ post }: { post: (typeof posts)[number] }) {
           paddingTop: '0.75rem',
         }}
       >
-        <span>{post.date}</span>
+        <span>{formatDate(post.date)}</span>
         <span>❤ {post.reactions}</span>
       </div>
     </Link>
@@ -240,7 +260,7 @@ function FeaturedCard({ post }: { post: (typeof posts)[number] }) {
               fontSize: '0.75rem',
             }}
           >
-            <span>{post.date}</span>
+            <span>{formatDate(post.date)}</span>
             <span>❤ {post.reactions}</span>
           </div>
         </div>
