@@ -32,7 +32,7 @@ function PostCard({ post }: { post: (typeof posts)[number] }) {
   return (
     <Link
       href={`/posts/${post.slug}`}
-      className="block rounded-xl transition-all duration-200 group"
+      className="block transition-all duration-200 group"
       style={{
         background: '#0D1826',
         border: '1px solid rgba(212,146,42,0.08)',
@@ -109,7 +109,7 @@ function PostCard({ post }: { post: (typeof posts)[number] }) {
               width: '100px',
               height: '100px',
               objectFit: 'cover',
-              borderRadius: '0.375rem',
+              
               flexShrink: 0,
               marginTop: '1.75rem',
             }}
@@ -124,7 +124,7 @@ function PostCard({ post }: { post: (typeof posts)[number] }) {
               width: '100px',
               height: '100px',
               objectFit: 'cover',
-              borderRadius: '0.375rem',
+              
               flexShrink: 0,
               marginTop: '1.75rem',
             }}
@@ -158,7 +158,7 @@ function FeaturedCard({ post }: { post: (typeof posts)[number] }) {
   return (
     <Link
       href={`/posts/${post.slug}`}
-      className="block rounded-xl transition-all duration-200 group"
+      className="block transition-all duration-200 group"
       style={{
         background: '#0D1826',
         border: '1px solid rgba(212,146,42,0.18)',
@@ -235,7 +235,7 @@ function FeaturedCard({ post }: { post: (typeof posts)[number] }) {
               width: '140px',
               height: '140px',
               objectFit: 'cover',
-              borderRadius: '0.5rem',
+              
               flexShrink: 0,
               alignSelf: 'center',
             }}
