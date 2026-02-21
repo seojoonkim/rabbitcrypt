@@ -2228,6 +2228,7 @@ Twitter, Tumblr, Etsy, Kickstarter, Coinbase 등에 초기 투자한 것으로 �
     reactions: 259,
     tags: ['토끼굴', '소개', 'Simon'],
     relatedSlugs: [],
+    mediaUrls: ['/media/msg-4-0.jpg'],
   }
 
 ];
