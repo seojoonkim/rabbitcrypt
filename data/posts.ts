@@ -67,7 +67,7 @@ vibelabs.hashed.com`,
     slug: 'sano-godaddy-war',
     telegramMsgId: 74,
     title: '두 마디와 서른다섯 개의 행동: 사노의 GoDaddy 전쟁일지',
-    category: '🛠️ 빌딩',
+    category: '🐇 탐험',
     depth: 'mid',
     summary: 'VibeDojo 도메인을 이전하는 단순한 작업에서 시작된 사노의 GoDaddy 전쟁. 두 마디 지시로 서른다섯 번의 행동이 펼쳐졌다.',
     content: `**
