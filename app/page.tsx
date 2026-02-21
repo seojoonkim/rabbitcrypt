@@ -37,65 +37,47 @@ export default function Home() {
 
   return (
     <div style={{ background: 'linear-gradient(180deg, #060A14 0%, #080E1A 15%, #0A1220 50%, #080E1A 100%)', color: '#F0E4CC', minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      {/* Header */}
+      {/* Header — 로고 왼쪽, 메뉴 오른쪽, 한 줄 */}
       <header
         className="fixed top-0 left-0 right-[8px] z-50 h-14"
         style={{
           background: 'rgba(4,7,14,0.98)',
           backdropFilter: 'blur(12px)',
+          borderBottom: '1px solid rgba(212,146,42,0.06)',
         }}
       >
         <div className="flex items-center justify-between h-full" style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 1.25rem' }}>
-          <div className="flex items-center">
-            <span
-              style={{
-                fontFamily: "var(--font-logo), 'Cormorant Garamond', Georgia, serif",
-                fontWeight: 600,
-                color: '#F0E4CC',
-                fontSize: '1.35rem',
-                letterSpacing: '0.18em',
-                textTransform: 'uppercase' as const,
-              }}
-            >
-              Rabbit Crypt
-            </span>
-          </div>
-        </div>
-      </header>
-
-      {/* Content */}
-      <div className="pt-14 min-h-screen" style={{ width: '100%', maxWidth: '1000px', margin: '0 auto' }}>
-        {/* Category filter */}
-        <div
-          className="fixed z-40"
-          style={{
-            top: '56px',
-            left: 0,
-            right: '8px',
-            background: 'rgba(4,7,14,0.98)',
-            backdropFilter: 'blur(12px)',
-            borderBottom: '1px solid rgba(212,146,42,0.06)',
-            padding: '0.75rem 0',
-          }}
-        >
-          <div
-            className="flex overflow-x-auto no-scrollbar"
-            style={{ gap: '1.5rem', maxWidth: '1000px', margin: '0 auto', padding: '0 1.25rem' }}
+          {/* Logo */}
+          <span
+            style={{
+              fontFamily: "var(--font-logo), 'Cormorant Garamond', Georgia, serif",
+              fontWeight: 600,
+              color: '#F0E4CC',
+              fontSize: '1.35rem',
+              letterSpacing: '0.18em',
+              textTransform: 'uppercase' as const,
+              flexShrink: 0,
+            }}
           >
+            Rabbit Crypt
+          </span>
+
+          {/* Category nav */}
+          <nav className="flex items-center overflow-x-auto no-scrollbar" style={{ gap: '1.25rem' }}>
             <button
               onClick={() => setSelectedCategory('all')}
               className="flex-shrink-0 transition-all"
               style={{
-                fontSize: '0.875rem',
-                padding: '0.375rem 0.25rem',
+                fontSize: '0.8rem',
+                padding: '0.25rem 0',
                 fontFamily: "var(--font-sans), 'Noto Sans KR', sans-serif",
                 background: 'transparent',
                 border: 'none',
                 cursor: 'pointer',
-                borderBottom: '2px solid',
+                borderBottom: '1.5px solid',
                 ...(selectedCategory === 'all'
                   ? { color: '#D4922A', fontWeight: 700, borderBottomColor: '#D4922A' }
-                  : { color: 'rgba(240,228,204,0.4)', fontWeight: 400, borderBottomColor: 'transparent' }),
+                  : { color: 'rgba(240,228,204,0.45)', fontWeight: 400, borderBottomColor: 'transparent' }),
               }}
             >
               전체
@@ -106,25 +88,26 @@ export default function Home() {
                 onClick={() => setSelectedCategory(cat)}
                 className="flex-shrink-0 transition-all"
                 style={{
-                  fontSize: '0.875rem',
-                  padding: '0.375rem 0.25rem',
+                  fontSize: '0.8rem',
+                  padding: '0.25rem 0',
                   fontFamily: "var(--font-sans), 'Noto Sans KR', sans-serif",
                   background: 'transparent',
                   border: 'none',
                   cursor: 'pointer',
-                  borderBottom: '2px solid',
+                  borderBottom: '1.5px solid',
                   ...(selectedCategory === cat
                     ? { color: '#D4922A', fontWeight: 700, borderBottomColor: '#D4922A' }
-                    : { color: 'rgba(240,228,204,0.4)', fontWeight: 400, borderBottomColor: 'transparent' }),
+                    : { color: 'rgba(240,228,204,0.45)', fontWeight: 400, borderBottomColor: 'transparent' }),
                 }}
               >
                 {categoryShort[cat]}
               </button>
             ))}
-          </div>
+          </nav>
         </div>
+      </header>
 
-        <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '8.5rem 1.25rem 5rem', width: '100%' }}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '5rem 1.25rem 5rem', width: '100%' }}>
 
           {/* ═══ POST GRID ═══ */}
           <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: '1.5rem' }}>
@@ -313,6 +296,5 @@ export default function Home() {
           </p>
         </footer>
       </div>
-    </div>
   );
 }
