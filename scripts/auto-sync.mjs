@@ -158,20 +158,14 @@ function parseMessages(html) {
     const dateMatch = block.match(/datetime="([^"]+)"/);
     const date = dateMatch ? dateMatch[1].split('T')[0] : null;
 
-    // Reactions
-    const reactions = {};
+    // Reactions: parse tgme_widget_message_reactions div
+    // Structure: <span class="tgme_reaction"><i class="emoji">...</i>COUNT</span>
     let totalReactions = 0;
-    const emojiMatches = [...block.matchAll(/class="[^"]*tgme_widget_message_reaction[^"]*"[\s\S]*?(?:<\/div>){3}/g)];
-    for (const em of emojiMatches) {
-      const counterMatch = em[0].match(/class="[^"]*counter[^"]*"[^>]*>(\d+)</);
-      if (counterMatch) {
-        totalReactions += parseInt(counterMatch[1]);
-      }
+    const rxnDiv = block.match(/tgme_widget_message_reactions[^>]*>([\s\S]*?)<\/div>/);
+    if (rxnDiv) {
+      const counts = [...rxnDiv[1].matchAll(/<\/i>(\d+)/g)];
+      totalReactions = counts.reduce((s, m) => s + parseInt(m[1]), 0);
     }
-    // Simpler fallback: sum all counter spans
-    const counterSpans = [...block.matchAll(/class="[^"]*counter[^"]*"[^>]*>(\d+)</g)];
-    const countSum = counterSpans.reduce((s, m) => s + parseInt(m[1]), 0);
-    totalReactions = Math.max(totalReactions, countSum);
 
     // Views
     const viewsMatch = block.match(/class="[^"]*tgme_widget_message_views[^"]*"[^>]*>([\d.,K]+)</);
@@ -779,16 +773,14 @@ async function main() {
     await sleep(DELAY_MS);
   }
 
-  // 5. Update reactions for recent posts (last 20)
+  // 5. Update reactions for ALL scraped posts
   log('\n💫 Updating reactions...');
-  const recentMessages = allMessages.filter(msg => processedSet.has(msg.id));
-  const recentSorted = recentMessages.sort((a, b) => b.id - a.id).slice(0, 20);
-  
-  for (const msg of recentSorted) {
+  for (const msg of allMessages) {
+    if (msg.reactions === 0) continue; // skip zero (might not have loaded)
     const slug = Object.entries(state.slugToMsgId).find(([, id]) => id === msg.id)?.[0];
     if (!slug) continue;
-    if (!src.includes(`id: '${slug}'`)) continue;
-    
+    if (!src.includes(`slug: '${slug}'`)) continue;
+
     const before = src;
     src = updateReactions(src, msg.id, msg.reactions, state.slugToMsgId);
     if (src !== before) reactionsUpdated++;

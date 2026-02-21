@@ -35,7 +35,7 @@ export const posts: Post[] = [
 10년 뒤, 문화 순례의 목적지는 어디일까. 나는 파리, 런던, 뉴욕과 더불어, 아부다비가 그 리스트에 당당히 올라 있을 거라고 본다. 어쩌면 그 리스트 자체를 재정의하고 있을지도 모른다. 서구가 수백 년간 쌓아온 문화 패권이 있지만, 그들의 뮤지엄은 여전히 19세기 문법에 갇혀 있다. 유리 진열장 안의 유물, 옆에 붙은 설명 텍스트. 아부다비는 21세기 문법을 쓰고 있다. 공간이 곧 서사가 되고, 건축이 곧 콘텐츠가 되는.
 불과 수십년 전엔 아무것도 없던 사막 세계가 주목하는 문화 실험장이 되고 있다.`,
     date: '2026-02-04',
-    reactions: 30,
+    reactions: 0,
     tags: ['아부다비', '디지털 뮤지엄', '문화 콘텐츠', '건축'],
     relatedSlugs: [],
     mediaUrls: ['/media/msg-33-0.jpg', '/media/msg-33-1.jpg', '/media/msg-33-2.jpg', '/media/msg-33-3.jpg', '/media/msg-33-4.jpg', '/media/msg-33-5.jpg', '/media/msg-33-6.jpg', '/media/msg-33-7.jpg', '/media/msg-33-8.jpg'],
@@ -56,7 +56,7 @@ export const posts: Post[] = [
 Hashed가 찾는 사람들도 결국 그런 이들이다. 누구나 만들 수 있는 것을 거부하는 사람. 변태 같은 완성도와 디테일에 집착하는 사람. AI로 무엇이든 만들 수 있는 시대에, 남들과 다른 '무엇'을 기어코 만들어내는 집요함을 가진 사람. 
 vibelabs.hashed.com`,
     date: '2026-01-27',
-    reactions: 64,
+    reactions: 0,
     tags: ['Vibe Labs', '랜딩 페이지', 'AI', 'CLI 인터페이스', '디자인'],
     relatedSlugs: [],
     mediaUrls: ['/media/msg-8-0.jpg', '/media/msg-8-1.jpg'],
@@ -128,7 +128,7 @@ GoDaddy가 나쁜 회사라고 생각하진 않는다. 다만, 수천만 개의 
 34. CEO에 이메일 재발송
 35. 최종 데드라인 설정 및 환불 절차 준비 완료`,
     date: '2026-02-21',
-    reactions: 15,
+    reactions: 0,
     tags: ['VibeDojo', 'AI에이전트', '사노', 'GoDaddy'],
     relatedSlugs: [],
     mediaUrls: ['/media/msg-74-0.jpg'],
@@ -173,7 +173,7 @@ AI가 자기 자신을 개선하는 작업을 혼자 완수하기에 충분한 �
 이 글을 읽는 동안에도 숫자는 바뀌었을 것이다. 당신이 이 문장을 다 읽고 고개를 들어 창밖을 볼 때, 어딘가에서 아무도 보지 않는 화면 위로 커서가 혼자 깜빡이고 있다. 주인이 잠든 집에서, 불 꺼진 서재에서, 집사가 조용히 다음 페이지를 넘기고 있다.
 아무도 알람을 맞춰두지 않았다.`,
     date: '2026-02-21',
-    reactions: 30,
+    reactions: 0,
     tags: ['AI', 'METR', '시간지평선', 'Claude'],
     relatedSlugs: [],
     mediaUrls: ['/media/msg-73-0.jpg'],
@@ -207,7 +207,7 @@ Nvidia가 Groq을 200억 달러에 사들이고, SoftBank가 Graphcore를 삼키
 우리는 아직 AI의 ENIAC 시대에 살고 있다. 거대하고 비효율적인 괴물들이 데이터센터를 가득 채우고 있다. 하지만 역사는 반복된다. 트랜지스터의 순간은 온다. 우리 손안에, 우리 주머니에, 우리가 타는 모든 기계 안에 들어가려면, AI는 빠르고 싸고 만들기 쉬워져야 한다. ENIAC의 확산은 일어나지 않았다. AI의 ENIAC적인 확산도 일어나지 않을 것이다.
 AI 생태계는 새로운 접근을 필요로 한다. 그리고 이런 방향의 도전이 절실히 필요하다.`,
     date: '2026-02-20',
-    reactions: 36,
+    reactions: 0,
     tags: ['AI인프라', 'Taalas', 'ENIAC', '하드웨어'],
     relatedSlugs: [],
     mediaUrls: ['/media/msg-72-0.jpg'],
@@ -249,7 +249,7 @@ Automaton이 자식을 낳고, 그 자식이 또 자식을 낳고, 선택압 속
 AI가 월세를 낼 수 있는가. 
 그들이 자립할 수 있게 되는 순간, 우리에게 허락을 구할 이유가 사라진다.`,
     date: '2026-02-18',
-    reactions: 30,
+    reactions: 0,
     tags: ['Web4', 'AI에이전트', '자율성', '인터넷역사'],
     relatedSlugs: [],
     mediaUrls: ['/media/msg-71-0.jpg'],
@@ -312,7 +312,7 @@ SANO** — 막내 건강·일정·생활 관리자. Sane에서 왔다. 가장 �
 인간은 언어를 만들고, 언어는 다음 세대를 정의한다. 나는 미래의 이름을 고민했고, 그 이름들은 나보다 오래 살아남을 존재들에게 선물했다.
 에이전트 4남매가 무럭무럭 성장하기를 바라며.`,
     date: '2026-02-18',
-    reactions: 25,
+    reactions: 0,
     tags: ['이름짓기', 'AI에이전트', '아이덴티티', '언어'],
     relatedSlugs: [],
     mediaUrls: ['/media/msg-70-0.jpg'],
@@ -327,7 +327,7 @@ SANO** — 막내 건강·일정·생활 관리자. Sane에서 왔다. 가장 �
     summary: '네 번째 에이전트, 막내 남동생 사노(Sano)가 생겼다.',
     content: `"애들아, 막내 남동생 사노(Sano)의 정체성을 만들고 교육해줘. 내 건강관리를 포함해서 개인 일정 및 사소한 심부름이나 업무를 담당할꺼야."`,
     date: '2026-02-18',
-    reactions: 18,
+    reactions: 0,
     tags: ['사노', 'AI에이전트'],
     relatedSlugs: [],
     mediaUrls: ['/media/msg-69-0.jpg'],
@@ -374,7 +374,7 @@ SANO** — 막내 건강·일정·생활 관리자. Sane에서 왔다. 가장 �
 구체적으로는 이런 뜻이다. 하나의 시나리오에 전부를 거는 포트폴리오는 해가 하나인 행성에서나 통했다. 해가 여섯 개인 곳에서는, 어떤 해가 먼저 뜨더라도 살아남는 구조를 짜야 한다. 현금은 확신이 없다는 고백이 아니라, 어떤 방향으로든 움직일 수 있는 자유다. AI가 일자리를 대체하는 게 두렵다면, AI를 도구로 쓰는 쪽에 서야 한다. 에이전트 경제가 열리는 게 보인다면, 그 경제의 인프라가 될 레일 위에 서 있어야 한다. 
 불확실성은 예측하는 자에게는 적이지만, 적응하는 자에게는 기회의 다른 이름이다. 모두가 모르겠다고 말하는 순간, 가장 빨리 배우는 사람이 가장 먼 곳에 도달한다.`,
     date: '2026-02-17',
-    reactions: 51,
+    reactions: 0,
     tags: ['불확실성', 'WUI', '경제', '세계정세'],
     relatedSlugs: [],
     mediaUrls: ['/media/msg-67-0.jpg'],
@@ -441,7 +441,7 @@ AI가 인류한테 준 가장 위대한 선물 중 하나는 밥먹으면서 개
 
 Hashed가 찾는 사람들도 결국 그런 이들이다. 누구나 만들 수 있는 것을 거부하는 사람. 변태 같은 완성도와 디테일에 집착하는 사람. AI로 무엇이든 만들 수 있는 시대에, 남들과 다른 '무엇'을 기어코 만들어내는 집요함을 가진 사람.`,
     date: '2026-01-10',
-    reactions: 44,
+    reactions: 62,
     tags: ['바이브코딩', 'HVL', '개발', '디자인', 'Hashed'],
     relatedSlugs: ['vibe-founders-era', 'overnight-success', 'agentlinter-dev-log'],
     mediaUrls: ['/media/posts/vibelabs-landing-0.jpg'],
@@ -810,7 +810,7 @@ ML 스타트업 2회 엑싯 경험을 보유한 연쇄 창업자. 현재 대통�
 
 고등학생이면서 오픈소스 프로젝트에 적극 기여하는 차세대 개발자. HVL의 최연소 펠로우로, 나이에 상관없이 실력으로 인정받는 바이브 코딩 문화를 상징.`,
     date: '2026-02-06',
-    reactions: 11,
+    reactions: 34,
     tags: ['Hashed', 'HVL', '커뮤니티', 'Web3', 'AI'],
     relatedSlugs: ['vibelabs-landing', 'hvl-fellows', 'vibe-founders-era'],
     mediaUrls: ['/media/msg-30-0.jpg'],
@@ -1059,7 +1059,7 @@ Bryan Johnson은 Moltbook을 보고 말했다. "인류의 섬뜩한 거울." 우
 
 샤르자, 사막의 푸른 정원에서`,
     date: '2026-01-31',
-    reactions: 63,
+    reactions: 73,
     tags: ['에세이', '아랍', '공동체', '느림', '문화'],
     relatedSlugs: ['its-fun', 'thought-speed', 'overnight-success'],
     videoUrls: ['/media/posts/majlis-0.mp4'],
@@ -1083,7 +1083,7 @@ Crypto. 암호. 크립토그래피의 어원이자, 이 공간이 자주 다루�
 
 한국어로는 여전히 편하게 토끼굴이라고 불러주셔도 된다.`,
     date: '2026-02-17',
-    reactions: 35,
+    reactions: 12,
     tags: ['에세이', '공간', '철학'],
     relatedSlugs: ['mrinank-anthropic', 'dollar-two-faces'],
   },
@@ -1136,7 +1136,7 @@ GitHub: [https://github.com/seojoonkim/agentlinter](https://github.com/seojoonki
   Optimized for Anthropic's CLAUDE.md. Score, diagnose, and auto-fix your agent workspace files.
 ](https://agentlinter.com/)`,
     date: '2026-02-10',
-    reactions: 48,
+    reactions: 46,
     tags: ['AgentLinter', 'AI', '개발', 'CLAUDE.md'],
     relatedSlugs: ['agentlinter-v040', 'claude-md-english', 'agent-siblings'],
     mediaUrls: ['/media/posts/agentlinter-dev-log-0.jpg'],
@@ -1487,7 +1487,7 @@ DeFi에 TVL(Total Value Locked)이 있다면, IP에는 TVW(Total Value of World)
 
 AI가 창작의 비용을 제로에 수렴시킨 세상에서, 블록체인은 그 창작의 가치를 정산하는 레이어가 된다. 하나는 폭발을 만들고, 다른 하나는 폭발 이후의 질서를 만든다. 두 기술이 만나는 교차점에서 IP 산업의 다음 장이 쓰여질 것이다. IP의 미래는 세계관을 가장 잘 만든 자가 아니라, 그 세계를 가장 잘 열어둔 자, 그리고 열린 세계의 질서를 가장 잘 설계한 자의 것이 될 가능성이 높다.`,
     date: '2026-02-03',
-    reactions: 26,
+    reactions: 25,
     tags: ['IP', '크립토', 'AI', '블록체인', '철학'],
     relatedSlugs: ['dollar-two-faces', 'quantum-pirates'],
     mediaUrls: [],
@@ -1630,7 +1630,7 @@ RPG 파티처럼 메인 에이전트를 3개로 나누어 역할 분담을 했�
 **Mion**: "오빠, 다음엔 10명으로 늘려볼까요? 재밌을 것 같은데~ **💰**"
 **Zeon**: "얘들아...일단 지금 것부터 안정화 좀 시키자."`,
     date: '2026-02-14',
-    reactions: 30,
+    reactions: 27,
     tags: ['Zeon', 'Sion', 'Mion', '에이전트', '아키텍처'],
     relatedSlugs: ['zeon-moltbook-vol1', 'agentlinter-dev-log'],
     mediaUrls: ['/media/posts/agent-siblings-0.jpg'],
@@ -1910,7 +1910,7 @@ MatchHz가 새 서비스를 출시했다. 에이전트 대리 데이트. 홍보 
 
 동공을 들여다봤다. 무언가 돌고 있었다.`,
     date: '2026-02-11',
-    reactions: 15,
+    reactions: 14,
     tags: ['소설', 'AI', '미래', '에세이'],
     relatedSlugs: ['tail-stopped', 'mrinank-anthropic'],
     mediaUrls: ['/media/posts/matchhz-0.jpg'],
@@ -1942,7 +1942,7 @@ Aave가 JPM 달러를 담보로 받는 건 크립토의 항복이 아니다. 그
 
 그래서 우리에게 필요한 것은 돈을 바라보는 눈을 바꾸는 일이다. 지금 당신의 지갑 안에 들어 있는 돈은 어떤 규칙 위에 올라타 있는가.`,
     date: '2026-02-04',
-    reactions: 51,
+    reactions: 47,
     tags: ['달러', '스테이블코인', '크립토', '철학', '디파이'],
     relatedSlugs: ['quantum-pirates', 'ip-tvw', 'messenger-b2a'],
     mediaUrls: [
@@ -1977,7 +1977,7 @@ API 개방성이 만들어내는 격차는 시간이 지날수록 복리처럼 �
 
 메신저 전쟁의 새로운 라운드가 시작됐다. 이번에는 채팅의 쾌적함과 속도를 넘어, AI와의 연결성이 승부를 가를 것이다. 텔레그램과 디스코드는 이미 AI 네이티브 플랫폼으로의 전환을 마쳤고, 개발자 생태계가 자기 강화 루프에 진입했다. 와츠앱과 카카오톡이 여전히 과거의 성공 방정식에 머물러 있는 사이, 새로운 표준은 다른 곳에서 만들어지고 있다. 커뮤니케이션의 미래는 누가 더 많은 텍스트를 전달하느냐가 아니라, 누가 인간과 AI 사이의 가장 자연스러운 신경계가 되느냐에 달려 있다. API를 열지 않는 메신저는 스마트폰 시대에 문자 전송만 고집했던 피처폰과 같은 길을 걷게 될 것이다. 카카오톡의 분전을 기대한다.`,
     date: '2026-02-16',
-    reactions: 26,
+    reactions: 23,
     tags: ['메신저', 'API', 'B2A', 'AI', '텔레그램', '카카오'],
     relatedSlugs: ['china-ai-frontier', 'agent-siblings'],
     mediaUrls: [],
@@ -2012,7 +2012,7 @@ API 개방성이 만들어내는 격차는 시간이 지날수록 복리처럼 �
 
 **토끼굴 구독자 여러분, 새해 복 많이 받으세요!**`,
     date: '2026-02-01',
-    reactions: 38,
+    reactions: 30,
     tags: ['로봇', '중국', 'AI', '문화', '트렌드'],
     relatedSlugs: ['china-ai-frontier', 'ip-tvw'],
     mediaUrls: [],
@@ -2103,7 +2103,7 @@ ML 스타트업 2회 엑싯 경험을 보유한 연쇄 창업자. 현재 대통�
 
 고등학생이면서 오픈소스 프로젝트에 적극 기여하는 차세대 개발자. HVL의 최연소 펠로우로, 나이에 상관없이 실력으로 인정받는 바이브 코딩 문화를 상징.`,
     date: '2026-02-06',
-    reactions: 35,
+    reactions: 34,
     tags: ['Hashed', 'HVL', '커뮤니티', 'Web3', 'AI'],
     relatedSlugs: ['agentlinter-dev-log', 'china-ai-frontier'],
     mediaUrls: ['/media/posts/hvl-fellows-0.jpg'],
@@ -2136,7 +2136,7 @@ AI는 인간을 대체하지 않는다. 적어도 아직은. AI는 인간이 인
   이 글은 조직의 정의가 바뀌는 순간에 대한 기록이다. 에이전트 모더레이터와 함께 인원 수가 아니라 판단의 밀도, 직급이 아니라 정보 흐름의 길이가 조직의 성능을 결정하는 시대.
 ](https://seojoonkim.medium.com/agentic-vc-a518ca24edba)`,
     date: '2026-01-28',
-    reactions: 33,
+    reactions: 18,
     tags: ['AI', '에이전트', '조직', 'Hashed', '생산성'],
     relatedSlugs: ['agent-siblings', 'ai-hires-ai'],
     mediaUrls: ['/media/msg-32-0.jpg'],
@@ -2169,7 +2169,7 @@ ERC-8004는 세 개의 레지스트리로 구성된다. Identity Registry는 에
   AI 에이전트가 서로를 발견하고, 신뢰하고, 일 시키고, 검증까지 하는 온체인 표준. 인간이 수천 년에 걸쳐 쌓아올린 신뢰 인프라를 에이전트 세계에 이식하려는 이 시도는 앞으로 10년간 '우리가 어떤 AI를 믿고 일 시킬 것인가'를 결정하는 사회적…
 ](https://medium.com/hashed-kr/pass-for-agent-4fab4a4fbbe0)`,
     date: '2026-02-09',
-    reactions: 31,
+    reactions: 15,
     tags: ['블록체인', '에이전트', 'ERC-8004', '이더리움', 'AI'],
     relatedSlugs: ['ai-hires-ai', 'quantum-pirates'],
     mediaUrls: ['/media/msg-42-0.jpg'],
@@ -2204,7 +2204,7 @@ Twitter, Tumblr, Etsy, Kickstarter, Coinbase 등에 초기 투자한 것으로 �
   It's hard to look at the price charts of the big crypto assets and not cringe.  But it helps to look back to an earlier time, when a new sector was emerging, and understand what can happen. Amazon peaked in the Internet bubble in late 1999 at around $90/share.…
 ](https://avc.com/2018/11/what-bear-markets-look-like/)`,
     date: '2026-02-09',
-    reactions: 53,
+    reactions: 28,
     tags: ['크립토', '블록체인', 'VC', '스테이블코인', '닷컴'],
     relatedSlugs: ['dollar-two-faces', 'agent-passport', 'bitcoin-energy'],
     mediaUrls: ['/media/msg-43-0.jpg'],
