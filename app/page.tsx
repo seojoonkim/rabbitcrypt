@@ -86,13 +86,13 @@ function PostCard({ post }: { post: (typeof posts)[number] }) {
 
           {/* Summary */}
           <p
-            className="line-clamp-2"
+            className="line-clamp-3"
             style={{
               color: 'rgba(240,228,204,0.4)',
               marginBottom: '1rem',
               fontFamily: "var(--font-serif), 'Noto Serif KR', Georgia, serif",
-              fontSize: '0.875rem',
-              lineHeight: '1.6',
+              fontSize: '0.8125rem',
+              lineHeight: '1.65',
             }}
           >
             {post.summary}
@@ -160,103 +160,105 @@ function FeaturedCard({ post }: { post: (typeof posts)[number] }) {
       href={`/posts/${post.slug}`}
       className="block transition-all duration-200 group"
       style={{
-        background: '#0D1826',
-        border: '1px solid rgba(212,146,42,0.18)',
-        padding: '1.75rem',
+        background: 'transparent',
+        borderTop: '1px solid rgba(212,146,42,0.35)',
+        borderBottom: '1px solid rgba(212,146,42,0.08)',
+        padding: '2.5rem 0',
         display: 'flex',
         flexDirection: 'column',
-        marginBottom: '1.5rem',
+        marginBottom: '2.5rem',
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.borderColor = 'rgba(212,146,42,0.5)';
-        e.currentTarget.style.background = '#0F1D2E';
+        e.currentTarget.style.borderTopColor = 'rgba(212,146,42,0.7)';
       }}
       onMouseLeave={(e) => {
-        e.currentTarget.style.borderColor = 'rgba(212,146,42,0.18)';
-        e.currentTarget.style.background = '#0D1826';
+        e.currentTarget.style.borderTopColor = 'rgba(212,146,42,0.35)';
       }}
     >
-      <div style={{ display: 'flex', gap: '1.5rem' }}>
+      <div style={{ display: 'flex', gap: '2.5rem', alignItems: 'flex-start' }}>
         <div style={{ flex: 1, minWidth: 0 }}>
-          {/* Category */}
-          <div style={{ marginBottom: '0.75rem' }}>
+          {/* Category + LATEST badge */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
             <span
               style={{
                 color: '#D4922A',
-                fontSize: '0.6875rem',
+                fontSize: '0.625rem',
                 fontFamily: "var(--font-sans), 'Noto Sans KR', sans-serif",
-                fontWeight: 400,
-                letterSpacing: '0.08em',
+                fontWeight: 600,
+                letterSpacing: '0.14em',
                 textTransform: 'uppercase',
               }}
             >
               {categoryShort[post.category]}
             </span>
+            <span style={{
+              color: 'rgba(212,146,42,0.5)',
+              fontSize: '0.5625rem',
+              fontFamily: "var(--font-sans), 'Noto Sans KR', sans-serif",
+              letterSpacing: '0.16em',
+              textTransform: 'uppercase',
+            }}>· LATEST</span>
           </div>
 
-          {/* Title — larger */}
+          {/* Title — bold and commanding */}
           <h2
             className="line-clamp-2"
             style={{
               color: '#F0E4CC',
-              marginBottom: '0.625rem',
+              marginBottom: '1rem',
               fontFamily: "var(--font-title), Inter, 'Noto Sans KR', -apple-system, sans-serif",
-              fontSize: '1.5rem',
-              lineHeight: '1.35',
-              fontWeight: 700,
-              letterSpacing: '-0.025em',
+              fontSize: '1.875rem',
+              lineHeight: '1.25',
+              fontWeight: 800,
+              letterSpacing: '-0.035em',
             }}
           >
             {post.title}
           </h2>
 
-          {/* Summary — 3 lines */}
+          {/* Summary — 4 lines */}
           <p
-            className="line-clamp-3"
+            className="line-clamp-4"
             style={{
-              color: 'rgba(240,228,204,0.45)',
+              color: 'rgba(240,228,204,0.5)',
               fontFamily: "var(--font-serif), 'Noto Serif KR', Georgia, serif",
               fontSize: '0.9375rem',
-              lineHeight: '1.65',
-              marginBottom: '1.25rem',
+              lineHeight: '1.75',
+              marginBottom: '1.5rem',
             }}
           >
             {post.summary}
           </p>
+
+          {/* Meta */}
+          <div
+            className="flex items-center justify-between"
+            style={{
+              color: 'rgba(240,228,204,0.25)',
+              fontFamily: "var(--font-sans), 'Noto Sans KR', sans-serif",
+              fontWeight: 300,
+              fontSize: '0.75rem',
+            }}
+          >
+            <span>{post.date}</span>
+            <span>❤ {post.reactions}</span>
+          </div>
         </div>
 
-        {/* Thumbnail — larger for featured */}
+        {/* Thumbnail — 4:3, cinematic */}
         {thumb && (
           <img
             src={thumb}
             alt=""
-            className="group-hover:scale-[1.04] transition-transform duration-300"
+            className="group-hover:scale-[1.03] transition-transform duration-500"
             style={{
-              width: '140px',
-              height: '140px',
+              width: '220px',
+              height: '165px',
               objectFit: 'cover',
-              
               flexShrink: 0,
-              alignSelf: 'center',
             }}
           />
         )}
-      </div>
-
-      {/* Meta */}
-      <div
-        className="flex items-center justify-between"
-        style={{
-          color: 'rgba(240,228,204,0.25)',
-          fontFamily: "var(--font-sans), 'Noto Sans KR', sans-serif",
-          fontWeight: 300,
-          fontSize: '0.75rem',
-          paddingTop: '0.75rem',
-          marginTop: 'auto',
-        }}
-      >
-        <span>{post.date}</span>
-        <span>❤ {post.reactions}</span>
       </div>
     </Link>
   );
