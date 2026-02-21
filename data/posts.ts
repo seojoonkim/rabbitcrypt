@@ -2208,7 +2208,7 @@ Twitter, Tumblr, Etsy, Kickstarter, Coinbase 등에 초기 투자한 것으로 �
     tags: ['크립토', '블록체인', 'VC', '스테이블코인', '닷컴'],
     relatedSlugs: ['dollar-two-faces', 'agent-passport', 'bitcoin-energy'],
     mediaUrls: ['/media/msg-43-0.jpg'],
-  },,
+  },
   {
     id: 'rabbit-hole-intro',
     slug: 'rabbit-hole-intro',
