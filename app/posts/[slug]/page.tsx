@@ -249,7 +249,7 @@ export default async function PostPage({ params }: PostPageProps) {
             marginBottom: '1.25rem',
             lineHeight: '1.15',
             letterSpacing: '-0.03em',
-            fontSize: 'clamp(2.5rem, 5vw, 3.75rem)',
+            fontSize: 'clamp(1.5rem, 2.5vw, 2rem)',
           }}
         >
           {post.title}
