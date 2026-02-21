@@ -722,7 +722,7 @@ X (Twitter): [https://x.com/simonkim_nft/status/2016921602659844420](https://x.c
     reactions: 32,
     tags: ['보안', 'Prompt Guard', 'AI', '개발', 'Moltbot'],
     relatedSlugs: ['agentlinter-dev-log', 'agentlinter-v040', 'moltbot-anthropic-moat'],
-    mediaUrls: ['/media/msg-21-0.jpg'],
+    mediaUrls: ['/media/msg-30-0.jpg'],
   },
   {
     id: '29',
@@ -1542,7 +1542,6 @@ BIP 360은 해적들을 막기 위한 첫 번째 방파제다. 하지만 방파�
     tags: ['AI', '중국', 'Seedance', '트렌드'],
     relatedSlugs: ['seedance-30', 'messenger-b2a'],
     mediaUrls: [],
-    videoUrls: ['/media/posts/china-ai-frontier-1.mp4'],
   },
   {
     id: '11',
@@ -1574,7 +1573,7 @@ Seedance 3.0이 최종 비공개 스프린트 단계에 진입했으며, 여러 
     reactions: 11,
     tags: ['Seedance', 'AI 영상', '중국', '트렌드'],
     relatedSlugs: ['china-ai-frontier', 'messenger-b2a'],
-    mediaUrls: [],
+    mediaUrls: ['/media/msg-57-0.jpg'],
   },
   {
     id: '12',

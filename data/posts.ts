@@ -722,7 +722,7 @@ X (Twitter): [https://x.com/simonkim_nft/status/2016921602659844420](https://x.c
     reactions: 32,
     tags: ['보안', 'Prompt Guard', 'AI', '개발', 'Moltbot'],
     relatedSlugs: ['agentlinter-dev-log', 'agentlinter-v040', 'moltbot-anthropic-moat'],
-    mediaUrls: ['/media/msg-21-0.jpg'],
+    mediaUrls: ['/media/msg-30-0.jpg'],
   },
   {
     id: '29',
@@ -813,7 +813,7 @@ ML 스타트업 2회 엑싯 경험을 보유한 연쇄 창업자. 현재 대통�
     reactions: 34,
     tags: ['Hashed', 'HVL', '커뮤니티', 'Web3', 'AI'],
     relatedSlugs: ['vibelabs-landing', 'hvl-fellows', 'vibe-founders-era'],
-    mediaUrls: [],
+    mediaUrls: ['/media/msg-30-0.jpg'],
   },
 
   {
@@ -1541,8 +1541,7 @@ BIP 360은 해적들을 막기 위한 첫 번째 방파제다. 하지만 방파�
     reactions: 24,
     tags: ['AI', '중국', 'Seedance', '트렌드'],
     relatedSlugs: ['seedance-30', 'messenger-b2a'],
-    mediaUrls: [],
-    videoUrls: ['/media/posts/china-ai-frontier-1.mp4'],
+    mediaUrls: ['/media/msg-56-0.jpg'],
   },
   {
     id: '11',
@@ -1574,7 +1573,7 @@ Seedance 3.0이 최종 비공개 스프린트 단계에 진입했으며, 여러 
     reactions: 11,
     tags: ['Seedance', 'AI 영상', '중국', '트렌드'],
     relatedSlugs: ['china-ai-frontier', 'messenger-b2a'],
-    mediaUrls: [],
+    mediaUrls: ['/media/msg-57-0.jpg'],
   },
   {
     id: '12',
