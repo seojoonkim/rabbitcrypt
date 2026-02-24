@@ -86,9 +86,22 @@ function loadState() {
       processedMsgIds: [],
       skippedMsgIds: [],
       slugToMsgId: {},
+      contentHashes: {},
     };
   }
-  return JSON.parse(readFileSync(SYNC_STATE_PATH, 'utf8'));
+  const state = JSON.parse(readFileSync(SYNC_STATE_PATH, 'utf8'));
+  if (!state.contentHashes) state.contentHashes = {};
+  return state;
+}
+
+function hashContent(text) {
+  // Simple deterministic hash: length + sum of char codes (sampled)
+  const sample = text.slice(0, 200) + text.slice(-200);
+  let h = text.length;
+  for (let i = 0; i < sample.length; i++) {
+    h = (h * 31 + sample.charCodeAt(i)) >>> 0;
+  }
+  return `${text.length}:${h}`;
 }
 
 function saveState(state) {
@@ -566,6 +579,17 @@ function updateReactions(src, msgId, newReactions, slugToMsgId) {
   return src.replace(postRegex, `$1${newReactions}`);
 }
 
+function updateContent(src, slug, newText) {
+  const escapedSlug = slug.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  // Match the content backtick block for this slug
+  const contentRegex = new RegExp(
+    `(id:\\s*'${escapedSlug}'[\\s\\S]*?content:\\s*\`)[\\s\\S]*?(\`\\s*,)`,
+    'm'
+  );
+  const escaped = escapeBacktick(newText);
+  return src.replace(contentRegex, `$1${escaped}$2`);
+}
+
 // ─────────────────────────────────────────────
 // Post type: add telegramMsgId field
 // ─────────────────────────────────────────────
@@ -580,7 +604,7 @@ function ensureTypeHasTelegramMsgId(src) {
 // ─────────────────────────────────────────────
 // Git: commit + push
 // ─────────────────────────────────────────────
-function gitCommitAndPush(newPostSlugs, updatedReactions) {
+function gitCommitAndPush(newPostSlugs, updatedReactions, editedSlugs = []) {
   if (DRY_RUN) {
     log('DRY_RUN: Skipping git commit');
     return;
@@ -593,6 +617,9 @@ function gitCommitAndPush(newPostSlugs, updatedReactions) {
     let message = `auto-sync: ${date}`;
     if (newPostSlugs.length > 0) {
       message += ` | +${newPostSlugs.length}편: ${newPostSlugs.join(', ')}`;
+    }
+    if (editedSlugs.length > 0) {
+      message += ` | 수정 ${editedSlugs.length}편: ${editedSlugs.join(', ')}`;
     }
     if (updatedReactions > 0) {
       message += ` | reactions ${updatedReactions}개 업데이트`;
@@ -614,11 +641,11 @@ function gitCommitAndPush(newPostSlugs, updatedReactions) {
 // ─────────────────────────────────────────────
 // Telegram notification
 // ─────────────────────────────────────────────
-async function sendTelegramNotification(newPosts, reactionsUpdated, errors) {
+async function sendTelegramNotification(newPosts, reactionsUpdated, errors, editedSlugs = []) {
   // Use openclaw's built-in message system via env if available
   // This is called via the cron, so just log for now
   // The cron wrapper will handle notification
-  if (newPosts.length === 0 && reactionsUpdated === 0) {
+  if (newPosts.length === 0 && reactionsUpdated === 0 && editedSlugs.length === 0) {
     log('📭 Nothing new to report.');
     return;
   }
@@ -628,6 +655,12 @@ async function sendTelegramNotification(newPosts, reactionsUpdated, errors) {
     lines.push(`\n➕ **새 글 ${newPosts.length}편 추가:**`);
     for (const p of newPosts) {
       lines.push(`  • ${p.title} (#${p.msgId})`);
+    }
+  }
+  if (editedSlugs.length > 0) {
+    lines.push(`\n✏️ **수정된 글 ${editedSlugs.length}편:**`);
+    for (const s of editedSlugs) {
+      lines.push(`  • ${s}`);
     }
   }
   if (reactionsUpdated > 0) {
@@ -787,8 +820,45 @@ async function main() {
   }
   log(`   Updated ${reactionsUpdated} reaction counts`);
 
+  // 5b. Check for content edits on existing posts
+  log('\n✏️  Checking for content edits...');
+  let contentUpdated = 0;
+  const editedSlugs = [];
+  for (const msg of allMessages) {
+    if (!processedSet.has(msg.id)) continue; // only check already-processed posts
+    if (msg.charCount < MIN_TEXT_LENGTH) continue; // skip short/image-only
+
+    const currentHash = hashContent(msg.fullText);
+    const storedHash = state.contentHashes[msg.id];
+
+    if (!storedHash) {
+      // First time seeing this post in hash tracking — store hash, no update needed
+      state.contentHashes[msg.id] = currentHash;
+      continue;
+    }
+
+    if (storedHash !== currentHash) {
+      // Content has changed — find slug and update posts.ts
+      const slug = Object.entries(state.slugToMsgId).find(([, id]) => id === msg.id)?.[0];
+      if (slug && src.includes(`id: '${slug}'`)) {
+        log(`   ✏️  Detected edit: msg #${msg.id} (${slug})`);
+        const before = src;
+        src = updateContent(src, slug, msg.fullText);
+        if (src !== before) {
+          contentUpdated++;
+          editedSlugs.push(slug);
+          state.contentHashes[msg.id] = currentHash;
+          log(`   ✅ Content updated: ${slug}`);
+        } else {
+          warn(`   ⚠️  Could not update content for: ${slug}`);
+        }
+      }
+    }
+  }
+  log(`   Updated ${contentUpdated} post contents`);
+
   // 6. Write posts.ts
-  if (!DRY_RUN && (newPostsAdded.length > 0 || reactionsUpdated > 0)) {
+  if (!DRY_RUN && (newPostsAdded.length > 0 || reactionsUpdated > 0 || contentUpdated > 0)) {
     copyFileSync(POSTS_PATH, POSTS_PATH + '.bak');
     writeFileSync(POSTS_PATH, src, 'utf8');
     log('✅ posts.ts written');
@@ -813,9 +883,9 @@ async function main() {
   saveState(state);
 
   // 9. Git commit + push
-  if (newPostsAdded.length > 0 || reactionsUpdated > 0) {
+  if (newPostsAdded.length > 0 || reactionsUpdated > 0 || contentUpdated > 0) {
     try {
-      gitCommitAndPush(newPostsAdded.map(p => p.slug), reactionsUpdated);
+      gitCommitAndPush(newPostsAdded.map(p => p.slug), reactionsUpdated, editedSlugs);
     } catch (err) {
       warn(`Git push failed: ${err.message}`);
       errors.push(`git push: ${err.message}`);
@@ -825,7 +895,7 @@ async function main() {
   }
 
   // 10. Report
-  await sendTelegramNotification(newPostsAdded, reactionsUpdated, errors);
+  await sendTelegramNotification(newPostsAdded, reactionsUpdated, errors, editedSlugs);
 
   // Summary
   log('\n─────────────────────────────────');
