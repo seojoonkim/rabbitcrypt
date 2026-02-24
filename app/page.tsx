@@ -24,6 +24,12 @@ function getThumb(post: (typeof posts)[number]) {
   return null;
 }
 
+function getExcerpt(content: string, maxLen: number) {
+  const first = content.split('\n')[0].trim();
+  if (first.length <= maxLen) return first;
+  return first.slice(0, maxLen) + '…';
+}
+
 /* ─── Date formatter ─── */
 function formatDate(dateStr: string) {
   const parts = dateStr.split('-');
@@ -104,7 +110,7 @@ function PostCard({ post }: { post: (typeof posts)[number] }) {
             {post.title}
           </h2>
 
-          {/* Summary */}
+          {/* Excerpt */}
           <p
             className="line-clamp-3"
             style={{
@@ -115,7 +121,7 @@ function PostCard({ post }: { post: (typeof posts)[number] }) {
               lineHeight: '1.65',
             }}
           >
-            {post.summary}
+            {getExcerpt(post.content, 300)}
           </p>
         </div>
 
@@ -236,7 +242,7 @@ function FeaturedCard({ post }: { post: (typeof posts)[number] }) {
             {post.title}
           </h2>
 
-          {/* Summary — 4 lines */}
+          {/* Excerpt — 4 lines */}
           <p
             className="line-clamp-4"
             style={{
@@ -247,7 +253,7 @@ function FeaturedCard({ post }: { post: (typeof posts)[number] }) {
               marginBottom: '1.5rem',
             }}
           >
-            {post.summary}
+            {getExcerpt(post.content, 400)}
           </p>
 
           {/* Meta */}
