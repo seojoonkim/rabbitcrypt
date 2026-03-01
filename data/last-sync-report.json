@@ -1,7 +1,13 @@
 {
-  "timestamp": "2026-02-27T03:25:12.365Z",
-  "newPosts": [],
+  "timestamp": "2026-02-28T03:25:20.573Z",
+  "newPosts": [
+    {
+      "slug": "passport-wallet-weight-business-trip",
+      "title": "여권지갑의 무게",
+      "msgId": 80
+    }
+  ],
   "reactionsUpdated": 3,
   "errors": [],
-  "message": "🐇 **토끼굴 싱크 완료**\n\n✏️ **수정된 글 3편:**\n  • ai-agent-standardization-battle\n  • unknowns-in-modern-creation\n  • memory-identity-ai-development\n\n💫 좋아요 3건 업데이트"
+  "message": "🐇 **토끼굴 싱크 완료**\n\n➕ **새 글 1편 추가:**\n  • 여권지갑의 무게 (#80)\n\n✏️ **수정된 글 2편:**\n  • unknowns-in-modern-creation\n  • memory-identity-ai-development\n\n💫 좋아요 3건 업데이트"
 }
