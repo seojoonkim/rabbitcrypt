@@ -27,10 +27,16 @@ export const posts: Post[] = [
     category: '✍️ 낙서',
     depth: 'entry',
     summary: 'UAE에서 전쟁 관련 속보를 한국어로 번역하여 공유하는 채널입니다.',
-    content: `아부다비에 살고 있는 회사 동료 및 한국인 지인들을 위해, 전쟁과 관련된 현지 속보를 3분 간격으로 한국어로 번역하여 송출하는 텔레그램 채널을 제온이와 함께 만들었다. 
+    content: `UAE Emergency News
+
+아부다비에 살고 있는 회사 동료 및 한국인 지인들을 위해, 전쟁과 관련된 현지 속보를 3분 간격으로 한국어로 번역하여 송출하는 텔레그램 채널을 제온이와 함께 만들었다. 
+
 https://t.me/uae_emergency_news
+
 혹시라도 가족이나 지인이 UAE에 있으면 공유해드리길. 모두의 안전을 간절히 바랍니다.
+
 다음의 20개 소스 목록을 참조한다.
+
 | #  | 소스                 | 성격          |
 | --- | ------------------ | ----------- |
 | 1  | Al Jazeera         | 중동 대표       |
@@ -53,9 +59,9 @@ https://t.me/uae_emergency_news
 | 18 | DW                 | 글로벌         |
 | 19 | Jerusalem Post     | 이스라엘        |
 | 20 | Sky News Arabia    | 아랍권         |
-❤35👍17🙏1`,
+❤42👍22🙏4`,
     date: '2026-02-28',
-    reactions: 53,
+    reactions: 68,
     tags: ['UAE', '전쟁', '속보', '텔레그램', '안전'],
     relatedSlugs: [],
     mediaUrls: ['/media/msg-86-0.jpg'],
@@ -69,11 +75,14 @@ https://t.me/uae_emergency_news
     category: '✍️ 낙서',
     depth: 'entry',
     summary: '전쟁의 시작과 비행기 지연에 대한 고찰을 담은 글.',
-    content: `내가 탑승한 에티하드 항공기는 인천공항 활주로에 1시간 반째 멈춰있다. 랩탑으로 CNN 속보를 확인했다. "US and Israel attack Iran; Tehran retaliates across Middle East." 트위터에는 내가 내릴 도시의 미군 기지에 폭탄이 떨어졌다는 속보가 올라오고 있다.
+    content: `갈 수 있을까
+
+내가 탑승한 에티하드 항공기는 인천공항 활주로에 1시간 반째 멈춰있다. 랩탑으로 CNN 속보를 확인했다. "US and Israel attack Iran; Tehran retaliates across Middle East." 트위터에는 내가 내릴 도시의 미군 기지에 폭탄이 떨어졌다는 속보가 올라오고 있다.
+
 비행기는 여전히 아부다비로 출발을 기다리고 있다. 전쟁이 시작되는 순간은 늘 갑작스럽다. 창밖의 하늘은 아직 아름답고, 고요하고, 아무것도 모른다.
-🙏22❤11`,
+🙏23❤12`,
     date: '2026-02-28',
-    reactions: 33,
+    reactions: 35,
     tags: ['전쟁', '비행기', '뉴스', '감상'],
     relatedSlugs: [],
     mediaUrls: ['/media/msg-85-0.jpg'],
@@ -119,7 +128,7 @@ Dario Amodei는 무엇을 느꼈을까. 그가 만들고 있는 것은 수학과
 “인류는 무엇을 잃어버렸기에 기술 기업의 문 앞에 무릎을 꿇었으며, 그 기업은 끝내 그 신뢰를 감당했는가.”
 분필은 이미 지워졌고, 수십억 달러짜리 전광판들이 밤새 AI의 미래를 밝히는 이 도시에서, 가장 오래 남을 질문만 콘크리트 밑에 스며들어 아직 마르지 않았다.`,
     date: '2026-02-28',
-    reactions: 37,
+    reactions: 38,
     tags: ['AI', '사회', '샌프란시스코', '인간성', '정치'],
     relatedSlugs: [],
     mediaUrls: ['/media/msg-81-0.jpg', '/media/msg-81-1.jpg', '/media/msg-81-2.jpg'],
@@ -156,9 +165,9 @@ Dario Amodei는 무엇을 느꼈을까. 그가 만들고 있는 것은 수학과
 비행기가 김포에 닿았다. 발걸음 가볍게 통로로 나섰다. 선반에 올려놓을 것이 없었으니 내릴 것도 없었다. 주머니 속 여권지갑이 허벅지에 가볍게 닿는 감촉만이, 내가 오늘 어딘가를 다녀왔다는 유일한 증거였다.
 
 이렇게 가벼운 마음과 가벼운 복장으로 갈 수 있는 곳이 조금씩 더 넓어지면 좋겠다고 생각했다. 서울에서 도쿄가, 도쿄에서 싱가폴이, 싱가폴에서 아부다비가 동네 카페쯤 되는 세계. 스무 살의 내 머릿속에 있던 어떤 상상이, 어느 금요일 오후의 일상이 되는 날.
-❤43👍17🙏7🤣1`,
+❤45👍17🙏7🤣1`,
     date: '2026-02-27',
-    reactions: 68,
+    reactions: 70,
     tags: ['여권지갑', '출장', '신뢰', '비즈니스', '관계'],
     relatedSlugs: [],
     mediaUrls: ['/media/msg-80-0.jpg'],
