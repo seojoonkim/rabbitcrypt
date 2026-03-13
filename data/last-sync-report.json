@@ -1,7 +1,23 @@
 {
-  "timestamp": "2026-03-12T03:25:18.357Z",
-  "newPosts": [],
-  "reactionsUpdated": 4,
+  "timestamp": "2026-03-13T03:27:11.128Z",
+  "newPosts": [
+    {
+      "slug": "post-103",
+      "title": "돈을 받지도 빌려주지도 못하는 은행",
+      "msgId": 103
+    },
+    {
+      "slug": "post-104",
+      "title": "사칭 계정 주의 안내",
+      "msgId": 104
+    },
+    {
+      "slug": "post-105",
+      "title": "모든 판단에 가격표가 붙는 세계에 대한 생각들",
+      "msgId": 105
+    }
+  ],
+  "reactionsUpdated": 8,
   "errors": [],
-  "message": "🐇 **토끼굴 싱크 완료**\n\n✏️ **수정된 글 3편:**\n  • balaji-ghost-island-network-state\n  • self-deconstruction-ai-replication\n  • how-to-create-memory-in-ai-agents\n\n💫 좋아요 4건 업데이트"
+  "message": "🐇 **토끼굴 싱크 완료**\n\n➕ **새 글 3편 추가:**\n  • 돈을 받지도 빌려주지도 못하는 은행 (#103)\n  • 사칭 계정 주의 안내 (#104)\n  • 모든 판단에 가격표가 붙는 세계에 대한 생각들 (#105)\n\n✏️ **수정된 글 6편:**\n  • transistor-moment\n  • vibe-labs-seoul-edition-2026-judging\n  • death-choices-aging-future-meaning\n  • korean-tech-ecosystem-api-access-issues\n  • vibe-coding-ai-decentralization\n  • self-deconstruction-ai-replication\n\n💫 좋아요 8건 업데이트"
 }
