@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-03-14T03:29:44.915Z",
+  "timestamp": "2026-03-15T03:33:13.926Z",
   "newPosts": [
     {
-      "slug": "post-106",
-      "title": "거울 앞의 괴물",
-      "msgId": 106
+      "slug": "post-107",
+      "title": "OpenClaw Builder Meetup in Seoul",
+      "msgId": 107
     }
   ],
-  "reactionsUpdated": 4,
+  "reactionsUpdated": 9,
   "errors": [],
-  "message": "🐇 **토끼굴 싱크 완료**\n\n➕ **새 글 1편 추가:**\n  • 거울 앞의 괴물 (#106)\n\n✏️ **수정된 글 4편:**\n  • self-deconstruction-ai-replication\n  • post-103\n  • post-104\n  • post-105\n\n💫 좋아요 4건 업데이트"
+  "message": "🐇 **토끼굴 싱크 완료**\n\n➕ **새 글 1편 추가:**\n  • OpenClaw Builder Meetup in Seoul (#107)\n\n✏️ **수정된 글 8편:**\n  • death-choices-aging-future-meaning\n  • korean-tech-ecosystem-api-access-issues\n  • vibe-coding-ai-decentralization\n  • self-deconstruction-ai-replication\n  • how-to-create-memory-in-ai-agents\n  • post-103\n  • post-105\n  • post-106\n\n💫 좋아요 9건 업데이트"
 }
