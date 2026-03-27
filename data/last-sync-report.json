@@ -1,7 +1,18 @@
 {
-  "timestamp": "2026-03-25T03:25:23.035Z",
-  "newPosts": [],
-  "reactionsUpdated": 3,
+  "timestamp": "2026-03-26T03:25:49.553Z",
+  "newPosts": [
+    {
+      "slug": "complexcon-hk-identity-culture-experience",
+      "title": "ComplexCon HK에서 본 세계의 입장권",
+      "msgId": 113
+    },
+    {
+      "slug": "fear-and-value-in-ai-creation",
+      "title": "물리법칙이 바뀐 곳에서 며칠을 보낸 이야기",
+      "msgId": 123
+    }
+  ],
+  "reactionsUpdated": 1,
   "errors": [],
-  "message": "🐇 **토끼굴 싱크 완료**\n\n✏️ **수정된 글 2편:**\n  • post-106\n  • post-111\n\n💫 좋아요 3건 업데이트"
+  "message": "🐇 **토끼굴 싱크 완료**\n\n➕ **새 글 2편 추가:**\n  • ComplexCon HK에서 본 세계의 입장권 (#113)\n  • 물리법칙이 바뀐 곳에서 며칠을 보낸 이야기 (#123)\n\n✏️ **수정된 글 1편:**\n  • post-111\n\n💫 좋아요 1건 업데이트"
 }
