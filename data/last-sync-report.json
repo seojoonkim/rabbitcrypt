@@ -1,18 +1,23 @@
 {
-  "timestamp": "2026-03-26T03:25:49.553Z",
+  "timestamp": "2026-03-27T03:25:41.638Z",
   "newPosts": [
     {
-      "slug": "complexcon-hk-identity-culture-experience",
-      "title": "ComplexCon HK에서 본 세계의 입장권",
-      "msgId": 113
+      "slug": "agent-era-branding-future",
+      "title": "에이전트 시대, 브랜드는 무엇이 되는가",
+      "msgId": 127
     },
     {
-      "slug": "fear-and-value-in-ai-creation",
-      "title": "물리법칙이 바뀐 곳에서 며칠을 보낸 이야기",
-      "msgId": 123
+      "slug": "university-value-shift-education",
+      "title": "정류장에 세우기 전에",
+      "msgId": 128
+    },
+    {
+      "slug": "kpop-fandom-digital-parliament",
+      "title": "K-POP 팬덤은 어떻게 디지털 의회가 되었나",
+      "msgId": 129
     }
   ],
-  "reactionsUpdated": 1,
+  "reactionsUpdated": 3,
   "errors": [],
-  "message": "🐇 **토끼굴 싱크 완료**\n\n➕ **새 글 2편 추가:**\n  • ComplexCon HK에서 본 세계의 입장권 (#113)\n  • 물리법칙이 바뀐 곳에서 며칠을 보낸 이야기 (#123)\n\n✏️ **수정된 글 1편:**\n  • post-111\n\n💫 좋아요 1건 업데이트"
+  "message": "🐇 **토끼굴 싱크 완료**\n\n➕ **새 글 3편 추가:**\n  • 에이전트 시대, 브랜드는 무엇이 되는가 (#127)\n  • 정류장에 세우기 전에 (#128)\n  • K-POP 팬덤은 어떻게 디지털 의회가 되었나 (#129)\n\n✏️ **수정된 글 2편:**\n  • post-105\n  • post-111\n\n💫 좋아요 3건 업데이트"
 }
