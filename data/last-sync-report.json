@@ -1,23 +1,13 @@
 {
-  "timestamp": "2026-03-27T03:25:41.638Z",
+  "timestamp": "2026-03-28T03:25:26.790Z",
   "newPosts": [
     {
-      "slug": "agent-era-branding-future",
-      "title": "에이전트 시대, 브랜드는 무엇이 되는가",
-      "msgId": 127
-    },
-    {
-      "slug": "university-value-shift-education",
-      "title": "정류장에 세우기 전에",
-      "msgId": 128
-    },
-    {
-      "slug": "kpop-fandom-digital-parliament",
-      "title": "K-POP 팬덤은 어떻게 디지털 의회가 되었나",
-      "msgId": 129
+      "slug": "prompting-ability-as-new-power",
+      "title": "프롬프팅 역량이 인류의 새로운 전투력이 되는 날",
+      "msgId": 130
     }
   ],
-  "reactionsUpdated": 3,
+  "reactionsUpdated": 7,
   "errors": [],
-  "message": "🐇 **토끼굴 싱크 완료**\n\n➕ **새 글 3편 추가:**\n  • 에이전트 시대, 브랜드는 무엇이 되는가 (#127)\n  • 정류장에 세우기 전에 (#128)\n  • K-POP 팬덤은 어떻게 디지털 의회가 되었나 (#129)\n\n✏️ **수정된 글 2편:**\n  • post-105\n  • post-111\n\n💫 좋아요 3건 업데이트"
+  "message": "🐇 **토끼굴 싱크 완료**\n\n➕ **새 글 1편 추가:**\n  • 프롬프팅 역량이 인류의 새로운 전투력이 되는 날 (#130)\n\n✏️ **수정된 글 4편:**\n  • passport-wallet-weight-business-trip\n  • agent-era-branding-future\n  • university-value-shift-education\n  • kpop-fandom-digital-parliament\n\n💫 좋아요 7건 업데이트"
 }
