@@ -1,13 +1,18 @@
 {
-  "timestamp": "2026-03-28T03:25:26.790Z",
+  "timestamp": "2026-03-29T03:29:45.578Z",
   "newPosts": [
     {
-      "slug": "prompting-ability-as-new-power",
-      "title": "프롬프팅 역량이 인류의 새로운 전투력이 되는 날",
-      "msgId": 130
+      "slug": "navigating-a-world-of-decreasing-variance",
+      "title": "편차가 희소해지는 세계를 건너는 법",
+      "msgId": 131
+    },
+    {
+      "slug": "internship-job-posting-giveaway",
+      "title": "인턴 채용 공고 + AEO/GEO 베스트셀러 책 선물 이벤트",
+      "msgId": 132
     }
   ],
-  "reactionsUpdated": 7,
+  "reactionsUpdated": 4,
   "errors": [],
-  "message": "🐇 **토끼굴 싱크 완료**\n\n➕ **새 글 1편 추가:**\n  • 프롬프팅 역량이 인류의 새로운 전투력이 되는 날 (#130)\n\n✏️ **수정된 글 4편:**\n  • passport-wallet-weight-business-trip\n  • agent-era-branding-future\n  • university-value-shift-education\n  • kpop-fandom-digital-parliament\n\n💫 좋아요 7건 업데이트"
+  "message": "🐇 **토끼굴 싱크 완료**\n\n➕ **새 글 2편 추가:**\n  • 편차가 희소해지는 세계를 건너는 법 (#131)\n  • 인턴 채용 공고 + AEO/GEO 베스트셀러 책 선물 이벤트 (#132)\n\n✏️ **수정된 글 4편:**\n  • agent-era-branding-future\n  • university-value-shift-education\n  • kpop-fandom-digital-parliament\n  • prompting-ability-as-new-power\n\n💫 좋아요 4건 업데이트"
 }
