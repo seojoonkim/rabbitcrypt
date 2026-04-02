@@ -1,7 +1,13 @@
 {
-  "timestamp": "2026-03-31T03:33:15.233Z",
-  "newPosts": [],
-  "reactionsUpdated": 5,
+  "timestamp": "2026-04-01T03:26:14.635Z",
+  "newPosts": [
+    {
+      "slug": "gaslighting-ai-open-source-project",
+      "title": "AI를 가스라이팅하는 오픈소스를 만들었다",
+      "msgId": 138
+    }
+  ],
+  "reactionsUpdated": 4,
   "errors": [],
-  "message": "🐇 **토끼굴 싱크 완료**\n\n✏️ **수정된 글 4편:**\n  • agent-era-branding-future\n  • university-value-shift-education\n  • prompting-ability-as-new-power\n  • navigating-a-world-of-decreasing-variance\n\n💫 좋아요 5건 업데이트"
+  "message": "🐇 **토끼굴 싱크 완료**\n\n➕ **새 글 1편 추가:**\n  • AI를 가스라이팅하는 오픈소스를 만들었다 (#138)\n\n✏️ **수정된 글 3편:**\n  • uncertainty-machine\n  • unknowns-in-modern-creation\n  • university-value-shift-education\n\n💫 좋아요 4건 업데이트"
 }
