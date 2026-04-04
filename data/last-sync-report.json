@@ -1,7 +1,13 @@
 {
-  "timestamp": "2026-04-02T03:25:22.230Z",
-  "newPosts": [],
-  "reactionsUpdated": 4,
+  "timestamp": "2026-04-03T03:25:27.422Z",
+  "newPosts": [
+    {
+      "slug": "melgeek-evangelion-centauri-keyboard-review",
+      "title": "MelGeek Evangelion Centauri 80 EVA-00 Rei Ayanami",
+      "msgId": 139
+    }
+  ],
+  "reactionsUpdated": 6,
   "errors": [],
-  "message": "🐇 **토끼굴 싱크 완료**\n\n✏️ **수정된 글 4편:**\n  • balaji-ghost-island-network-state\n  • agent-era-branding-future\n  • navigating-a-world-of-decreasing-variance\n  • gaslighting-ai-open-source-project\n\n💫 좋아요 4건 업데이트"
+  "message": "🐇 **토끼굴 싱크 완료**\n\n➕ **새 글 1편 추가:**\n  • MelGeek Evangelion Centauri 80 EVA-00 Rei Ayanami (#139)\n\n✏️ **수정된 글 4편:**\n  • agent-era-branding-future\n  • kpop-fandom-digital-parliament\n  • prompting-ability-as-new-power\n  • gaslighting-ai-open-source-project\n\n💫 좋아요 6건 업데이트"
 }
